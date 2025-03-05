@@ -6,8 +6,8 @@ export default function App() {
   return (
     <>
       <Navbar />
-      <div className="h-screen flex  max-xl:flex-col ">
-     <Hero/>
+      <div className="h-[100vh-72px] flex  max-xl:flex-col ">
+        <Hero />
       </div>
     </>
   )
