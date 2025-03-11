@@ -7,17 +7,17 @@ export default function Hero() {
         <div className='flex mt-6 '>
             {/* Left Div part */}
             <div className='w-1/2'>
-                <div className='flex h-7 justify-between'>
-                    <button className='flex text-[1.05rem] px-7 bg-black text-white uppercase rounded py-3 pb-9'> <span className='mr-3 mt-[5px]'><MdOutlineMessage /></span>  <p className=''> View support chat
+                <div className='flex items-center justify-between'>
+                    <button className='flex text-[1.05rem] px-[5%] py-[5%] mr-0.5 bg-black text-white uppercase rounded '> <span className='mr-3 mt-[5px] '><MdOutlineMessage /></span>  <p className=' max-lg:text-[0.7rem]'> View support chat
                     </p>
                     </button>
 
-                    <button className='flex text-[1.05rem] px-14 bg-black text-white uppercase rounded py-3 pb-9'> <span className='mr-3 mt-[5px]'><IoMdCall /></span>  <p className=''> Via call
+                    <button className='flex text-[1.05rem] px-[15%] py-[5%] bg-black text-white uppercase rounded'> <span className='mr-3 mt-[5px]'><IoMdCall /></span>  <p className=' max-lg:text-[0.7rem]'> Via call
                     </p>
                     </button>
                 </div>
 
-                <button className='flex w-full border-2 border-black mt-10   text-[1.05rem] px-45  text-black uppercase rounded py-3 '> <span className='mr-3 mt-[5px]'><IoMdCall /></span>  <p className=''> Via email form
+                <button className='flex w-full border-2 border-black mt-10   text-[1.05rem] px-[40%]  text-black uppercase rounded py-[2%] '> <span className='mr-3 mt-[5px]'><IoMdCall /></span>  <p className=' max-lg:text-[0.8rem]'> Via email form
                 </p>
                 </button>
                 <form className='mt-4'>
