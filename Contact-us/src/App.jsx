@@ -5,7 +5,7 @@ import Hero from './Components/Hero'
 
 export default function App() {
   return (
-    <div>
+    <div className='mb-3'>
       <Navbar />
       <div className='mx-[9%] mt-3'>
          <ContactHead/>
