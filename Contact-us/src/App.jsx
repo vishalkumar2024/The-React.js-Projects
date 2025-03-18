@@ -8,8 +8,8 @@ export default function App() {
     <div className='mb-3'>
       <Navbar />
       <div className='mx-[9%] mt-3'>
-         <ContactHead/>
-         <Hero/>
+        <ContactHead />
+        <Hero />
       </div>
     </div>
   )

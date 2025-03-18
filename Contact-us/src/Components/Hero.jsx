@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { MdOutlineMessage } from "react-icons/md";
 import { IoMdCall } from "react-icons/io";
 
@@ -9,10 +9,7 @@ export default function Hero() {
     function secondBtnStyle() {
         alert("I am making a call.");
     }
-    function onsubmit(e){
-        e.preventDefault();
-        console.log("e")
-    }
+   
 
     return (
         <div className='flex mt-6 max-md:flex-col'>
@@ -23,7 +20,7 @@ export default function Hero() {
                     </p>
                     </button>
 
-                    <button  onClick={secondBtnStyle} className='flex text-[1.05rem] px-[15%] py-[5%] bg-black text-white uppercase rounded'> <span className='mr-3 mt-[5px]'><IoMdCall /></span>  <p className=' max-lg:text-[0.7rem] max-md:text-[1rem]'> Via call
+                    <button onClick={secondBtnStyle} className='flex text-[1.05rem] px-[15%] py-[5%] bg-black text-white uppercase rounded'> <span className='mr-3 mt-[5px]'><IoMdCall /></span>  <p className=' max-lg:text-[0.7rem] max-md:text-[1rem]'> Via call
                     </p>
                     </button>
                 </div>
@@ -32,10 +29,10 @@ export default function Hero() {
                 </p>
                 </button>
 
-                <form onSubmit={onsubmit} className='mt-4'>
+                <form  className='mt-4'>
                     <div className='flex flex-col mt-8 relative'>
                         <label htmlFor="Name" className='bg-white px-1 font-semibold absolute left-5 -top-[14px]'>Name</label>
-                        <input type="text" className='w-full h-[40px] pl-4 py-3 border border-gray-500 rounded max-md:h-[60px]' />
+                        <input  type="text" className='w-full h-[40px] pl-4 py-3 border border-gray-500 rounded max-md:h-[60px]' />
                     </div>
                     <div className='flex flex-col mt-8 relative'>
                         <label htmlFor="email" className='bg-white px-1 font-semibold absolute left-5 -top-[14px]'>E-mail</label>
@@ -47,7 +44,7 @@ export default function Hero() {
                     </div>
                 </form>
                 <div className='flex justify-center mt-4'>
-                    <button className=' text-[1.05rem] px-10 py-2 bg-black text-white uppercase rounded'>Submit
+                    <button  className=' text-[1.05rem] px-10 py-2 bg-black text-white uppercase rounded'>Submit
                     </button>
                 </div>
             </div>
