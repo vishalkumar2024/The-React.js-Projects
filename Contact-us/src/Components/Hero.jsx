@@ -4,6 +4,7 @@ import { IoMdCall } from "react-icons/io";
 import { ToastContainer, toast } from 'react-toastify';
 
 export default function Hero() {
+    // Some tostify added on it //
     const FirstBtn = () => toast('Do you want support chat?');
     const SecondBtn = () => toast('I am making a call.');
 
@@ -44,6 +45,7 @@ export default function Hero() {
                 theme="light"
             // transition={Bounce}
             />
+
             {/* Left Div part */}
             <div className='w-1/2 max-md:w-full'>
                 <div className='flex items-center justify-between'>
@@ -84,10 +86,6 @@ export default function Hero() {
             {/* Right div part */}
             <div className='w-1/2 pl-5 max-md:w-full'>
                 <img src="https://img.freepik.com/free-vector/service-24-7-concept-illustration_114360-7380.jpg" alt="" />
-            </div>
-            <div className="grid place-items-center h-dvh bg-zinc-900/15">
-                <button >Notify !</button>
-
             </div>
         </div>
     )
