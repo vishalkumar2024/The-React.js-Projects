@@ -9,7 +9,26 @@ export default function Hero() {
     function secondBtnStyle() {
         alert("I am making a call.");
     }
-   
+
+    // Need some emprovisation in future so that we can do two way binding in multiple form //
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [textarea, setTextarea] = useState("");
+
+    function HandlerName(e) {
+        setName(e.target.value);
+    }
+    function HandlerEmail(e) {
+        setEmail(e.target.value);
+    }
+    function HandlerTextarea(e) {
+        setTextarea(e.target.value);
+    }
+
+
+    function submitHandler(e) {
+        e.preventDefault();
+    }
 
     return (
         <div className='flex mt-6 max-md:flex-col'>
@@ -29,22 +48,22 @@ export default function Hero() {
                 </p>
                 </button>
 
-                <form  className='mt-4'>
+                <form className='mt-4'>
                     <div className='flex flex-col mt-8 relative'>
                         <label htmlFor="Name" className='bg-white px-1 font-semibold absolute left-5 -top-[14px]'>Name</label>
-                        <input  type="text" className='w-full h-[40px] pl-4 py-3 border border-gray-500 rounded max-md:h-[60px]' />
+                        <input type="text" onChange={HandlerName} value={name} className='w-full h-[40px] pl-4 py-3 border border-gray-500 rounded max-md:h-[60px]' />
                     </div>
                     <div className='flex flex-col mt-8 relative'>
                         <label htmlFor="email" className='bg-white px-1 font-semibold absolute left-5 -top-[14px]'>E-mail</label>
-                        <input type="email" className='w-full h-[40px] pl-4 py-3 border border-gray-500 rounded max-md:h-[60px]' />
+                        <input type="email"  onChange={HandlerEmail} value={email}  className='w-full h-[40px] pl-4 py-3 border border-gray-500 rounded max-md:h-[60px]' />
                     </div>
                     <div className='flex flex-col mt-8 relative'>
                         <label htmlFor="text" className='bg-white px-1 font-semibold absolute left-5 -top-[14px] uppercase'>text</label>
-                        <textarea name="Text" id="" className='w-full h-[150px] pl-4 py-3 border border-gray-500 rounded'></textarea>
+                        <textarea name="Text"  onChange={HandlerTextarea} value={textarea}  className='w-full h-[150px] pl-4 py-3 border border-gray-500 rounded'></textarea>
                     </div>
                 </form>
                 <div className='flex justify-center mt-4'>
-                    <button  className=' text-[1.05rem] px-10 py-2 bg-black text-white uppercase rounded'>Submit
+                    <button onClick={submitHandler} className=' text-[1.05rem] px-10 py-2 bg-black text-white uppercase rounded'>Submit
                     </button>
                 </div>
             </div>
