@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+/* Custom classes */
+@layer components{
+    .btn-style{
+        @apply bg-black px-12 py-2 text-white rounded-sm text-[1rem] capitalize
+    }
+    
+    /* We can define more classes like this */
+}
