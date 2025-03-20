@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function LandinPage() {
+export default function LandinPage({toggle}) {
   return (
     <div className='container flex p-25'>
       {/* Left div */}
@@ -11,7 +11,7 @@ export default function LandinPage() {
       {/* Right div */}
       <div className='w-1/2  flex flex-col justify-center items-center'>
         <h1 className='text-8xl font-bold uppercase'>dice game</h1>
-        <button className='btn-style mt-5'>Play now</button>
+        <button onClick={toggle} className='btn-style mt-5 cursor-pointer'>Play now</button>
       </div>
     </div>
   )

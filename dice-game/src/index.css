@@ -4,6 +4,7 @@
 @layer components{
     .btn-style{
         @apply bg-black px-12 py-2 text-white rounded-sm text-[1rem] capitalize
+        hover:bg-white hover:text-black hover:border hover:border-black hover:shadow-black hover:transition-all duration-300;
     }
     
     /* We can define more classes like this */
