@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Rulesofgame from './Rulesofgame';
 
 export default function Gameplay() {
     let diceNumber = [1, 2, 3, 4, 5, 6];
@@ -30,6 +31,19 @@ export default function Gameplay() {
         setUpdate(0);
     }
 
+    const [rules, setRules] = useState(false)  // code for show rules button to show the Rule of game Component or hide it
+    const [show, setShow] = useState("Show")
+    function showRules() {
+        if (rules) {
+            setRules(false);
+            setShow("Show")
+        }
+        else {
+            setRules(true);
+            setShow("Hide")
+        }
+    }
+
     return (
         <div className='p-10'>
             <div className=' w-full h-[131px] flex  justify-between'>
@@ -52,16 +66,19 @@ export default function Gameplay() {
                     <p className='capitalize font-semibold text-[1.2rem] mt-3'>select number</p>
                 </div>
             </div>
-            <div className=' w-full h-[400px] flex justify-center items-center'>
+            <div className=' w-full h-full flex justify-center items-center'>
                 <div className=' w-[15%] h-[80%] flex flex-col '>
                     <div className=' w-[90%] h-[150px] m-2 '>
                         <img onClick={rollDice} className='size-full' src={`/public/Images/dice_${roll}.png`} alt="dice" />
                     </div>
                     <p className=' m-5 font-semibold text-[1.05rem]'>Click on Dice to roll</p>
                     <button onClick={Reset} /* onclick={()=> setUpdate(0)} */ className='btn-style mx-4 px-5 font-semibold bg-white text-black border border-black py-2 mt-3 hover:bg-black hover:text-white'>reset score</button>
-                    <button className='btn-style mx-4 px-5 mt-10'>show rules</button>
+                    <button onClick={showRules} className='btn-style mx-4 px-5 mt-10'>{show} rules</button>
                 </div>
-                
+            </div>
+            <div className='mt-8 '>{
+                rules ? <Rulesofgame /> : ""
+            }
             </div>
         </div>
     )

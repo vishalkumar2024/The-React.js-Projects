@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function LandinPage({toggle}) {
+export default function LandinPage({ toggle }) {
   return (
     <div className='container flex p-25'>
       {/* Left div */}
