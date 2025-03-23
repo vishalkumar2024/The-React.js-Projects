@@ -61,6 +61,7 @@ export default function Gameplay() {
                     <button onClick={Reset} /* onclick={()=> setUpdate(0)} */ className='btn-style mx-4 px-5 font-semibold bg-white text-black border border-black py-2 mt-3 hover:bg-black hover:text-white'>reset score</button>
                     <button className='btn-style mx-4 px-5 mt-10'>show rules</button>
                 </div>
+                
             </div>
         </div>
     )
