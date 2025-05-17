@@ -1,0 +1,26 @@
+#add-icon {
+    color: white;
+    padding: 4px 7px;
+    margin-left: 8px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: box-shadow 0.5s;
+}
+
+#add-icon:hover {
+    box-shadow: 1px 1px 8px aqua, -1px -1px 8px aqua;
+}
+
+#Todo-head{
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+    text-shadow:
+    0 0 10px cyan,
+    0 0 20px cyan,
+    0 0 40px cyan,
+    0 0 40px cyan;
+}
