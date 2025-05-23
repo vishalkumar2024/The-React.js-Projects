@@ -3,7 +3,7 @@ import React from 'react'
 export default function Navbar() {
   return (
     <>
-      <div className=" h-18 flex 2xl:h-28 items-center justify-around mt-3">
+      <div className=" h-18  flex 2xl:h-28 items-center justify-around">
         <div>
           <img src="https://images.seeklogo.com/logo-png/9/1/nike-logo-png_seeklogo-99478.png" className="h-20 w-25 2xl:h-30 2xl:w-35 " alt="Logo mage" />
         </div>

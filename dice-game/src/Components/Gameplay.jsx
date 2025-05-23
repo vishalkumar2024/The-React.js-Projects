@@ -43,8 +43,12 @@ export default function Gameplay() {
             setShow("Hide")
         }
     }
-
-    return (
+    if (rules) return (
+        <>
+            <Rulesofgame />
+        </>
+    )
+    else return (
         <div className='p-10'>
             <div className=' w-full h-[131px] flex  justify-between'>
                 <div className='w-50 flex flex-col justify-center items-center '>
@@ -75,10 +79,6 @@ export default function Gameplay() {
                     <button onClick={Reset} /* onclick={()=> setUpdate(0)} */ className='btn-style mx-4 px-5 font-semibold bg-white text-black border border-black py-2 mt-3 hover:bg-black hover:text-white'>reset score</button>
                     <button onClick={showRules} className='btn-style mx-4 px-5 mt-10'>{show} rules</button>
                 </div>
-            </div>
-            <div className='mt-8 '>{
-                rules ? <Rulesofgame /> : ""
-            }
             </div>
         </div>
     )
