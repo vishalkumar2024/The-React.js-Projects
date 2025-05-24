@@ -5,17 +5,22 @@ import Hero from './Components/Hero';
 import { useState } from 'react';
 
 export default function App() {
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState(false);
 
   function changeTheme() {
-    setTheme("dark")
-  };
+    if (theme) {
+      setTheme(false)
 
+    } else {
+      setTheme(true)
+    }
+  };
+   
   return (
     <>
-      <Navbar />
-      <div  className={`flex max-xl:flex-col bg-${theme=="light"?"white":"black"}`} id='maindiv'>
-        <Hero />
+      <Navbar  theme={theme}/>
+      <div className={`flex max-xl:flex-col ${theme ? 'bg-gray-900 text-white' : ' text-black'}`}>
+        <Hero changeTheme={changeTheme} />
       </div>
     </>
   )
