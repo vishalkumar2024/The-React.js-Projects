@@ -1,9 +1,12 @@
 import React from 'react'
+import Hero from '../Components/Hero/Hero'
+
+
 
 function Shop() {
   return (
     <div>
-      <h1>this is me</h1>
+       <Hero/>
     </div>
   )
 }
