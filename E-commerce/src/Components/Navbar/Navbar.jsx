@@ -9,9 +9,9 @@ function Navbar() {
         <div className='flex justify-around p-3 shadow-black shadow'>
             <div className='flex items-center gap-2'>
                 <img src={Logo} alt="" />
-                <p className='text-[#171717] text-[35px] font-semibold'>SHOPPER</p>
+                <p className='text-[#171717] text-[35px] font-semibold'><Link to="/">SHOPPER</Link> </p>
             </div>
-            <ul className='flex items-center gap-12 text-gray-500 text-[20px] font-semibold'>
+            <ul className='flex items-center gap-12 text-gray-500 text-[20px] outlin-none font-semibold'>
                 <li className='cursor-pointer'><Link to="/">Shop</Link> </li>
                 <li className='cursor-pointer'><Link to="/men">Men</Link> </li>
                 <li className='cursor-pointer'><Link to="/women">Women</Link></li>
