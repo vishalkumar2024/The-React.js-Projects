@@ -35,6 +35,8 @@ Each folder represents a different application, ranging from beginner-level apps
 I'm Vishal Kumar Soni, a passionate web developer exploring full-stack and frontend ecosystems. I love creating clean, functional interfaces and improving with each project.
 
 📧 Email: vkumarsoni30@gmail.com
+
 🔗 GitHub: @vishalkumar2024
+
 💼 LinkedIn:www.linkedin.com/in/vishal-kumar-soni-
 
