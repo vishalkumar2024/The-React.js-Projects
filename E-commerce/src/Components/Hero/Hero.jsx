@@ -8,7 +8,7 @@ import './Hero.css'
 
 function Hero() {
     return (
-        <div className='flex bg-linear-to-b from-[#f6cbf9] to-[#e1ffea22]' id="HeroMain">
+        <div className='flex mt-[2px] bg-linear-to-b from-[#f6cbf9] to-[#e1ffea22]' id="HeroMain">
 
             {/* Left Part */}
             <div className=' h-full w-1/2 flex items-center justify-center  pl-[100px] '>
@@ -24,7 +24,7 @@ function Hero() {
                         <p className='text-[65px] font-bold mb-1'>for everyone</p>
                     </div>
 
-                    <div className='flex items-center justify-center gap-4 w-[250px] h-[40px] rounded-4xl mt-8 bg-red-600 text-white text-[18px] font-semibold'>
+                    <div className='flex items-center justify-center gap-4 cursor-pointer w-[250px] h-[40px] rounded-4xl mt-8 bg-red-600 text-white text-[18px] font-semibold'>
                         <div>Latest Collection</div>
                         <img src={arrowIcon} alt="" />
                     </div>
