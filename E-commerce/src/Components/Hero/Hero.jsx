@@ -8,10 +8,10 @@ import './Hero.css'
 
 function Hero() {
     return (
-        <div className='flex mt-[2px] bg-linear-to-b from-[#f6cbf9] to-[#e1ffea22]' id="HeroMain">
+        <div className='flex mt-[2px] mb-10 pt-36 bg-linear-to-b from-[#f6cbf9] to-[#e1ffea22]' id="HeroMain">
 
             {/* Left Part */}
-            <div className=' h-full w-1/2 flex items-center justify-center  pl-[100px] '>
+            <div className=' h-full w-1/2   flex items-center justify-center  pl-[100px] '>
                 <div className='w-[70%]' >
                     <h2 className='text-[#090909] text-[26px] uppercase font-semibold'>New Arrival Only</h2>
 
