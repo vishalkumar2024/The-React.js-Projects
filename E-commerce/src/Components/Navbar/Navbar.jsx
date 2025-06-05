@@ -12,10 +12,10 @@ function Navbar() {
                 <p className='text-[#171717] text-[35px] font-semibold'><Link to="/">SHOPPER</Link> </p>
             </div>
             <ul className='flex items-center gap-12 text-gray-500 text-[20px] outlin-none font-semibold'>
-                <li className='cursor-pointer'><Link to="/">Shop</Link> </li>
-                <li className='cursor-pointer'><Link to="/men">Men</Link> </li>
-                <li className='cursor-pointer'><Link to="/women">Women</Link></li>
-                <li className='cursor-pointer'><Link to="/kid">Kid</Link></li>
+                <li className='cursor-pointer active:text-red-300 '><Link to="/">Shop</Link> </li>
+                <li className='cursor-pointer  active:text-red-300'><Link to="/men">Men</Link> </li>
+                <li className='cursor-pointer active:text-red-300'><Link to="/women">Women</Link></li>
+                <li className='cursor-pointer active:text-red-300'><Link to="/kid">Kid</Link></li>
             </ul>
             <div className='flex items-center gap-10'>
                 <Link to="/loginSignup"> <button className='bg-green-500 px-4 py-2 rounded cursor-pointer text-amber-50 active:bg-green-700'>Login</button>
