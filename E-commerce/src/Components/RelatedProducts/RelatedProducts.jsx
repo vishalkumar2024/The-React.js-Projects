@@ -6,7 +6,7 @@ import Item from '../Items/Item'
 function RelatedProducts(props) {
     const { product } = props
     return (
-        <div className='flex flex-col items-center gap-3 h-[90vh]'>
+        <div className='flex flex-col items-center gap-3 h-[90vh] mt-12 mb-5'>
             <h1 className='text-[#171717] text-[50px] font-stretch-semi-condensed'>Related Products</h1>
             <hr className='w-[200px] h-[6px] rounded bg-[#252525]' />
             <div className='flex gap-7 mt-12'>

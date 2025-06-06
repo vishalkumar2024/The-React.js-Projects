@@ -1,21 +1,23 @@
 
-
 import p9_img from "./product_9.png";
 import p10_img from "./product_10.png";
 import p11_img from "./product_11.png";
 import p12_img from "./product_12.png";
+
 import p21_img from "./product_21.png";
 import p22_img from "./product_22.png";
 import p23_img from "./product_23.png";
 import p24_img from "./product_24.png";
+
 import p33_img from "./product_33.png";
 import p34_img from "./product_34.png";
 import p35_img from "./product_35.png";
 import p36_img from "./product_36.png";
 
 let related = [
+
     {
-        id: 1,
+        id: 9,
         name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
         category: "women",
         image: p9_img,
@@ -23,7 +25,7 @@ let related = [
         old_price: 120.5,
     },
     {
-        id: 2,
+        id: 10,
         name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
         category: "women",
         image: p10_img,
@@ -31,7 +33,7 @@ let related = [
         old_price: 120.5,
     },
     {
-        id: 3,
+        id: 11,
         name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
         category: "women",
         image: p11_img,
@@ -39,7 +41,7 @@ let related = [
         old_price: 120.5,
     },
     {
-        id: 4,
+        id: 12,
         name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
         category: "women",
         image: p12_img,
