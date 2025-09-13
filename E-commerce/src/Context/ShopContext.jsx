@@ -3,7 +3,6 @@ import allProducts from "../Components/Assets/all_product"
 
 export const ShopContext = createContext(null);
 
-
 const ShopContextProvider = (props) => {
 
     const contextValue = { allProducts };

@@ -11,7 +11,8 @@ function Product() {
   const { allProducts } = useContext(ShopContext);
   const { productId } = useParams();
   const product = allProducts.find((e) => e.id === Number(productId))
-
+  console.log(product)
+  
   return (
     <div className="pt-[82px]">
       <Breadcrumbs product={product} />
