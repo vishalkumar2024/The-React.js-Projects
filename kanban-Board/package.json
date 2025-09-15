@@ -13,6 +13,9 @@
     "@tailwindcss/vite": "^4.1.13",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-feather": "^2.0.10",
+    "react-icon": "^1.0.0",
+    "react-icons": "^5.5.0",
     "tailwindcss": "^4.1.13"
   },
   "devDependencies": {
