@@ -4,6 +4,7 @@ import { X } from "react-feather";
 
 function EditTask(props) {
     const [showEdit, setShowEdit] = useState(false);
+    const [inputvalue, setInputvalue] = useState("");
     return (
         <div className={`bg-white flex justify-center h-fit rounded ${!showEdit ? "hover:bg-gray-300 transition duration-200" : ""
             }`}>
@@ -13,15 +14,19 @@ function EditTask(props) {
 
                     (<form
                         className='flex flex-col w-full   gap-2'
-                        onSubmit={() => {
+                        onSubmit={(e) => {
                             e.preventDefault()
-                            if (props.onSubmit) props.onSubmit()
+                            setShowEdit(false);
+                            setInputvalue("");
+                            if (props.onSubmit && inputvalue.length>0) props.onSubmit(inputvalue)
                         }}>
                         <input
                             className='bg-gray-300 w-[95%] mx-auto my-1.5 rounded outline-none p-1.5 border border-cyan-400'
                             type="text"
                             autoFocus
-                            defaultValue={props.text}
+                            value={inputvalue}
+                            onChange={(e) => { setInputvalue(e.target.value) }}
+                            // defaultValue={props.text}
                             placeholder={props.placeholder || "Enter item"}
                         />
                         <div className='flex justify-between pb-3 px-4'>

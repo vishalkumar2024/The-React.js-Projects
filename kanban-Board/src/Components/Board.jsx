@@ -23,7 +23,7 @@ function Board(props) {
                 <DropdownMenu>
                     <DropdownMenuTrigger className="outline-none cursor-pointer"> <MoreHorizontal /></DropdownMenuTrigger>
                     <DropdownMenuContent className="bg-white hover:bg-zinc-100 cursor-pointer ">
-                        <DropdownMenuLabel>Delete Board</DropdownMenuLabel>
+                        <DropdownMenuLabel onClick={()=>props.removeBoard(props.BoardItem?.id)}>Delete Board</DropdownMenuLabel>
                     </DropdownMenuContent>
                 </DropdownMenu>
             </div>
