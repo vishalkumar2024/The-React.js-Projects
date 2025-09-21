@@ -5,7 +5,9 @@ import { X } from "react-feather";
 function EditTask(props) {
     const [showEdit, setShowEdit] = useState(false);
     return (
-        <div className='bg-white flex justify-center'>
+        <div className={`bg-white flex justify-center h-fit rounded ${!showEdit ? "hover:bg-gray-300 transition duration-200" : ""
+            }`}>
+
             {
                 showEdit ?
 
@@ -18,18 +20,23 @@ function EditTask(props) {
                         <input
                             className='bg-gray-300 w-[95%] mx-auto my-1.5 rounded outline-none p-1.5 border border-cyan-400'
                             type="text"
+                            autoFocus
                             defaultValue={props.text}
                             placeholder={props.placeholder || "Enter item"}
                         />
                         <div className='flex justify-between pb-3 px-4'>
-                            <button className='bg-blue-400 hover:bg-blue-500 transition duration-200  px-2 border border-blue-700 rounded' type='submit'>{props.buttonText || "ADD"}</button>
+                            <button
+                                className='bg-blue-400 hover:bg-blue-500 transition duration-200  px-2 border border-blue-700 rounded'
+                                type='submit'>{props.buttonText || "ADD"}
+                            </button>
                             <X onClick={() => setShowEdit(false)} className='cursor-pointer' />
                         </div>
                     </form>)
 
                     : (<p
                         onClick={() => setShowEdit(true)}
-                        className='py-3  px-auto cursor-pointer'>{props.text || "Add Task"}
+
+                        className='py-3 max-w-24 cursor-pointer'>{props.text || "Add Task"}
                     </p>)
             }
         </div>
