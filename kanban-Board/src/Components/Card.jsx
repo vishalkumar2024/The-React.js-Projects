@@ -19,7 +19,6 @@ function Card(props) {
                 <div>
                     {
                         props.CardItem.labels?.map((item, index) => {
-
                             return <Chip key={index} labelItem={item} />
                         })
                     }
@@ -27,13 +26,13 @@ function Card(props) {
                 <DropdownMenu>
                     <DropdownMenuTrigger className="outline-none cursor-pointer"> <MoreHorizontal /></DropdownMenuTrigger>
                     <DropdownMenuContent className="bg-white hover:bg-zinc-100 cursor-pointer ">
-                        <DropdownMenuLabel>Delete Task</DropdownMenuLabel>
+                        <DropdownMenuLabel onClick={()=>props.removeCard(props.CardItem?.id, props.boardId)}>Delete Task</DropdownMenuLabel>
                     </DropdownMenuContent>
                 </DropdownMenu>
             </div>
 
             <div className='mb-5 font-extrabold'>
-                {props.CardItem?.description}
+                {props.CardItem?.title}
             </div>
 
             {/* footer */}

@@ -47,8 +47,8 @@ function App() {
   //---------- Add card function ----------//
   const addCard = (title, board_id) => {
     const card = {
-      id: date.now() + Math.random(),
-      title: "",
+      id: Date.now() + Math.random(),
+      title: title,
       labels: [],
       tasks: [],
       date: "",
@@ -98,7 +98,7 @@ function App() {
 
   //---------- Remove Board function ----------//
   const removeBoard = (board_id) => {
-    const tempBoard = board.filter(item => item.id !== board_id );
+    const tempBoard = board.filter(item => item.id !== board_id);
     setBoard(tempBoard)
 
   }
@@ -118,7 +118,13 @@ function App() {
         <div className='px-10 py-5  flex gap-8 flex-wrap'>
           {
             board.map((item) => {
-              return <Board key={item.id} BoardItem={item} removeBoard={removeBoard} />
+              return <Board
+                key={item.id}
+                BoardItem={item}
+                removeBoard={removeBoard}
+                addCard={addCard}
+                removeCard={removeCard}
+              />
             })
 
           }

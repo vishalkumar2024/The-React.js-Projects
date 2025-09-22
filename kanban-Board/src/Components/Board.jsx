@@ -23,7 +23,7 @@ function Board(props) {
                 <DropdownMenu>
                     <DropdownMenuTrigger className="outline-none cursor-pointer"> <MoreHorizontal /></DropdownMenuTrigger>
                     <DropdownMenuContent className="bg-white hover:bg-zinc-100 cursor-pointer ">
-                        <DropdownMenuLabel onClick={()=>props.removeBoard(props.BoardItem?.id)}>Delete Board</DropdownMenuLabel>
+                        <DropdownMenuLabel onClick={() => props.removeBoard(props.BoardItem?.id)}>Delete Board</DropdownMenuLabel>
                     </DropdownMenuContent>
                 </DropdownMenu>
             </div>
@@ -31,14 +31,23 @@ function Board(props) {
             <div className='custom-scroll bg-gray-200 max-h-[470px] mx-3 p-5 overflow-y-scroll'>
                 {
                     props.BoardItem.cards.map((item) => {
-                       return <Card key={item.id} CardItem={item} />
+                        return <Card
+                            key={item.id}
+                            CardItem={item}
+                            removeCard={props.removeCard}
+                            boardId={props.BoardItem?.id}
+                        />
                     })
 
                 }
 
                 <div>
-                    <EditTask className='bg-red-400 px-6'
-                        text={"Add card"} placeholder={"Enter Item"} />
+                    <EditTask
+                        className='bg-red-400 px-6'
+                        text={"Add card"}
+                        placeholder={"Enter Item"}
+                        onSubmit={(value) => props.addCard(value, props.BoardItem?.id)}
+                    />
                 </div>
 
             </div>
