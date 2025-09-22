@@ -14,7 +14,11 @@ import {
 
 function Card(props) {
     return (
-        <div className='bg-white mb-3.5 p-4 rounded-2xl'>
+        <div className='bg-white mb-3.5 p-4 rounded-2xl'
+            draggable
+            onDragEnter={() => props.handleDragEnter(props.CardItem?.id, props.boardId)}
+            onDragEnd={() => props.handleDragEnd(props.CardItem?.id, props.boardId)}
+        >
             <div className='flex justify-between pb-4'>
                 <div>
                     {
@@ -26,7 +30,7 @@ function Card(props) {
                 <DropdownMenu>
                     <DropdownMenuTrigger className="outline-none cursor-pointer"> <MoreHorizontal /></DropdownMenuTrigger>
                     <DropdownMenuContent className="bg-white hover:bg-zinc-100 cursor-pointer ">
-                        <DropdownMenuLabel onClick={()=>props.removeCard(props.CardItem?.id, props.boardId)}>Delete Task</DropdownMenuLabel>
+                        <DropdownMenuLabel onClick={() => props.removeCard(props.CardItem?.id, props.boardId)}>Delete Task</DropdownMenuLabel>
                     </DropdownMenuContent>
                 </DropdownMenu>
             </div>

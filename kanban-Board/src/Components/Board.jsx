@@ -13,8 +13,8 @@ import {
 
 function Board(props) {
     return (
-        <div className=' w-80 pb-4 bg-white'>
-            <div className='flex justify-between p-5'>
+        <div className=' w-80 h-[480px] pb-4 bg-white'>
+            <div className='flex  justify-between p-5'>
                 <div className='flex gap-2'>
                     <p className='text-[18px] font-bold'> {props.BoardItem?.title}</p>
                     <span className='text-[18px] text-gray-400 font-bold'>{props.BoardItem.cards.length}</span>
@@ -28,7 +28,7 @@ function Board(props) {
                 </DropdownMenu>
             </div>
 
-            <div className='custom-scroll bg-gray-200 max-h-[470px] mx-3 p-5 overflow-y-scroll'>
+            <div className='custom-scroll bg-gray-200 max-h-[400px] mx-3 p-5 overflow-y-scroll'>
                 {
                     props.BoardItem.cards.map((item) => {
                         return <Card
@@ -36,6 +36,8 @@ function Board(props) {
                             CardItem={item}
                             removeCard={props.removeCard}
                             boardId={props.BoardItem?.id}
+                            handleDragEnd={props.handleDragEnd}
+                            handleDragEnter={props.handleDragEnter}
                         />
                     })
 

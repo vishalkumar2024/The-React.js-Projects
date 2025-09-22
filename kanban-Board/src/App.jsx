@@ -1,4 +1,3 @@
-
 import { useState } from 'react'
 import './App.css'
 import Board from './Components/Board'
@@ -43,6 +42,10 @@ function App() {
     }
   ])
 
+  const [target, setTarget] = useState({
+    card_id: "",
+    board_id: "",
+  })
 
   //---------- Add card function ----------//
   const addCard = (title, board_id) => {
@@ -85,7 +88,6 @@ function App() {
 
   //---------- Add Board function ----------//
   const addBoard = (title) => {
-    console.log(title)
     setBoard([...board,
     {
       id: Date.now() + Math.random(),
@@ -103,12 +105,50 @@ function App() {
 
   }
 
+
+  //-----------  Hnadle Drag Start function  ---------- //
+  const handleDragEnter = (card_id, board_id) => {
+    setTarget({
+      card_id,
+      board_id,
+    })
+  }
+
+
+  //-----------  Hnadle Drag End function  ---------- //
+  const handleDragEnd = (card_id, board_id) => {
+    let s_Bindex, s_Cindex, t_Bindex, t_Cindex;
+
+    s_Bindex = board.findIndex((item) => item.id === board_id)
+    if (s_Bindex < 0) return;
+
+    s_Cindex = board[s_Bindex].cards?.findIndex((item) => item.id === card_id)
+    if (s_Cindex < 0) return;
+
+
+    t_Bindex = board.findIndex((item) => item.id === target.board_id)
+    if (t_Bindex < 0) return;
+
+    t_Cindex = board[t_Bindex].cards.findIndex((item) => item.id === target.card_id)
+    if (t_Cindex < 0) return;
+
+    const tempBoard = [...board];
+    const tempCard = tempBoard[s_Bindex].cards[s_Cindex];
+
+    tempBoard[s_Bindex].cards.splice(s_Cindex, 1);
+    tempBoard[t_Bindex].cards.splice(t_Cindex, 0, tempCard);
+
+    setBoard(tempBoard)
+  }
+
+
+
   return (
     <div className='bg-zinc-600   min-h-screen h-full w-screen'>
 
       {/* Navbar */}
       <div className='w-full  bg-zinc-800 '>
-        <div className='text-2xl uppercase p-5 text-amber-50'>
+        <div className='text-2xl uppercase p-4 text-amber-50'>
           Kanban
         </div>
       </div>
@@ -124,6 +164,8 @@ function App() {
                 removeBoard={removeBoard}
                 addCard={addCard}
                 removeCard={removeCard}
+                handleDragEnd={handleDragEnd}
+                handleDragEnter={handleDragEnter}
               />
             })
 
