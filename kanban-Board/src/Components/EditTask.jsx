@@ -41,7 +41,7 @@ function EditTask(props) {
                     : (<p
                         onClick={() => setShowEdit(true)}
 
-                        className='py-3 max-w-24 cursor-pointer'>{props.text || "Add Task"}
+                        className='py-3 px-2 max-w-24 cursor-pointer'>{props.text || "Add Task"}
                     </p>)
             }
         </div>

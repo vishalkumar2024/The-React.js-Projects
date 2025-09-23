@@ -11,6 +11,7 @@
    border-radius: 30px;
    border: 1px solid #dbd5d5;
    background-color: #fff;
+   /* background: #0000006c */
 
 }
 
@@ -18,11 +19,9 @@
    background-color: #a9a8a8;
 }
 
-/* .add-Board {
-   background: #fff;
-   border-radius: 55px;
-
-} */
+.model-container{
+   background: rgba(0, 0, 0, 0.507)
+}
 
 @theme inline {
    --radius-sm: calc(var(--radius) - 4px);
