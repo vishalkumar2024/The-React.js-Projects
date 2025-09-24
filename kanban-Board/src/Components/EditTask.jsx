@@ -4,7 +4,7 @@ import { X } from "react-feather";
 
 function EditTask(props) {
     const [showEdit, setShowEdit] = useState(false);
-    const [inputvalue, setInputvalue] = useState("");
+    const [inputvalue, setInputvalue] = useState(props.default || "");
     return (
         <div className={`bg-white flex justify-center h-fit rounded ${!showEdit ? "hover:bg-gray-300 transition duration-200" : ""
             }`}>
