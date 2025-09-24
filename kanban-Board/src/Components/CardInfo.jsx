@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Model from './Model'
 import { Calendar, CheckSquare, Delete, List, Tag, Trash, Type } from 'react-feather'
 import EditTask from './EditTask'
+import Chip from './Chip'
 
 
 function CardInfo(props) {
@@ -16,19 +17,36 @@ function CardInfo(props) {
     ]
     const [activeColor, setActiveColor] = useState("");
 
+    // const { title, labels, date, description, tasks } = props.card
+    const [value, setValue] = useState({ ...props.card })
+
+    const calculateProgress = () => {
+        if (value.tasks?.length == 0) return "0";
+        const complete = value.tasks.filter(item => item.completed)?.length;
+        const final = ((complete / value.tasks?.length) * 100)
+        return final;
+    }
+
+
+    useEffect(() => {
+        props.updateCard(props.card.id, props.boardId, value);
+    }, [value])
+
     return (
         <Model onClose={() => props.onClose()}>
             <div className='bg-neutral-100 w-[600px] flex flex-col gap-7  p-7 '>
                 <div className='flex flex-col  gap-3'>
                     <div className='font-semibold  flex items-center text-[1.3rem]   gap-2'>
                         <Type />
-                        Title
+                        {value.title}
                     </div>
                     <div className='w-[50%]  bg-blue'>
                         <EditTask
-                            text="Hello there"
+                            text={value.title}
+                            default={value.title}
                             placeholder="Enter Title"
                             buttonText="Set Title"
+                            onSubmit={(Value)=>setValue({...value,title:Value})}
                         />
                     </div>
                 </div>
@@ -40,7 +58,8 @@ function CardInfo(props) {
                     </div>
                     <div className='w-[50%]  bg-blue'>
                         <EditTask
-                            text=" Description"
+                            text={value.description}
+                            default={value.description}
                             placeholder="Enter Description"
                             buttonText="Set Description"
                         />
@@ -53,7 +72,7 @@ function CardInfo(props) {
                         Date
                     </div>
                     <div className='w-[50%] border-2 border-gray-500 rounded p-2 text-[1.1rem] outline-none'>
-                        <input type="date" className='outline-none cursor-pointer' />
+                        <input type="date" default={value.date ? new Date(date).toISOString().substr(0, 10) : ""} className='outline-none cursor-pointer' />
                     </div>
                 </div>
 
@@ -62,6 +81,19 @@ function CardInfo(props) {
                     <div className='font-semibold  flex items-center text-[1.3rem]   gap-3'>
                         <Tag />
                         Labels
+                    </div>
+                    <div className='flex gap-3 flex-wrap my-[5px]'>
+                        {
+                            value.labels.map((item, index) => (
+                                <Chip
+                                    key={index}
+                                    color={item.color}
+                                    text={item.text}
+                                    close
+                                    onClose={() => console.log("chips")}
+                                />
+                            ))
+                        }
                     </div>
                     <div className='h-5  flex items-center gap-3.5 list-none mb-2'>
                         {
@@ -92,29 +124,34 @@ function CardInfo(props) {
                     </div>
 
                     <div className='h-3 rounded-2xl w-full border border-[#ccc]'>
-                        <div className='h-3 rounded-2xl bg-[#1379ec] w-[30%] active:bg-lime-400' />
+                        <div className={`h-3 rounded-2xl bg-[#1379ec] `}
+                            style={{ width: calculateProgress() + "%" }}
+                        />
                     </div>
 
                     <div className='flex flex-col gap-7 mt-3'>
-                        <div className='flex items-center justify-between gap-3'>
-                            <div className='flex   items-center gap-3'>
-                                <input type="checkbox" className='size-[16px] cursor-pointer'/>
-                                <p className='font-semibold'> Task 1</p>
-                            </div>
-                            <Trash className='cursor-pointer'/>
-                        </div>
-                        <div className='flex gap-3 items-center justify-between '>
-                            <div className='flex gap-3'>
-                                <input type="checkbox" className='size-[16px] cursor-pointer' />
-                                <p className='font-semibold'> Task 2</p>
-                            </div>
-                            <Trash className='cursor-pointer' />
-                        </div>
+                        {
+                            value.tasks.map((item, index) =>
+                                <div
+                                    className='flex items-center justify-between gap-3'
+                                    key={index}>
+                                    <div className='flex   items-center gap-3'>
+                                        <input
+                                            type="checkbox"
+                                            default={item.completed}
+                                            className='size-[16px] cursor-pointer'
+                                        />
+                                        <p className='font-semibold'>{item.text}</p>
+                                    </div>
+                                    <Trash className='cursor-pointer' />
+                                </div>
+                            )
+                        }
                     </div>
 
                     <div className='w-[50%] rounded  text-[1.1rem] outline-none'>
                         <EditTask
-                            text="Tasks"
+                            text="Add Tasks"
                             placeholder="Enter Tasks"
                             buttonText="Set Tasks"
                         />

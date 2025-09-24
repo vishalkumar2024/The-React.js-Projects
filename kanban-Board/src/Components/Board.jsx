@@ -38,6 +38,7 @@ function Board(props) {
                             boardId={props.BoardItem?.id}
                             handleDragEnd={props.handleDragEnd}
                             handleDragEnter={props.handleDragEnter}
+                            updateCard={props.updateCard}
                         />
                     })
 

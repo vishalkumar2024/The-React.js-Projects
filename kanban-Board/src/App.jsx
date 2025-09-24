@@ -106,7 +106,7 @@ function App() {
   }
 
 
-  //-----------  Hnadle Drag Start function  ---------- //
+  //-----------  Handle Drag Start function  ---------- //
   const handleDragEnter = (card_id, board_id) => {
     setTarget({
       card_id,
@@ -115,7 +115,7 @@ function App() {
   }
 
 
-  //-----------  Hnadle Drag End function  ---------- //
+  //-----------  Handle Drag End function  ---------- //
   const handleDragEnd = (card_id, board_id) => {
     let s_Bindex, s_Cindex, t_Bindex, t_Cindex;
 
@@ -142,6 +142,21 @@ function App() {
   }
 
 
+  const updateCard = (card_id, board_id, card) => {
+    const bIndex = board.findIndex(item => item.id === board_id)
+    if (bIndex < 0) return;
+    else {
+
+      const cIndex = board[bIndex].cards.findIndex(item => item.id === card_id)
+      if (cIndex < 0) return;
+      else {
+        const tempBoard = [...board];
+        tempBoard[bIndex].cards[cIndex] = card;
+        setBoard(tempBoard);
+      }
+    }
+  }
+
 
   return (
     <div className='bg-zinc-600   min-h-screen h-full w-screen'>
@@ -166,6 +181,7 @@ function App() {
                 removeCard={removeCard}
                 handleDragEnd={handleDragEnd}
                 handleDragEnter={handleDragEnter}
+                updateCard={updateCard}
               />
             })
 
@@ -191,4 +207,3 @@ export default App
 //    • 3rd+Verified • 3rd+
 // Software Developer at GeMTech PARAS | Full Stack Developer | Competitive Programmer | AI & Tech EnthusiastSoftware Developer at GeMTech PARAS | Full Stack Developer | Competitive Programmer | AI & Tech Enthusiast
 // 1d •  1 day ago • Visible to anyone on or off LinkedIn
- 

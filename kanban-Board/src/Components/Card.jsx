@@ -15,11 +15,12 @@ import CardInfo from './CardInfo';
 
 function Card(props) {
     const [showModel, setShowModel] = useState(false);
+    
 
     return (
         <>
             {
-                showModel && <CardInfo onClose={() => setShowModel(false)} />
+                showModel && <CardInfo updateCard={props.updateCard} boardId={props.boardId}  card={props.CardItem} onClose={() => setShowModel(false)} />
             }
             <div className='bg-white mb-3.5 p-4 rounded-2xl'
                 draggable
@@ -32,7 +33,7 @@ function Card(props) {
                     <div>
                         {
                             props.CardItem.labels?.map((item, index) => {
-                                return <Chip key={index} labelItem={item} />
+                                return <Chip key={index} text={item.text} color={item.color}   />
                             })
                         }
                     </div>
