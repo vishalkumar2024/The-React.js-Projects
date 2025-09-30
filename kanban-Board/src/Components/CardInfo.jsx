@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Model from './Model'
-import { Calendar, CheckSquare, Delete, List, Tag, Trash, Type } from 'react-feather'
+import { Calendar, CheckSquare, List, Tag, Trash, Type } from 'react-feather'
 import EditTask from './EditTask'
 import Chip from './Chip'
 
@@ -29,8 +29,36 @@ function CardInfo(props) {
 
 
     useEffect(() => {
+        if (value.title === props.card?.title &&
+            value.date === props.card?.date &&
+            value.description === props.card.description &&
+            value.labels?.length === props.card?.labels?.length &&
+            value?.tasks === props?.card?.tasks.length) return
+
         props.updateCard(props.card.id, props.boardId, value);
     }, [value])
+
+    const addLabel = (Value, color) => {
+        console.log("added label");
+        const index = value.labels?.findIndex(item => item.text === Value);
+        if (index > -1) return;
+
+        const label = {
+            text: Value,
+            color,
+        }
+        setValue({ ...value, labels: [...value.labels, label] })
+        setActiveColor("");
+    }
+
+    const removeLabel = (text) => {
+        console.log("Removes")
+        const index = value.labels?.findIndex((item) => item.text === text);
+        if (index < 0) return;
+
+        const tempLabel = value.labels.splice(index, 1);
+        setValue({ ...value, labels: tempLabel })
+    }
 
     return (
         <Model onClose={() => props.onClose()}>
@@ -46,7 +74,7 @@ function CardInfo(props) {
                             default={value.title}
                             placeholder="Enter Title"
                             buttonText="Set Title"
-                            onSubmit={(Value)=>setValue({...value,title:Value})}
+                            onSubmit={(Value) => setValue({ ...value, title: Value })}
                         />
                     </div>
                 </div>
@@ -62,6 +90,8 @@ function CardInfo(props) {
                             default={value.description}
                             placeholder="Enter Description"
                             buttonText="Set Description"
+                            onSubmit={(Value) => setValue({ ...value, description: Value })}
+
                         />
                     </div>
                 </div>
@@ -72,7 +102,13 @@ function CardInfo(props) {
                         Date
                     </div>
                     <div className='w-[50%] border-2 border-gray-500 rounded p-2 text-[1.1rem] outline-none'>
-                        <input type="date" default={value.date ? new Date(date).toISOString().substr(0, 10) : ""} className='outline-none cursor-pointer' />
+                        <input
+                            type="date"
+                            default={value.date ? new Date(date).toISOString().substr(0, 10) : ""}
+                            onSubmit={(event) => setValue({ ...value, date: event.target.value })}
+
+                            className='outline-none cursor-pointer'
+                        />
                     </div>
                 </div>
 
@@ -90,7 +126,7 @@ function CardInfo(props) {
                                     color={item.color}
                                     text={item.text}
                                     close
-                                    onClose={() => console.log("chips")}
+                                    onClose={() => removeLabel(item)}
                                 />
                             ))
                         }
@@ -112,6 +148,7 @@ function CardInfo(props) {
                             text="Labels"
                             placeholder="Enter Label"
                             buttonText="Set Label"
+                            onSubmit={() => addLabel(value, activeColor)}
                         />
                     </div>
                 </div>
