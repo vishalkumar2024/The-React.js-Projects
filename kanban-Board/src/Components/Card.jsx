@@ -15,14 +15,14 @@ import CardInfo from './CardInfo';
 
 function Card(props) {
     const [showModel, setShowModel] = useState(false);
-    
+
     // {console.log(CardItem)}
 
     return (
         <>
             {
-                showModel && <CardInfo updateCard={props.updateCard} boardId={props.boardId}  card={props.CardItem} onClose={() => setShowModel(false)} />
-                
+                showModel && <CardInfo updateCard={props.updateCard} boardId={props.boardId} card={props.CardItem} onClose={() => setShowModel(false)} />
+
             }
             <div className='bg-white mb-3.5 p-4 rounded-2xl'
                 draggable
@@ -35,7 +35,7 @@ function Card(props) {
                     <div>
                         {
                             props.CardItem.labels?.map((item, index) => {
-                                return <Chip key={index} text={item.text} color={item.color}   />
+                                return <Chip key={index} text={item.text} color={item.color} />
                             })
                         }
                     </div>
@@ -59,10 +59,15 @@ function Card(props) {
                             <span> {props.CardItem?.date} </span>
                         </p>
                     }
-                    <div className='flex gap-2'>
-                        <CheckSquare className='size-[20px]' />
-                        <p>1/2</p>
-                    </div>
+                    {
+                        props.CardItem.tasks.length > 0 && (
+                            <div className='flex gap-2'>
+                                <CheckSquare className='size-[20px]' />
+                                <p>
+                                    {props.CardItem?.tasks?.filter((item) => item.completed).length}/{props.CardItem.tasks.length}
+                                </p>
+                            </div>
+                        )}
                 </div>
             </div>
         </>
