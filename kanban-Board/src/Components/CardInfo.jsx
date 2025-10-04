@@ -38,25 +38,20 @@ function CardInfo(props) {
         props.updateCard(props.card.id, props.boardId, value);
     }, [value])
 
-    const addLabel = (Value, color) => {
-        console.log("added label");
-        const index = value.labels?.findIndex(item => item.text === Value);
+    const addLabel = (labelText, color) => {
+        const index = value.labels?.findIndex(item => item.text === labelText);
         if (index > -1) return;
 
         const label = {
-            text: Value,
+            text: labelText,
             color,
         }
         setValue({ ...value, labels: [...value.labels, label] })
         setActiveColor("");
     }
 
-    const removeLabel = (text) => {
-        console.log("Removes")
-        const index = value.labels?.findIndex((item) => item.text === text);
-        if (index < 0) return;
-
-        const tempLabel = value.labels.splice(index, 1);
+    const removeLabel = (textValue) => {
+        const tempLabel = value.labels?.filter((item) => item.text !== textValue);
         setValue({ ...value, labels: tempLabel })
     }
 
@@ -104,8 +99,8 @@ function CardInfo(props) {
                     <div className='w-[50%] border-2 border-gray-500 rounded p-2 text-[1.1rem] outline-none'>
                         <input
                             type="date"
-                            default={value.date ? new Date(date).toISOString().substr(0, 10) : ""}
-                            onSubmit={(event) => setValue({ ...value, date: event.target.value })}
+                            default={value.date ? new Date(value.date).toISOString().substr(0, 10) : ""}
+                            onChange={(event) => setValue({ ...value, date: event.target.value })}
 
                             className='outline-none cursor-pointer'
                         />
@@ -126,7 +121,7 @@ function CardInfo(props) {
                                     color={item.color}
                                     text={item.text}
                                     close
-                                    onClose={() => removeLabel(item)}
+                                    onClose={() => removeLabel(item.text)}
                                 />
                             ))
                         }
@@ -148,7 +143,7 @@ function CardInfo(props) {
                             text="Labels"
                             placeholder="Enter Label"
                             buttonText="Set Label"
-                            onSubmit={() => addLabel(value, activeColor)}
+                            onSubmit={(PresentText) => addLabel(PresentText, activeColor)}
                         />
                     </div>
                 </div>

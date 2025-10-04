@@ -16,11 +16,13 @@ import CardInfo from './CardInfo';
 function Card(props) {
     const [showModel, setShowModel] = useState(false);
     
+    // {console.log(CardItem)}
 
     return (
         <>
             {
                 showModel && <CardInfo updateCard={props.updateCard} boardId={props.boardId}  card={props.CardItem} onClose={() => setShowModel(false)} />
+                
             }
             <div className='bg-white mb-3.5 p-4 rounded-2xl'
                 draggable

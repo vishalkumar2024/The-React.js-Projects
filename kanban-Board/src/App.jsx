@@ -183,7 +183,7 @@ function App() {
                 handleDragEnter={handleDragEnter}
                 updateCard={updateCard}
               />
-            })
+            })  
 
           }
           <div className='min-w-[320px] w-[320px] h-fit '>
@@ -201,9 +201,3 @@ function App() {
 }
 
 export default App
-
-
-// Deepanker TiwariDeepanker Tiwari
-//    • 3rd+Verified • 3rd+
-// Software Developer at GeMTech PARAS | Full Stack Developer | Competitive Programmer | AI & Tech EnthusiastSoftware Developer at GeMTech PARAS | Full Stack Developer | Competitive Programmer | AI & Tech Enthusiast
-// 1d •  1 day ago • Visible to anyone on or off LinkedIn

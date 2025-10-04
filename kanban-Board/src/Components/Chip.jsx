@@ -6,7 +6,7 @@ function Chip(props) {
     return (
         <div style={{ backgroundColor: props.color }} className='w-fit flex items-center gap-2.5 py-1 px-5 bg-gray-400 rounded-2xl ' >
             {props.text}
-            {props.close && (<X onClick={() => props.onClose ? props.onClose() : ""} />)}
+            {props.close && (<X className='cursor-pointer' onClick={() => props.onClose ? props.onClose() : ""} />)}
         </div>
     )
 }
