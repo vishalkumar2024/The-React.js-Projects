@@ -65,25 +65,22 @@ function CardInfo(props) {
             completed: false,
         }
 
-        setValue({...value,tasks:[...value.tasks,task]})
+        setValue({ ...value, tasks: [...value.tasks, task] })
     }
 
 
     const removeTask = (id) => {
-        const index= value.tasks?.findIndex((item)=>item.id===id)
-        if(index<0) return;
-
-        const tempTask=value.tasks?.splice(index,1);
-        setValue({...value,tasks:tempTask})
+        const tempLabel = value.tasks?.filter((item) => item.id !== id);
+        setValue({ ...value, tasks: tempLabel })
     }
 
-    const updateTask=(id,completed)=>{
-        const index= value.tasks?.findIndex((item)=>item.id===id)
-        if(index<0) return;
+    const updateTask = (id, completed) => {
+        const index = value.tasks?.findIndex((item) => item.id === id)
+        if (index < 0) return;
 
-        const tempTask=[...value.tasks];
-        tempTask[index].completed=completed;
-        setValue({...value,tasks:tempTask});
+        const tempTask = [...value.tasks];
+        tempTask[index].completed = completed;
+        setValue({ ...value, tasks: tempTask });
     }
 
     return (
@@ -188,24 +185,24 @@ function CardInfo(props) {
 
                     <div className='h-3 rounded-2xl w-full border border-[#ccc]'>
                         <div className={`h-3 rounded-2xl bg-[#1379ec] `}
-                            style={{ width: calculateProgress() + "%",backgroundColor:calculateProgress()=="100"?"limegreen":"" }}
+                            style={{ width: calculateProgress() + "%", backgroundColor: calculateProgress() == "100" ? "limegreen" : "" }}
                         />
                     </div>
 
                     <div className='flex flex-col gap-7 mt-3'>
                         {
                             value.tasks.map((item, index) =>
-                                <div className='flex items-center justify-gap-3' key={index}>
+                                <div className='flex items-center justify-between  gap-3' key={index}>
                                     <div className='flex   items-center gap-3'>
                                         <input
                                             type="checkbox"
                                             defaultChecked={item.completed}
                                             className='size-[16px] cursor-pointer'
-                                            onChange={(event)=>updateTask(item.id,event.target.checked)}
+                                            onChange={(event) => updateTask(item.id, event.target.checked)}
                                         />
                                         <p className='font-semibold'>{item.text}</p>
                                     </div>
-                                    <Trash className='cursor-pointer' onClick={()=>removeTask(item.id)} />
+                                    <Trash className='cursor-pointer' onClick={() => removeTask(item.id)} />
                                 </div>
                             )
                         }
@@ -216,7 +213,7 @@ function CardInfo(props) {
                             text="Add Tasks"
                             placeholder="Enter Tasks"
                             buttonText="Set Tasks"
-                            onSubmit={(value)=>addTask(value)}
+                            onSubmit={(value) => addTask(value)}
                         />
                     </div>
                 </div>

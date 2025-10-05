@@ -13,10 +13,8 @@ import {
 } from "../Components/ui/dropdown-menu"
 import CardInfo from './CardInfo';
 
-function Card(props) {
+function Card(props) { 
     const [showModel, setShowModel] = useState(false);
-
-    // {console.log(CardItem)}
 
     return (
         <>
@@ -31,11 +29,11 @@ function Card(props) {
                 onClick={() => setShowModel(true)}
             >
 
-                <div className='flex justify-between pb-4'>
-                    <div>
+                <div className='flex justify-between  pb-4'>
+                    <div className=''>
                         {
                             props.CardItem.labels?.map((item, index) => {
-                                return <Chip key={index} text={item.text} color={item.color} />
+                                return <Chip key={index} text={item.text} color={item.color} className="py-4" />
                             })
                         }
                     </div>

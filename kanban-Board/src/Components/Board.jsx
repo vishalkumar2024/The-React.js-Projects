@@ -2,7 +2,6 @@ import React from 'react'
 import { MoreHorizontal } from "react-feather";
 import Card from './Card';
 import EditTask from './EditTask';
-// import { Button } from '../Components/ui/button'
 
 import {
     DropdownMenu,
@@ -13,8 +12,8 @@ import {
 
 function Board(props) {
     return (
-        <div className=' w-80 h-[480px] pb-4 bg-white'>
-            <div className='flex  justify-between p-5'>
+        <div className=' w-80 h-[470px] pb-4 bg-white'>
+            <div className='flex  justify-between px-5 pt-[16px] pb-[10px]'>
                 <div className='flex gap-2'>
                     <p className='text-[18px] font-bold'> {props.BoardItem?.title}</p>
                     <span className='text-[18px] text-gray-400 font-bold'>{props.BoardItem.cards.length}</span>
@@ -58,4 +57,4 @@ function Board(props) {
     )
 }
 
-export default Board
+export default Board 
