@@ -6,7 +6,7 @@ function EditTask(props) {
     const [showEdit, setShowEdit] = useState(false);
     const [inputvalue, setInputvalue] = useState(props.default || "");
     return (
-        <div className={`bg-white z-50 flex justify-center h-fit rounded ${!showEdit ? "hover:bg-fuchsia-300 transition duration-200" : ""
+        <div className={`${props.theme=="light"?"bg-white":"bg-zinc-500"} z-50 flex justify-center h-fit rounded ${!showEdit ? " transition duration-200" : ""
             }`}>
 
             {
@@ -41,7 +41,7 @@ function EditTask(props) {
                     : (<p
                         onClick={() => setShowEdit(true)}
 
-                        className='py-[10px] px-2 max-w-24 cursor-pointer'>{props.text || "Add Task"}
+                        className={`py-[10px] px-2 max-w-24 cursor-pointer ${props.theme=="light"?" text-black":" text-zinc-200"} `}>{props.text || "Add Task"}
                     </p>)
             }
         </div>

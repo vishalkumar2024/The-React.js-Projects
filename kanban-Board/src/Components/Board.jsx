@@ -12,22 +12,22 @@ import {
 
 function Board(props) {
     return (
-        <div className=' w-80 h-[470px] pb-4 rounded bg-white'>
+        <div className={` w-80 h-[470px] pb-4 rounded  ${props.theme=="light"?"bg-white":"bg-zinc-700"} `}>
             <div className='flex  justify-between px-5 pt-[16px] pb-[10px]'>
                 <div className='flex gap-2'>
-                    <p className='text-[18px] font-bold'> {props.BoardItem?.title}</p>
-                    <span className='text-[18px] text-gray-400 font-bold'>{props.BoardItem.cards.length}</span>
+                    <p className={`text-[18px] font-extrabold ${props.theme=="light"?"text-cyan-900":"text-cyan-100"} font-bold`}> {props.BoardItem?.title}</p>
+                    <span className={`text-[18px] font-bold  ${props.theme=="light"?"text-gray-500":"text-gray-300"} `}>{props.BoardItem.cards.length}</span>
                 </div>
 
                 <DropdownMenu>
-                    <DropdownMenuTrigger className="outline-none cursor-pointer"> <MoreHorizontal /></DropdownMenuTrigger>
+                    <DropdownMenuTrigger className={`outline-none cursor-pointer ${props.theme=="light"?"text-black":"text-white"}`}> <MoreHorizontal /></DropdownMenuTrigger>
                     <DropdownMenuContent className="bg-white hover:bg-zinc-100 cursor-pointer ">
                         <DropdownMenuLabel onClick={() => props.removeBoard(props.BoardItem?.id)}>Delete Board</DropdownMenuLabel>
                     </DropdownMenuContent>
                 </DropdownMenu>
             </div>
 
-            <div className='custom-scroll bg-blue-300 max-h-[400px] mx-3 p-5 overflow-y-scroll'>
+            <div className={`custom-scroll ${props.theme=="light"?"bg-blue-400":"bg-cyan-800"} max-h-[400px] mx-3 p-5 overflow-y-scroll`}>
                 {
                     props.BoardItem.cards.map((item) => {
                         return <Card
@@ -38,6 +38,7 @@ function Board(props) {
                             handleDragEnd={props.handleDragEnd}
                             handleDragEnter={props.handleDragEnter}
                             updateCard={props.updateCard}
+                            theme={props.theme}
                         />
                     })
 
@@ -49,6 +50,7 @@ function Board(props) {
                         text={"Add card"}
                         placeholder={"Enter Item"}
                         onSubmit={(value) => props.addCard(value, props.BoardItem?.id)}
+                        theme={props.theme}
                     />
                 </div>
 

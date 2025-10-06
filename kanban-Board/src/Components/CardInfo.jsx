@@ -11,9 +11,9 @@ function CardInfo(props) {
         "#4fcc25",
         "#1ebffa",
         "#8da377",
-        "#9975bd",
+        "#e9a13c",
         "#cf61a1",
-        "#240959",
+        "#935efc"
     ]
     const [activeColor, setActiveColor] = useState("");
 

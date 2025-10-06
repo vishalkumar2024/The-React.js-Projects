@@ -145,6 +145,9 @@ function App() {
   }
 
 
+  const [theme, setTheme] = useState("light");
+
+
   const updateCard = (card_id, board_id, card) => {
     const bIndex = board.findIndex(item => item.id === board_id)
     if (bIndex < 0) return;
@@ -162,20 +165,33 @@ function App() {
 
 
   return (
-    <div className=' min-h-screen h-full w-screen relative'>
-      
-        <Iridescence
-        className="absolute h-full w-full inset-0 -z-50 pointer-events-none"
-          color={[0.8, 1, 1]}
-          mouseReact={false}
-          amplitude={0.1}
-          speed={0.19}
-        />
+    <div className={` min-h-screen h-full w-screen relative`}>
+      {
+        theme == "light" ? (
+
+          <Iridescence
+            className="absolute h-full w-full inset-0 -z-50 pointer-events-none"
+            color={[0.8, 1, 1]}
+            mouseReact={false}
+            amplitude={0.1}
+            speed={0.19}
+          />
+        ) : (
+           <Iridescence
+            className="absolute h-full w-full inset-0 -z-50 pointer-events-none"
+            color={[0.1, 0.2, 0.2]}
+            mouseReact={false}
+            amplitude={0.1}
+            speed={0.19}
+          />
+        )
+      }
+
 
 
       {/* Navbar */}
-      <div className=' py-5' >
-         <Navbar />
+      <div className=' pt-5 pb-8' >
+        <Navbar theme={theme} setTheme={setTheme} />
       </div>
 
 
@@ -185,6 +201,7 @@ function App() {
           {
             board.map((item) => {
               return <Board
+                theme={theme} setTheme={setTheme}
                 key={item.id}
                 BoardItem={item}
                 removeBoard={removeBoard}
@@ -203,6 +220,7 @@ function App() {
               padding={"100px"} text="Add Card"
               placeholder="Enter Item"
               onSubmit={(value) => addBoard(value)}
+              theme={theme}
             />
           </div>
         </div>
