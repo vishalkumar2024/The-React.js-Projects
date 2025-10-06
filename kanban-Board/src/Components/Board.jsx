@@ -12,7 +12,7 @@ import {
 
 function Board(props) {
     return (
-        <div className=' w-80 h-[470px] pb-4 bg-white'>
+        <div className=' w-80 h-[470px] pb-4 rounded bg-white'>
             <div className='flex  justify-between px-5 pt-[16px] pb-[10px]'>
                 <div className='flex gap-2'>
                     <p className='text-[18px] font-bold'> {props.BoardItem?.title}</p>
@@ -27,7 +27,7 @@ function Board(props) {
                 </DropdownMenu>
             </div>
 
-            <div className='custom-scroll bg-gray-200 max-h-[400px] mx-3 p-5 overflow-y-scroll'>
+            <div className='custom-scroll bg-blue-300 max-h-[400px] mx-3 p-5 overflow-y-scroll'>
                 {
                     props.BoardItem.cards.map((item) => {
                         return <Card

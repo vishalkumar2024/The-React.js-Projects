@@ -2,6 +2,9 @@ import { useState } from 'react'
 import './App.css'
 import Board from './Components/Board'
 import EditTask from './Components/EditTask'
+import Shuffle from './ReactBit/Shuffle';
+import Iridescence from './ReactBit/Iridescence';
+import Navbar from './Components/Navbar';
 
 function App() {
   const [board, setBoard] = useState([
@@ -159,18 +162,26 @@ function App() {
 
 
   return (
-    <div className='bg-zinc-600   min-h-screen h-full w-screen'>
+    <div className=' min-h-screen h-full w-screen relative'>
+      
+        <Iridescence
+        className="absolute h-full w-full inset-0 -z-50 pointer-events-none"
+          color={[0.8, 1, 1]}
+          mouseReact={false}
+          amplitude={0.1}
+          speed={0.19}
+        />
+
 
       {/* Navbar */}
-      <div className='w-full  bg-zinc-800 '>
-        <div className='text-2xl uppercase p-4 text-amber-50'>
-          Kanban
-        </div>
+      <div className=' py-5' >
+         <Navbar />
       </div>
+
 
       {/* board */}
       <div className=''>
-        <div className='px-10 py-5  flex gap-8 flex-wrap'>
+        <div className='px-10  pb-4  flex gap-8 flex-wrap'>
           {
             board.map((item) => {
               return <Board
@@ -183,10 +194,10 @@ function App() {
                 handleDragEnter={handleDragEnter}
                 updateCard={updateCard}
               />
-            })  
+            })
 
           }
-          <div className='min-w-[320px] w-[320px] h-fit '>
+          <div className='min-w-[320px] w-[320px] h-fit pb-4'>
             <EditTask
               displayClass="add-Board"
               padding={"100px"} text="Add Card"

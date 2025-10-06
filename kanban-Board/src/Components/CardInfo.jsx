@@ -85,7 +85,7 @@ function CardInfo(props) {
 
     return (
         <Model onClose={() => props.onClose()}>
-            <div className='bg-neutral-100 w-[600px] flex flex-col gap-7  p-7 '>
+            <div className='bg-neutral-200 w-[600px] z-50 flex flex-col gap-7  p-7 '>
                 <div className='flex flex-col  gap-3'>
                     <div className='font-semibold  flex items-center text-[1.3rem]   gap-2'>
                         <Type />

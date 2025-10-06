@@ -3,7 +3,7 @@ import React from 'react'
 function Model(props) {
   return (
     <div
-      className='fixed top-0 left-0 h-[100vh] w-full flex items-center justify-center model-container'
+      className='fixed z-50 top-0 left-0 h-[100vh] w-full flex items-center justify-center model-container'
       onClick={() => props.onClose ? props.onClose() : ""}
     >
       <div

@@ -11,17 +11,32 @@
    border-radius: 30px;
    border: 1px solid #dbd5d5;
    background-color: #fff;
-   /* background: #0000006c */
+
 
 }
 
 .custom-scroll::-webkit-scrollbar-thumb:hover {
    background-color: #a9a8a8;
+   
 }
 
-.model-container{
+.model-container {
    background: rgba(0, 0, 0, 0.607)
+   
 }
+
+.iridescent-glass {
+   background: linear-gradient(135deg,
+         rgba(255, 255, 255, 0.2) 0%,
+         rgba(255, 255, 255, 0.1) 100%);
+   backdrop-filter: blur(40px);
+   -webkit-backdrop-filter: blur(20px);
+}
+
+
+
+
+
 
 @theme inline {
    --radius-sm: calc(var(--radius) - 4px);
@@ -131,10 +146,11 @@
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
+   * {
+      @apply border-border outline-ring/50;
    }
-  body {
-    @apply bg-background text-foreground;
+
+   body {
+      @apply bg-background text-foreground;
    }
 }
