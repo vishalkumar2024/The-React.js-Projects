@@ -85,13 +85,13 @@ function CardInfo(props) {
 
     return (
         <Model onClose={() => props.onClose()}>
-            <div className='bg-neutral-200 w-[600px] z-50 flex flex-col gap-7  p-7 '>
+            <div className='bg-neutral-200 w-[100%] z-50 flex flex-col gap-7  p-7 '>
                 <div className='flex flex-col  gap-3'>
                     <div className='font-semibold  flex items-center text-[1.3rem]   gap-2'>
                         <Type />
                         {value.title}
                     </div>
-                    <div className='w-[50%]  bg-blue'>
+                    <div className='w-[50%] max-sm:w-[70%] editTask-resize bg-blue'>
                         <EditTask
                             text={value.title}
                             default={value.title}
@@ -107,7 +107,7 @@ function CardInfo(props) {
                         <List />
                         Description
                     </div>
-                    <div className='w-[50%]  bg-blue'>
+                    <div className='w-[50%] max-sm:w-[70%] editTask-resize bg-blue'>
                         <EditTask
                             text={value.description}
                             default={value.description}
@@ -124,7 +124,7 @@ function CardInfo(props) {
                         <Calendar />
                         Date
                     </div>
-                    <div className='w-[50%] border-2 border-gray-500 rounded p-2 text-[1.1rem] outline-none'>
+                    <div className='w-[50%] max-md:w-[60%] calender-resize border-2 border-gray-500 rounded p-2 text-[1.1rem] outline-none'>
                         <input
                             type="date"
                             default={value.date ? new Date(value.date).toISOString().substr(0, 10) : ""}
@@ -161,12 +161,12 @@ function CardInfo(props) {
                                     key={index}
                                     style={{ background: item }}
                                     onClick={() => { setActiveColor(item) }}
-                                    className={' size-[20px] rounded-full border-3 border-transparent active:border-amber-500 transition-all duration-400 cursor-pointer'}
+                                    className={'colorBall-resize h-[20px] w-[20px] rounded-full border-3 border-transparent active:border-amber-500 transition-all duration-400 cursor-pointer'}
                                 ></li>
                             })
                         }
                     </div>
-                    <div className='w-[50%] rounded  text-[1.1rem] outline-none'>
+                    <div className='w-[50%] max-sm:w-[70%] editTask-resize rounded  text-[1.1rem] outline-none'>
                         <EditTask
                             text="Labels"
                             placeholder="Enter Label"
@@ -208,7 +208,7 @@ function CardInfo(props) {
                         }
                     </div>
 
-                    <div className='w-[50%] rounded  text-[1.1rem] outline-none'>
+                    <div className='w-[50%] max-sm:w-[70%] editTask-resize rounded  text-[1.1rem] outline-none'>
                         <EditTask
                             text="Add Tasks"
                             placeholder="Enter Tasks"

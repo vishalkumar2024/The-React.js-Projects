@@ -5,8 +5,11 @@ import { X } from "react-feather";
 function EditTask(props) {
     const [showEdit, setShowEdit] = useState(false);
     const [inputvalue, setInputvalue] = useState(props.default || "");
+
+    
+
     return (
-        <div className={`${props.theme=="light"?"bg-white":"bg-zinc-500"} z-50 flex justify-center h-fit rounded ${!showEdit ? " transition duration-200" : ""
+        <div className={`${props.theme == "light" ? "bg-white" : "bg-zinc-500"} z-50 cursor-pointer flex justify-center h-fit   py-[10px] rounded ${!showEdit ? " transition duration-200" : ""
             }`}>
 
             {
@@ -18,7 +21,7 @@ function EditTask(props) {
                             e.preventDefault()
                             setShowEdit(false);
                             setInputvalue("");
-                            if (props.onSubmit && inputvalue.length>0) props.onSubmit(inputvalue)
+                            if (props.onSubmit && inputvalue.length > 0) props.onSubmit(inputvalue)
                         }}>
                         <input
                             className='bg-gray-300 w-[95%] mx-auto my-1.5 rounded outline-none p-1.5 border border-cyan-400'
@@ -26,7 +29,6 @@ function EditTask(props) {
                             autoFocus
                             value={inputvalue}
                             onChange={(e) => { setInputvalue(e.target.value) }}
-                            // defaultValue={props.text}
                             placeholder={props.placeholder || "Enter item"}
                         />
                         <div className='flex justify-between pb-3 px-4'>
@@ -38,11 +40,12 @@ function EditTask(props) {
                         </div>
                     </form>)
 
-                    : (<p
+                    : (<div
+                         
                         onClick={() => setShowEdit(true)}
-
-                        className={`py-[10px] px-2 max-w-24 cursor-pointer ${props.theme=="light"?" text-black":" text-zinc-200"} `}>{props.text || "Add Task"}
-                    </p>)
+                        className={` w-full h-full flex justify-center ${props.theme == "light" ? " text-black" : " text-zinc-200"} `}>
+                        <p>   {props.text || "Add Task"} </p> 
+                    </div>)
             }
         </div>
     )

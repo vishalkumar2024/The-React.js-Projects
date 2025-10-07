@@ -46,7 +46,6 @@ function Board(props) {
 
                 <div>
                     <EditTask
-                        className='bg-red-400 px-6'
                         text={"Add card"}
                         placeholder={"Enter Item"}
                         onSubmit={(value) => props.addCard(value, props.BoardItem?.id)}

@@ -10,7 +10,6 @@ function Navbar({ theme, setTheme }) {
     };
 
 
-    console.log(theme)
     return (
         <div  className=' iridescent-glass border border-transparent hover:border-zinc-100 rounded-4xl py-3 w-fit z-50 mx-auto  flex max-md:flex-col max-md:items-center max-md:gap-3 max-md:w-[90%]'>
             <div className=' uppercase py-4'>

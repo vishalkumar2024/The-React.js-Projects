@@ -7,7 +7,7 @@ function Model(props) {
       onClick={() => props.onClose ? props.onClose() : ""}
     >
       <div
-        className='bg-white rounded max-h-[95vh] overflow-auto custom-scroll'
+        className='bg-white rounded max-h-[95vh] w-[45%] max-lg:w-[55%]  max-sm:w-[70%] overflow-auto custom-scroll'
         onClick={(e) => e.stopPropagation()}
       >
         {props.children}
