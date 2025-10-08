@@ -6,7 +6,6 @@ function EditTask(props) {
     const [showEdit, setShowEdit] = useState(false);
     const [inputvalue, setInputvalue] = useState(props.default || "");
 
-    
 
     return (
         <div className={`${props.theme == "light" ? "bg-white" : "bg-zinc-500"} z-50 cursor-pointer flex justify-center h-fit   py-[10px] rounded ${!showEdit ? " transition duration-200" : ""
@@ -29,7 +28,7 @@ function EditTask(props) {
                             autoFocus
                             value={inputvalue}
                             onChange={(e) => { setInputvalue(e.target.value) }}
-                            placeholder={props.placeholder || "Enter item"}
+                            placeholder={props.placeholder || "Enter Card"}
                         />
                         <div className='flex justify-between pb-3 px-4'>
                             <button
@@ -41,10 +40,10 @@ function EditTask(props) {
                     </form>)
 
                     : (<div
-                         
+
                         onClick={() => setShowEdit(true)}
                         className={` w-full h-full flex justify-center ${props.theme == "light" ? " text-black" : " text-zinc-200"} `}>
-                        <p>   {props.text || "Add Task"} </p> 
+                        <p>   {props.text || "Add Task"} </p>
                     </div>)
             }
         </div>

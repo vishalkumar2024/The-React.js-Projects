@@ -2,45 +2,33 @@ import { useState } from 'react'
 import './App.css'
 import Board from './Components/Board'
 import EditTask from './Components/EditTask'
-import Shuffle from './ReactBit/Shuffle';
 import Iridescence from './ReactBit/Iridescence';
 import Navbar from './Components/Navbar';
 
 function App() {
   const [board, setBoard] = useState([
+
+    //First Board
     {
       id: Date.now() + Math.random() * 10,
       title: "To Do",
-      cards: [
-        {
-          id: Date.now() + Math.random() * 2,
-          title: "card1",
-          tasks: [],
-          labels: [
-            {
-              text: "Frontend",
-              color: "pink"
-            },
-          ],
-          description: "This is a frontend",
-          date: ""
+      cards: []
 
-        },
-        {
-          id: Date.now() + Math.random() * 2,
-          title: "card2",
-          tasks: [],
-          labels: [
-            {
-              text: "Backend",
-              color: "green"
-            },
-          ],
-          description: "This is a backend",
-          date: ""
+    },
 
-        }
-      ]
+    // Second Board //
+    {
+      id: Date.now() + Math.random() * 10,
+      title: "Progress",
+      cards: []
+
+    },
+
+    //Third Board
+    {
+      id: Date.now() + Math.random() * 10,
+      title: "Done",
+      cards: []
 
     }
   ])
@@ -165,7 +153,7 @@ function App() {
 
 
   return (
-    <div className={` min-h-screen h-full w-screen relative`}>
+    <div className={` min-h-screen h-full w-full relative`}>
       {
         theme == "light" ? (
 
@@ -177,12 +165,12 @@ function App() {
             speed={0.19}
           />
         ) : (
-           <Iridescence
+          <Iridescence
             className="absolute h-full w-full inset-0 -z-50 pointer-events-none"
             color={[0.1, 0.2, 0.2]}
             mouseReact={false}
             amplitude={0.1}
-            speed={0.19}
+            speed={0.4}
           />
         )
       }
@@ -195,34 +183,33 @@ function App() {
       </div>
 
 
-      {/* board */}
-      <div className=''>
-        <div className='px-10  pb-4  flex gap-8 flex-wrap'>
-          {
-            board.map((item) => {
-              return <Board
-                theme={theme} setTheme={setTheme}
-                key={item.id}
-                BoardItem={item}
-                removeBoard={removeBoard}
-                addCard={addCard}
-                removeCard={removeCard}
-                handleDragEnd={handleDragEnd}
-                handleDragEnter={handleDragEnter}
-                updateCard={updateCard}
-              />
-            })
-
-          }
-          <div className='min-w-[320px] w-[320px] h-fit pb-4'>
-            <EditTask
-              displayClass="add-Board"
-              padding={"100px"} text="Add Card"
-              placeholder="Enter Item"
-              onSubmit={(value) => addBoard(value)}
-              theme={theme}
+      {/* boards */}
+      <div className=' flex justify-center px-3 gap-12 flex-wrap pb-4'>
+        {
+          board.map((item) => {
+            return <Board
+              theme={theme} 
+              setTheme={setTheme}
+              key={item.id}
+              BoardItem={item}
+              removeBoard={removeBoard}
+              addCard={addCard}
+              removeCard={removeCard}
+              handleDragEnd={handleDragEnd}
+              handleDragEnter={handleDragEnter}
+              updateCard={updateCard}
             />
-          </div>
+          })
+
+        }
+        <div className='min-w-[320px] w-[320px] h-fit pb-4'>
+          <EditTask
+            displayClass="add-Board"
+            text="Add Board"
+            placeholder="Enter new board"
+            onSubmit={(value) => addBoard(value)}
+            theme={theme}
+          />
         </div>
       </div>
     </div>

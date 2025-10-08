@@ -11,9 +11,8 @@
    border-radius: 30px;
    border: 1px solid #dbd5d5;
    background-color: #fff;
-
-
 }
+
 
 .custom-scroll::-webkit-scrollbar-thumb:hover {
    background-color: #a9a8a8;
