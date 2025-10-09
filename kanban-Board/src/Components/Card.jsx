@@ -45,7 +45,7 @@ function Card(props) {
                     </DropdownMenu>
                 </div>
 
-                <div className={`mb-5 font-extrabold ${props.theme == "light" ? "text-black" : "text-zinc-300"}`}>
+                <div className={`mb-5 w-full font-extrabold text-wrap ${props.theme == "light" ? "text-black" : "text-zinc-300"}`}>
                     {props.CardItem?.title}
                 </div>
 
