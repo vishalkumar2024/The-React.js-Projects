@@ -33,6 +33,8 @@ function App() {
     }
   ])
 
+  const [addboard, setAddboard] = useState(false)
+
   const [target, setTarget] = useState({
     card_id: "",
     board_id: "",
@@ -153,7 +155,7 @@ function App() {
 
 
   return (
-    <div className={` min-h-screen h-full w-full relative`}>
+    <div className={` min-h-screen  h-full w-full relative`}>
       {
         theme == "light" ? (
 
@@ -188,7 +190,7 @@ function App() {
         {
           board.map((item) => {
             return <Board
-              theme={theme} 
+              theme={theme}
               setTheme={setTheme}
               key={item.id}
               BoardItem={item}
@@ -206,6 +208,7 @@ function App() {
           <EditTask
             displayClass="add-Board"
             text="Add Board"
+            openAddboard
             placeholder="Enter new board"
             onSubmit={(value) => addBoard(value)}
             theme={theme}

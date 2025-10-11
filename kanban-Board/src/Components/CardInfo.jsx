@@ -109,7 +109,7 @@ function CardInfo(props) {
                     </div>
                     <div className='w-[50%] max-sm:w-[70%] editTask-resize bg-blue'>
                         <EditTask
-                            text={value.description}
+                            text={"Enter Description"}
                             default={value.description}
                             placeholder="Enter Description"
                             buttonText="Set Description"
