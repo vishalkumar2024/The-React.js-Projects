@@ -39,7 +39,11 @@ export default function TextToSpeech(props) {
     return (
         <div id='voice-inner-container'>
             <select
-                className="form-select"
+                style={{
+                    backgroundColor: props.mode === 'light' ? '#bfc4c9' : '#455a76',
+                    color: props.mode === 'light' ? 'dark' : '#f8f9fa',
+                }}
+                className=' form-select'
                 onChange={handleVoiceChange}
                 value={voices.indexOf(selectedVoice)}
             >

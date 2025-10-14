@@ -44,8 +44,17 @@ export default function TextForm(props) {
     }
 
     function reverseWords(text) {
-        const reversed = text.split("").reverse().join("");
-        setText(reversed);
+        let str = text.trim().split(/\s+/);
+        let i = 0;
+        let j = str.length - 1;
+        while (i < j) {   //TC=O(n/2)
+            let temp = str[i];
+            str[i] = str[j];
+            str[j] = temp;
+            i++;
+            j--;
+        }
+        setText(str.join(" "));
     }
 
     const removeNumbers = () => {
@@ -167,7 +176,7 @@ export default function TextForm(props) {
                 </div>
 
                 <div id='voice-container'>
-                    <TextToSpeech Text={Text} />
+                    <TextToSpeech Text mode={props.mode} />
                 </div>
                 <button className="btn btn-primary" onClick={SpeakText}>Texts in Voice</button>
 
