@@ -1,6 +1,6 @@
 import './App.css';
 import Navbar from './Components/Navbar';
-import TextForm from './Components/textForm';
+import TextForm from './Components/TextForms';
 import { useState } from 'react';
 
 function App() {
@@ -11,16 +11,15 @@ function App() {
     if (mode === 'light') {
       document.body.style.backgroundColor = '#042743'
       setMode('dark')
-      document.title = 'Textutil-Dark Mode';
+      document.title = 'TextVision-Dark Mode';
     }
     else {
       document.body.style.backgroundColor = 'white'
       setMode('light');
-      document.title = 'Textutil-Light Mode';
+      document.title = 'TextVision-Light Mode';
 
     }
   }
-
 
 
   return (

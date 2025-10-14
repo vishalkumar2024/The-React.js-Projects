@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import TextToSpeech from './TextToSpeech';
 
-
 export default function TextForm(props) {
     const [Text, setText] = useState("");
     const [textColor, setTextColor] = useState("#000000");
@@ -13,41 +12,40 @@ export default function TextForm(props) {
         let upperText = Text.toUpperCase();
         setText(upperText);
     }
+
     function updateLoCase() {
         let lowerCase = Text.toLowerCase();
         setText(lowerCase);
     }
+
     function TrimText() {
         let TrimText = Text.trim();
         setText(TrimText);
     }
+
     function SpeakText() {
+        if (Text.length == 0) {
+            return alert("Please enter some text first!")
+        }
         let synthesis = window.speechSynthesis;
         let voice = new SpeechSynthesisUtterance(Text);
         synthesis.speak(voice);
     }
+
     function cleartext() {
         let lowerCase = '';
         setText(lowerCase);
         setVowel(0)
         setConsonent(0)
     }
+
     function handleChange(evt) {
         setText(evt.target.value);
     }
 
-    function reverseWords(s) {
-        let str = s.trim().split(/\s+/);
-        let i = 0;
-        let j = str.length - 1;
-        while (i < j) {
-            let temp = str[i];
-            str[i] = str[j];
-            str[j] = temp;
-            i++;
-            j--;
-        }
-        setText(str.join(" "));
+    function reverseWords(text) {
+        const reversed = text.split("").reverse().join("");
+        setText(reversed);
     }
 
     const removeNumbers = () => {
@@ -85,7 +83,6 @@ export default function TextForm(props) {
                 }
             }
         }
-
         setVowel(vowelCount);
         setConsonent(consonantCount);
     };
@@ -103,7 +100,7 @@ export default function TextForm(props) {
 
     const handleDecodeText = (text) => {
         try {
-            let decodedText = atob(text); // built-in JS function
+            let decodedText = atob(text);
             setText(decodedText);
             alert("Text decoded successfully!", "success");
         } catch (error) {
@@ -117,14 +114,10 @@ export default function TextForm(props) {
             .then(() => {
                 alert("Text copied to clipboard!", "success");
             })
-            .catch((err) => {
-                console.error("Failed to copy text: ", err);
+            .catch(() => {
                 alert("Failed to copy text!", "danger");
             });
     };
-
-    { console.log("mode is" + props.mode) }
-
 
     return (
         <>
@@ -133,7 +126,7 @@ export default function TextForm(props) {
                 <h2 className='title'>Enter the Text to analyze</h2>
 
                 <div className="mb-3">
-                    <textarea className="form-control" id="myBox" style={{ backgroundColor: props.mode === 'light' ? 'white' : 'gray', color: textColor }} value={Text} placeholder={"Enter the text here"} onChange={handleChange} rows="7"></textarea>
+                    <textarea className="form-control" id="myBox" style={{ backgroundColor: props.mode === 'light' ? 'white' : 'gray', color: textColor }} value={Text} placeholder={"Enter the text here"} onChange={handleChange} rows="6"></textarea>
                 </div>
                 <button className="btn btn-primary" onClick={updateUpCase}>To upper case</button>
                 <button className="btn btn-primary" onClick={updateLoCase}>To lower case</button>
@@ -181,7 +174,7 @@ export default function TextForm(props) {
                 <button className="btn btn-primary" onClick={cleartext}>Clear the text</button>
 
             </div >
-            <div className="input-container" style={{ color: props.mode === 'light' ? 'GrayText' : 'silver' }}>
+            <div id="input-container" style={{ color: props.mode === 'light' ? 'GrayText' : 'silver' }}>
                 <h2>Your text summery </h2>
                 <p id="para" >{Text.split(" ").length - 1} words and {Text.length} Text</p>
                 <h4 id="para">Time to read {0.08 * (Text.split(" ").length - 1)}</h4>
@@ -189,4 +182,3 @@ export default function TextForm(props) {
         </>
     )
 }
-

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 
+
 export default function TextToSpeech(props) {
     const [voices, setVoices] = useState([]);
     const [selectedVoice, setSelectedVoice] = useState(null);
@@ -50,7 +51,7 @@ export default function TextToSpeech(props) {
             </select>
 
             <button id="voice-button  " className="btn btn-primary" onClick={handleSpeak}>
-                ▶ Speak
+                Speak
             </button>
         </div>
     );

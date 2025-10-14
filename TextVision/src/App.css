@@ -1,12 +1,11 @@
 body {
-  /* padding-top:10px; */
-  padding: 30px 50px 0px 30px;
+  padding: 15px 50px 0px 30px;
 }
 
 #container {
   margin: 10px;
   border: 2px solid gray;
-  padding: 20px;
+  padding: 20px 20px 10px 20px;
   width: 100%;
 }
 
@@ -34,24 +33,29 @@ h3 {
   margin: 20px 10px;
 }
 
-.mb-3,
-.btn {
+.mb-3 {
   margin: 10px;
 }
 
+.btn {
+  margin: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
 .title {
-  padding: 0px 0px 15px 10px;
+  padding: 0px 0px 0px 10px;
 }
 
 #para {
-  margin-left: 30px;
+  margin-left: 20px;
   margin-bottom: 0px;
 
 }
 
 #voice-container {
   display: inline-block;
-  width: 47%;
+  width: 36%;
   border: 1px solid gray;
   border-radius: 5px;
   margin: 5px 5px 5px 10px;
@@ -70,6 +74,12 @@ h3 {
 
 #voice-button {
   width: 200px;
+  display: flex;
+  gap: 10px;
+}
+
+#play-button {
+  background-color: #e98686;
 }
 
 #color-input {
@@ -92,6 +102,11 @@ h3 {
   font-weight: 600;
 
 }
+
+/* #input-container{
+  background-color: #c35151;
+  margin-bottom: 0px;
+} */
 
 @media (max-width:500px) {
   #style-vowelBox {
