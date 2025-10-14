@@ -1,0 +1,100 @@
+body {
+  /* padding-top:10px; */
+  padding: 30px 50px 0px 30px;
+}
+
+#container {
+  margin: 10px;
+  border: 2px solid gray;
+  padding: 20px;
+  width: 100%;
+}
+
+#textarea-container {
+  width: 100%;
+  margin-bottom: 0px;
+}
+
+h3 {
+  color: rgb(52, 6, 6);
+  margin: 20px;
+}
+
+#myBox {
+  border: 4x solid black;
+}
+
+#navbar-css {
+  background-color: #ddf1ee;
+  border-radius: 5px;
+  padding: 0px;
+}
+
+#theme-changer {
+  margin: 20px 10px;
+}
+
+.mb-3,
+.btn {
+  margin: 10px;
+}
+
+.title {
+  padding: 0px 0px 15px 10px;
+}
+
+#para {
+  margin-left: 30px;
+  margin-bottom: 0px;
+
+}
+
+#voice-container {
+  display: inline-block;
+  width: 47%;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin: 5px 5px 5px 10px;
+  padding-left: 10px;
+}
+
+#voice-inner-container {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+#voice-inner-container select {
+  width: 90%;
+}
+
+#voice-button {
+  width: 200px;
+}
+
+#color-input {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 0px 20px;
+}
+
+#style-border {
+  display: inline-block;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin: 5px 5px 5px 10px;
+}
+
+#style-inner {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  font-weight: 600;
+
+}
+
+@media (max-width:500px) {
+  #style-vowelBox {
+    font-size: 15px;
+  }
+}
