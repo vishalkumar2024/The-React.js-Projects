@@ -21,6 +21,7 @@ h3 {
 
 #myBox {
   border: 4x solid black;
+  width: 100%;
 }
 
 #navbar-css {
@@ -37,7 +38,7 @@ h3 {
   margin: 10px;
 }
 
-.btn {
+#btn {
   margin: 10px;
   padding-left: 30px;
   padding-right: 30px;
@@ -59,25 +60,15 @@ h3 {
   border: 1px solid gray;
   border-radius: 5px;
   margin: 5px 5px 5px 10px;
-  padding-left: 10px;
+  padding: 10px;
 }
 
 #voice-inner-container {
   display: flex;
-  align-items: center;
-  font-weight: 600;
-}
-
-#voice-inner-container select {
-  width: 90%;
-}
-
-#voice-button {
-  width: 200px;
-  display: flex;
   gap: 10px;
-}
+  font-weight: 600;
 
+}
 
 #color-input {
   display: inline-block;
@@ -100,13 +91,54 @@ h3 {
 
 }
 
-/* #input-container{
-  background-color: #c35151;
-  margin-bottom: 0px;
-} */
 
 @media (max-width:500px) {
   #style-vowelBox {
     font-size: 15px;
+  }
+
+  #buttons-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .btn,
+  #style-border,
+  #color-input,
+  #myBox {
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .lastDiv {
+    padding: 20px;
+  }
+
+}
+
+
+@media (max-width:600px) {
+  body {
+    padding: 15px 15px 0px 5px;
+  }
+}
+
+
+@media (min-width: 600px) and (max-width: 930px) {
+  #voice-container {
+    width: 80%;
+  }
+}
+
+@media (max-width:599px) {
+  #voice-container {
+    width: 100%;
+  }
+}
+
+@media (max-width:930px) {
+  #navbar-css {
+    padding: 20px;
   }
 }

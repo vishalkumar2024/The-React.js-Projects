@@ -26,10 +26,10 @@ export default function TextToSpeech(props) {
         setSelectedVoice(voice);
     };
 
-    const handleSpeak = () => {
-        if (!props.Text.trim()) return alert("Please enter some text first!");
+    const handleSpeak = (text) => {
+        if (text.trim().length==0) return alert("Please enter some text first!");
 
-        const speech = new SpeechSynthesisUtterance(props.Text);
+        const speech = new SpeechSynthesisUtterance(text);
         if (selectedVoice) {
             speech.voice = selectedVoice;
         }
@@ -54,7 +54,7 @@ export default function TextToSpeech(props) {
                 ))}
             </select>
 
-            <button id="voice-button  " className="btn btn-primary" onClick={handleSpeak}>
+            <button className="btn btn-primary" onClick={()=>handleSpeak(props.text)}>
                 Speak
             </button>
         </div>

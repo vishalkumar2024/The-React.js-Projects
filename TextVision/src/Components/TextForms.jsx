@@ -24,7 +24,7 @@ export default function TextForm(props) {
     }
 
     function SpeakText() {
-        if (Text.length == 0) {
+        if (Text.trim().length == 0) {
             return alert("Please enter some text first!")
         }
         let synthesis = window.speechSynthesis;
@@ -137,53 +137,56 @@ export default function TextForm(props) {
                 <div className="mb-3">
                     <textarea className="form-control" id="myBox" style={{ backgroundColor: props.mode === 'light' ? 'white' : 'gray', color: textColor }} value={Text} placeholder={"Enter the text here"} onChange={handleChange} rows="6"></textarea>
                 </div>
-                <button className="btn btn-primary" onClick={updateUpCase}>To upper case</button>
-                <button className="btn btn-primary" onClick={updateLoCase}>To lower case</button>
-                <button className="btn btn-primary" onClick={TrimText}>Trim the Text</button>
-                <button type='submit' className='btn btn-primary' onClick={() => handleCopyText(Text)}>Copy Text</button>
-                <button className="btn btn-primary" onClick={() => reverseWords(Text)}> Reverse Words</button>
-                <button className="btn btn-primary" onClick={() => removeNumbers()}>Remove number</button>
-                <button className="btn btn-primary" onClick={() => removeSpecialCharacter()}>Remove special character</button>
+                <div id='buttons-container'>
+                    <button id="btn" className="btn btn-primary" onClick={updateUpCase}>To upper case</button>
+                    <button id="btn" className="btn btn-primary" onClick={updateLoCase}>To lower case</button>
+                    <button id="btn" className="btn btn-primary" onClick={TrimText}>Trim the Text</button>
+                    <button type='submit' id="btn" className='btn btn-primary' onClick={() => handleCopyText(Text)}>Copy Text</button>
+                    <button id="btn" className="btn btn-primary" onClick={() => reverseWords(Text)}> Reverse Words</button>
+                    <button id="btn" className="btn btn-primary" onClick={() => removeNumbers()}>Remove number</button>
+                    <button id="btn" className="btn btn-primary" onClick={() => removeSpecialCharacter()}>Remove special character</button>
 
 
-                <form id='color-input' onSubmit={handleSubmit}>
-                    <div id='style-inner'>
-                        <input
-                            type="color"
-                            value={textColor}
-                            onChange={handleChangeColor}
-                        />
-                        <button type='submit' className='btn btn-primary'>Set text color</button>
+                    <form id='color-input' onSubmit={handleSubmit}>
+                        <div id='style-inner'>
+                            <input
+                                type="color"
+                                value={textColor}
+                                onChange={handleChangeColor}
+                            />
+                            <button type='submit' id="btn" className='btn btn-primary'>Set text color</button>
+                        </div>
+                    </form>
+
+                    <div id='style-border'>
+                        <div id='style-inner'>
+                            <div style={{ padding: "10px", }}>Vowel: <span style={{ color: '#ff992d' }}>{vowel}</span> &nbsp;
+                                Consonent:<span style={{ color: '#ff992d' }}> {consonent}</span></div>
+                            <button id="btn" className="btn btn-primary" onClick={() => countVowelConsonant(Text)}>Count vowel & consonent</button>
+                        </div>
                     </div>
-                </form>
 
-                <div id='style-border'>
-                    <div id='style-inner'>
-                        <div style={{ padding: "10px", }}>Vowel: <span style={{ color: '#ff992d' }}>{vowel}</span> &nbsp;
-                            Consonent:<span style={{ color: '#ff992d' }}> {consonent}</span></div>
-                        <button className="btn btn-primary" onClick={() => countVowelConsonant(Text)}>Count vowel & consonent</button>
+                    <div id='style-border'>
+                        <div id='style-inner'>
+                            <button id="btn" className="btn btn-primary" onClick={() => handleEncodeText(Text)}>Encode text
+                            </button>
+
+                            <button id="btn" className="btn btn-primary" onClick={() => handleDecodeText(Text)}>Decode text
+                            </button>
+                        </div>
                     </div>
-                </div>
 
-                <div id='style-border'>
-                    <div id='style-inner'>
-                        <button className="btn btn-primary" onClick={() => handleEncodeText(Text)}>Encode text
-                        </button>
-
-                        <button className="btn btn-primary" onClick={() => handleDecodeText(Text)}>Decode text
-                        </button>
+                    <div id='voice-container'>
+                        <TextToSpeech text={Text} mode={props.mode} />
                     </div>
-                </div>
 
-                <div id='voice-container'>
-                    <TextToSpeech Text mode={props.mode} />
-                </div>
-                <button className="btn btn-primary" onClick={SpeakText}>Texts in Voice</button>
+                    <button id="btn" className="btn btn-primary" onClick={SpeakText}>Texts in Voice</button>
 
-                <button className="btn btn-primary" onClick={cleartext}>Clear the text</button>
+                    <button id="btn" className="btn btn-primary" onClick={cleartext}>Clear the text</button>
+                </div>
 
             </div >
-            <div id="input-container" style={{ color: props.mode === 'light' ? 'GrayText' : 'silver' }}>
+            <div id="input-container" className='lastDiv' style={{ color: props.mode === 'light' ? 'GrayText' : 'silver' }}>
                 <h2>Your text summery </h2>
                 <p id="para" >{Text.split(" ").length - 1} words and {Text.length} Text</p>
                 <h4 id="para">Time to read {0.08 * (Text.split(" ").length - 1)}</h4>
