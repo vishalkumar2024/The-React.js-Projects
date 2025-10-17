@@ -7,16 +7,17 @@ Each folder represents a different application, ranging from beginner-level apps
 
 ## 🚀 Projects Included
 
-| Project Name         | Description                                           |
-|----------------------|-------------------------------------------------------|
+| Project Name         | Description                                          |
+|----------------------|------------------------------------------------------|
 | `Contact-us`         | A simple responsive contact form UI                  |
 | `E-commerce`         | E-commerce frontend with reusable product components |
 | `Newsdaily-news`     | A dynamic news app built using NewsAPI               |
-| `Textutils`          | Utility app to manipulate and analyze text           |
+| `TextVision`         | Utility app to manipulate and analyze text           |
 | `To-Do-List`         | A functional to-do list with add/delete/edit features|
 | `brand-page`         | Brand landing page with hero section and info blocks |
 | `contact-App`        | Another version of a contact form with enhancements  |
 | `dice-game`          | Interactive dice game built with React state         |
+| `Kanban-Board`       | Task management app users can create, edit, drag cards across boards|
 
 > ✨ New projects will be added frequently!
 
@@ -26,7 +27,7 @@ Each folder represents a different application, ranging from beginner-level apps
 
 - **Framework**: [React.js](https://reactjs.org/)
 - **Languages**: JavaScript, HTML, CSS
-- **Styling**: Tailwind CSS, Custom CSS
+- **Styling**: Tailwind CSS, Custom CSS, Bootstrap
 - **Tools**: Visual Studio Code, Git & GitHub, npm
 
 ---
