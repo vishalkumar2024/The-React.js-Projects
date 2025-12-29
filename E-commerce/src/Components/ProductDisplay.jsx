@@ -32,7 +32,7 @@ function productDisplay(props) {
                 </div>
                 <div className='flex my-5 mx-0 gap-7 text-6 font-semibold'>
                     <div className='text-[#818181] line-through'>${product.old_price}</div>
-                    <div className='text-[#ff4141]'>${product.new_price}</div>
+                    <div className='text-[#2ac802]'>${product.new_price}</div>
                 </div>
                 <div >
                     <h1 className=' text-[#656565] text-5 font-semibold'>
@@ -50,6 +50,7 @@ function productDisplay(props) {
                     </div>
                 </div>
                 <button className='py-3 px-8 w-[200px] rounded text-[1rem] font-semibold bg-[#ff4141] text-white mb-[10px] border-none outline-none cursor-pointer'>ADD TO CART</button>
+                
                 <p className='mt-3'><span className='font-semibold'>Category: </span>{product.category}, T-shirt, Crop-Top</p>
                 <p className='mt-3'><span className='font-semibold'>Tags: </span>Modern, Latest</p>
             </div>

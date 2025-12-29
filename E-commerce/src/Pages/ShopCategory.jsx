@@ -9,7 +9,7 @@ function ShopCategory(props) {
 
   return (
     <div className="pt-[82px]">
-      <img src={props.banner} className='block my-7 mx-auto w-[82%]' alt="" />
+      <img src={props.banner} className='block my-7 mx-auto w-[82%]' alt="banne`r" />
       <div className='flex justify-between items-center my-0 mx-[170px]'>
         <p> <span className='font-semibold'>Showing 1-12</span> out of 36 products </p>
         <div className='flex py-2 px-5 rounded-3xl border border-[#888] font-semiboldbold'> Sort by <img src={dropdownIcon} className='h-[10px] w-[12px] font-bold  mt-[8px] ml-1' alt="" /> </div>
