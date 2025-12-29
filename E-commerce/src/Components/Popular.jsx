@@ -1,6 +1,6 @@
 import React from 'react'
-import dataProduct from "../Assets/data"
-import Item from '../Items/Item'
+import dataProduct from "./Assets/data"
+import Item from './Item'
 
 function Popular() {
     return (

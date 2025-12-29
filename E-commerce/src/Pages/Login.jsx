@@ -32,7 +32,7 @@ function login() {
                 </form>
                 <p className='mt-5 text-[#5c5c5c] text-[18px] font-semibold'>Don't have an account? <Link to="/signup" className='text-amber-600 font-semiboldbold underline '>Signup here</Link></p>
                 <div className='flex items-center mt-6 gap-5 text-[#5c5c5c] text-4'>
-                    <input type="checkbox" name='' id='' />
+                    <input type="checkbox" className='cursor-pointer' name='' id='' />
                     <p>By continuing, i agree to the terms of use and privacy policy.</p>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 import React from 'react'
-import dataProducts from "../Assets/related"
-import Item from '../Items/Item'
+import dataProducts from "../Components/Assets/related"
+import Item from '../Components/Item'
 
 
 function RelatedProducts(props) {

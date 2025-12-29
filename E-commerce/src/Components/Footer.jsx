@@ -1,8 +1,8 @@
 import React from 'react'
-import FooterImg from "../Assets/logo_big.png"
-import instagramLogo from "../Assets/instagram_icon.png"
-import pinterestLogo from "../Assets/pintester_icon.png"
-import whatsAppLogo from "../Assets/whatsapp_icon.png"
+import FooterImg from "../Components/Assets/logo_big.png"
+import instagramLogo from "../Components/Assets/instagram_icon.png"
+import pinterestLogo from "../Components/Assets/pintester_icon.png"
+import whatsAppLogo from "../Components/Assets/whatsapp_icon.png"
 
 function Footer() {
     return (

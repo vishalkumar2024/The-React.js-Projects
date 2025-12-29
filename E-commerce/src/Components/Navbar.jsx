@@ -1,6 +1,6 @@
 import React from 'react'
-import Logo from "../Assets/logo.png"
-import CartIcon from "../Assets/cart_icon.png"
+import Logo from "../Components/Assets/logo.png"
+import CartIcon from "../Components/Assets/cart_icon.png"
 import { Link } from 'react-router-dom'
 
 

@@ -1,6 +1,6 @@
 import React from 'react'
-import starIcon from "../Assets/star_icon.png"
-import starDullIcon from "../Assets/star_dull_icon.png"
+import starIcon from "../Components/Assets/star_icon.png"
+import starDullIcon from "../Components/Assets/star_dull_icon.png"
 
 
 function productDisplay(props) {

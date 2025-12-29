@@ -1,6 +1,6 @@
 import React from 'react'
-import newCollections from "../Assets/new_collections"
-import Item from '../Items/Item'
+import newCollections from "../Components/Assets/new_collections"
+import Item from '../Components/Item'
 function NewCollections() {
     return (
         <div className='flex flex-col items-center  gap-2 mb-16 '>

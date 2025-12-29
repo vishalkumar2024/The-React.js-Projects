@@ -1,12 +1,12 @@
 
 import './App.css'
-import Navbar from './Components/Navbar/Navbar'
+import Navbar from './Components/Navbar'
 import { Routes, Route } from "react-router-dom"
 import Shop from './Pages/Shop'
 import ShopCategory from './Pages/ShopCategory'
 import Product from './Pages/Product'
 import Cart from './Pages/Cart'
-import Footer from './Components/Footer/Footer'
+import Footer from './Components/Footer'
 import menBanner from "./Components/Assets/banner_mens.png"
 import womenBanner from "./Components/Assets/banner_women.png"
 import kidBanner from "./Components/Assets/banner_kids.png"

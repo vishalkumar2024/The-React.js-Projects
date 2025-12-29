@@ -1,5 +1,5 @@
 import React from 'react'
-import breadcrumArrowIcon from "../Assets/breadcrum_arrow.png"
+import breadcrumArrowIcon from "../Components/Assets/breadcrum_arrow.png"
 
 
 function Breadcrumbs(props) {

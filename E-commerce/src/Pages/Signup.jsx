@@ -41,7 +41,7 @@ function Signup() {
 
                     <p className='mt-4 text-[#5c5c5c] text-[18px] font-semibold'>Alreay have an account? <Link to="/login" className='text-amber-600 font-semiboldbold underline '>Login here</Link></p>
                     <div className='flex items-center mt-6 gap-5 text-[#5c5c5c] text-4'>
-                        <input type="checkbox" name='' id='' />
+                        <input type="checkbox" className='cursor-pointer' name='' id='' />
                         <p>By continuing, i agree to the terms of use and privacy policy.</p>
                     </div>
                 </div>

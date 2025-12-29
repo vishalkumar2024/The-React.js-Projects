@@ -1,5 +1,5 @@
 import React from 'react'
-import exclusiveImage from "../Assets/exclusive_image.png"
+import exclusiveImage from "../Components/Assets/exclusive_image.png"
 
 
 function Offers() {
