@@ -34,11 +34,11 @@ function Navbar() {
 
             {/* Two divs for mobile menu */}
             <div className=' py-2'>
-                <div className='hidden max-md:flex gap-8 items-center ml-4 w-[100px] cursor-pointer  mr-4'>
+                <div id="nav-icons" className='hidden  max-md:flex gap-8 items-center mx-4 w-[100px] cursor-pointer '>
                     <img src={menu} alt="mobile Menu" onClick={!menuBar ? () => setMenuBar(true) : () => setMenuBar(false)} />
 
                     <Link to="/cart">  <img src={CartIcon} alt="Cart Image" className='max-lg:size-8' /></Link>
-                    <div className='w-[15px] h-[15px] flex items-center justify-center -mt-6 -ml-10 rounded-full text-[10px] bg-red-500 text-white'>{getTotalItem()}</div>
+                    <div id="red-box" className='w-[15px] h-[15px] flex items-center justify-center -mt-6 -ml-10 rounded-full text-[10px] bg-red-500 text-white'>{getTotalItem()}</div>
                 </div>
 
                 {/* Div for small screens */}

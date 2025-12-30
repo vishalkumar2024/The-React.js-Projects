@@ -1,10 +1,32 @@
-/* #HeroMain{
-    height: calc(100vh - 90px);
-} */
+@media (max-width:500px) {
+    #nav-icons {
+        gap: 10px;
+        width: 80px;
+        margin: 0 4px 0 0;
+    }
 
-/* #mobileMenu{
-    transform: translateY(45%);
-    transition: all 2s ease-in;
+    #red-box {
+        margin-left: -18px;
+    }
 
-   
-} */
+    #HeroMain p {
+        font-size: 60px;
+    }
+
+    #HeroMain span {
+        padding: 0;
+    }
+
+    #popular-item {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    #item img {
+        height: 220px;
+    }
+
+    #newCollection-item {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+
+    }
+}

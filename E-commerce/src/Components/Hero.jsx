@@ -8,23 +8,23 @@ import './Hero.css'
 
 function Hero() {
     return (
-        <div className='flex mb-10 pt-22 bg-linear-to-b from-[#adf8ec] to-[#e1ffea22]  max-md:pt-0' id="HeroMain">
+        <div id="HeroMain" className='flex mb- pt-22 bg-red-300  bg-linear-to-b from-[#adf8ec] to-[#e1ffea22]  max-md:pt-0 ' >
 
             {/* Left Part */}
-            <div className=' h-full w-[50%]   flex items-center justify-center  pl-[100px] max-lg:pl-[40px] max-md:w-[100%]'>
+            <div className=' h-full w-[50%]   flex items-center justify-center  pl-[100px] max-lg:pl-[40px] max-md:w-[100%] max-md:pl-[70px] max-sm:pl-[10px]'>
                 <div className='w-[70%]  max-md:w-[80%]' >
                     <h2 className='text-[#090909] text-[26px] uppercase font-semibold'>New Arrival Only</h2>
 
                     <div className=''>
-                        <div className='flex 0 '>
-                            <p className='text-8xl  font-semibold mb-2 max-lg:text-7xl max-md:text-[120px]'>new</p>
-                            <span className=' max-md:pt-8'>  <img className='w-[100px] max-lg:w-[70px] ' src={handIcon} alt="" /> </span>
+                        <div className='flex max-md:py-6'>
+                            <p className='text-8xl  font-semibold mb-2 max-lg:text-7xl max-md:text-[120px]'>New</p>
+                            <span className=' max-md:pt-8 '>  <img className='w-[100px] max-lg:w-[70px] ' src={handIcon} alt="" /> </span>
                         </div>
                         <p className='text-7xl font-semibold mb-1 max-lg:text-6xl'>collections</p>
                         <p className='text-[65px] font-bold mb-1 max-lg:text-6xl'>for everyone</p>
                     </div>
 
-                    <div className='flex items-center justify-center gap-4 cursor-pointer w-[250px] h-[40px] rounded-4xl mt-8 bg-red-600 text-white text-[18px] font-semibold max-lg:w-[220px] max-lg:h-[30px] '>
+                    <div className='flex items-center justify-center gap-4 cursor-pointer w-[250px] h-[40px] rounded-4xl mt-8 bg-red-600 text-white text-[18px] font-semibold max-lg:w-[220px] max-lg:h-[30px] max-md:h-[40px] '>
                         <div>Latest Collection</div>
                         <img src={arrowIcon} alt="" />
                     </div>
