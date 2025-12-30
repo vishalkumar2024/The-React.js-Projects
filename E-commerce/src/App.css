@@ -4,6 +4,9 @@
         width: 80px;
         margin: 0 4px 0 0;
     }
+    #mobileMenu{
+        margin-left: -40px;
+    }
 
     #red-box {
         margin-left: -18px;
@@ -24,7 +27,9 @@
     #item img {
         height: 220px;
     }
-
+    #offers img{
+        display: none;
+    }
     #newCollection-item {
         grid-template-columns: repeat(1, minmax(0, 1fr));
 
@@ -50,5 +55,26 @@
     }
     #footer-copyright{
         font-size: 16px;
+    }
+    #shopcategory p{
+        font-size: 12px;
+    }
+    #shopcategory-image{
+        margin-top: 8px;
+        width: 96%;
+    }
+    #shopcategory-div{
+        font-size: 12px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    #shopcategory-div img{
+        height: 8px;
+        width: 10px;
+        margin-top: 6px;
+    }
+    #shopcategory #more-btn{
+        font-size: 15px;
+        width: 130px;
     }
 }

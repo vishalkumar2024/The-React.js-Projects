@@ -44,9 +44,11 @@ function Navbar() {
                 {/* Div for small screens */}
                 <div id="mobileMenu" className={`${menuBar ? "fixed" : "hidden"} bg-[#74f5dfe7] p-2.5 mt-4.5  md:hidden max-sm:w-[120px] `}>
                     <ul>
-                        <Link to="/men"> <li className='h-10 w-[120px] py-2 px-3 hover:bg-[#d4fbf3] max-sm:w-[100%] '>Men</li></Link>
-                        <Link to="/women"><li className='h-10 w-[120px] py-2 px-3 hover:bg-[#d4fbf3] max-sm:w-[100%] '>Women</li></Link>
-                        <Link to="/kid"><li className='h-10 w-[120px] py-2 px-3 hover:bg-[#d4fbf3] max-sm:w-[100%] '>Kids</li></Link>
+                        <Link to="/men" onClick={()=>setMenuBar(false)}> <li className='h-10 w-[120px] py-2 px-3 hover:bg-[#d4fbf3] max-sm:w-[100%] '>Men</li></Link>
+                        <Link to="/women" onClick={()=>setMenuBar(false)}><li className='h-10 w-[120px] py-2 px-3 hover:bg-[#d4fbf3] max-sm:w-[100%] '>Women</li></Link>
+                        <Link to="/kid" onClick={()=>setMenuBar(false)}><li className='h-10 w-[120px] py-2 px-3 hover:bg-[#d4fbf3] max-sm:w-[100%] '>Kids</li></Link>
+
+                        <Link to="/login" onClick={()=>setMenuBar(false)}><li className='bg-green-500 text-white cursor-pointer py-2 max-lg:py-1.5 max-lg:px-3rounded  active:bg-green-700 w-[120px] px-3  max-sm:w-[100%] '>Login</li></Link>
                     </ul>
                 </div>
 
