@@ -9,7 +9,7 @@ function Popular() {
             <hr className='w-[200px] h-[6px] rounded bg-[#252525]  ' />
             <div className='flex mt-7  gap-8 pb-10 max-xl:gap-5 max-lg:gap-2 max-md:flex-col'>
                 {dataProduct.map((item, i) => {
-                    return <div> <Item key={i} id={item.id} name={item.name} image={item.image} new_price={item.new_price} old_price={item.old_price} />
+                    return <div className=' '> <Item key={i} id={item.id} name={item.name} image={item.image} new_price={item.new_price} old_price={item.old_price} />
                     </div>
                 })}
             </div>
