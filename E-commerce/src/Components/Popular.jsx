@@ -4,12 +4,13 @@ import Item from './Item'
 
 function Popular() {
     return (
-        <div className='flex flex-col items-center gap-2 h-[90vh]'>
-            <h1 className='uppercase text-[#171717]  mt-7 text-[50px] font-bold'>popular in women</h1>
-            <hr className='w-[200px] h-[6px] rounded bg-[#252525]  '/>
-            <div className='flex mt-7 gap-8 pb-10'>
+        <div className='flex flex-col items-center gap-2  mb-4'>
+            <h1 className='uppercase text-[#171717]  mt-7 text-[50px] font-bold max-sm:text-[32px] '>popular in women</h1>
+            <hr className='w-[200px] h-[6px] rounded bg-[#252525]  ' />
+            <div className='flex mt-7  gap-8 pb-10 max-xl:gap-5 max-lg:gap-2 max-md:flex-col'>
                 {dataProduct.map((item, i) => {
-                    return <Item key={i} id={item.id} name={item.name} image={item.image} new_price={item.new_price} old_price={item.old_price} />
+                    return <div> <Item key={i} id={item.id} name={item.name} image={item.image} new_price={item.new_price} old_price={item.old_price} />
+                    </div>
                 })}
             </div>
         </div>
