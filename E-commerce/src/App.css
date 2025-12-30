@@ -29,4 +29,10 @@
         grid-template-columns: repeat(1, minmax(0, 1fr));
 
     }
+    #newslater{
+        padding: 30px;
+    }
+    #newslater form{
+         width: 300px;
+    }
 }

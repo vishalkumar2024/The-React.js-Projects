@@ -8,7 +8,7 @@ import './Hero.css'
 
 function Hero() {
     return (
-        <div id="HeroMain" className='flex mb- pt-22 bg-red-300  bg-linear-to-b from-[#adf8ec] to-[#e1ffea22]  max-md:pt-0 ' >
+        <div id="HeroMain" className='flex mb- pt-22  bg-linear-to-b from-[#adf8ec] to-[#e1ffea22]  max-md:pt-0 ' >
 
             {/* Left Part */}
             <div className=' h-full w-[50%]   flex items-center justify-center  pl-[100px] max-lg:pl-[40px] max-md:w-[100%] max-md:pl-[70px] max-sm:pl-[10px]'>
