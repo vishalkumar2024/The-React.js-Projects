@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Logo from "../Components/Assets/logo.png"
 import CartIcon from "../Components/Assets/cart_icon.png"
 import { Link } from 'react-router-dom'
+import { ShopContext } from '../Context/ShopContext'
 
 
 function Navbar() {
+
+    const { getTotalItem } = useContext(ShopContext);
+
     return (
         <div className='flex justify-around bg-white fixed w-full p-2 z-50 shadow-black shadow'>
             <div className='flex items-center gap-2'>
@@ -18,10 +22,10 @@ function Navbar() {
                 <li className='cursor-pointer active:text-red-300'><Link to="/kid">Kid</Link></li>
             </ul>
             <div className='flex items-center gap-10'>
-                <Link to="/login"> <button onClick={window.scrollTo(0,0)} className='bg-green-500 px-4 py-2 rounded cursor-pointer text-amber-50 active:bg-green-700'>Login</button>
+                <Link to="/login"> <button onClick={window.scrollTo(0, 0)} className='bg-green-500 px-4 py-2 rounded cursor-pointer text-amber-50 active:bg-green-700'>Login</button>
                 </Link>
                 <Link to="/cart">  <img src={CartIcon} alt="" /></Link>
-                <div className='w-5 h-5 flex items-center justify-center -mt-9 -ml-13 rounded-full text-[16px] bg-red-500 text-white'>0</div>
+                <div className='w-5 h-5 flex items-center justify-center -mt-9 -ml-13 rounded-full text-[16px] bg-red-500 text-white'>{getTotalItem()}</div>
             </div>
         </div>
     )

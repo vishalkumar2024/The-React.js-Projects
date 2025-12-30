@@ -45,16 +45,16 @@ function CartItem() {
                             </div>
                         )
                     }
-                    return null;
 
+                    return null;
 
                 })}
                 <div className='flex my-100px mx-0 py-14 pl-2 '>
 
                     {/* Left Part */}
-                    <div className='flex flex-col w-[50%] mr-[100px]  gap-[40px]'>
+                    <div className='flex flex-col w-[50%] mr-[100px]  gap-[20px]'>
                         <h1 className='text-3xl text-black font-bold uppercase '>Cart Totals</h1>
-                        <div>
+                        <div >
                             <div className='flex justify-between py-4 px-0'>
                                 <p>SubTotal</p>
                                 <p>${getTotalAmount()}</p>
