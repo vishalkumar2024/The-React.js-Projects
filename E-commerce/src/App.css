@@ -35,4 +35,20 @@
     #newslater form{
          width: 300px;
     }
+    #footer-logo{
+        height: 40px;
+    }
+    #footer-logo-p{
+        font-size: 32px;
+    }
+    #footer-ul{
+        flex-direction: column;
+    }
+    #footer-li{
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+    #footer-copyright{
+        font-size: 16px;
+    }
 }
