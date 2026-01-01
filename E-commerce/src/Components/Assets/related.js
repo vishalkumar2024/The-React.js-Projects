@@ -18,15 +18,15 @@ let related = [
 
     {
         id: 9,
-        name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+        name: "Striped Flutter Sleeve ",
         category: "women",
         image: p9_img,
         new_price: 85.0,
-        old_price: 120.5,
+        old_price:90.7,
     },
     {
         id: 10,
-        name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+        name: "Striped Flutter Sleeve ",
         category: "women",
         image: p10_img,
         new_price: 85.0,
@@ -34,7 +34,7 @@ let related = [
     },
     {
         id: 11,
-        name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+        name: "Striped Flutter Sleeve ",
         category: "women",
         image: p11_img,
         new_price: 85.0,
@@ -42,16 +42,13 @@ let related = [
     },
     {
         id: 12,
-        name: "Striped Flutter Sleeve Overlap Collar Peplum Hem Blouse",
+        name: "Striped Flutter Sleeve ",
         category: "women",
         image: p12_img,
         new_price: 85.0,
         old_price: 120.5,
-    },
-
-    {
         id: 21,
-        name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+        name: "Men Green Solid Zippered ",
         category: "men",
         image: p21_img,
         new_price: 85.0,
@@ -59,7 +56,7 @@ let related = [
     },
     {
         id: 22,
-        name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+        name: "Men Green Solid Zippered ",
         category: "men",
         image: p22_img,
         new_price: 85.0,
@@ -67,7 +64,7 @@ let related = [
     },
     {
         id: 23,
-        name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+        name: "Men Green Solid Zippered ",
         category: "men",
         image: p23_img,
         new_price: 85.0,
@@ -75,7 +72,7 @@ let related = [
     },
     {
         id: 24,
-        name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+        name: "Men Gree  Solid" ,
         category: "men",
         image: p24_img,
         new_price: 85.0,
@@ -84,7 +81,7 @@ let related = [
 
     {
         id: 33,
-        name: "Boys Orange Colourblocked Hooded Sweatshirt",
+        name: "Boys Orange Colour  ",
         category: "kid",
         image: p33_img,
         new_price: 85.0,
@@ -92,7 +89,7 @@ let related = [
     },
     {
         id: 34,
-        name: "Boys Orange Colourblocked Hooded Sweatshirt",
+        name: "Boys Orange Colour  ",
         category: "kid",
         image: p34_img,
         new_price: 85.0,
@@ -100,7 +97,7 @@ let related = [
     },
     {
         id: 35,
-        name: "Boys Orange Colourblocked Hooded Sweatshirt",
+        name: "Boys Orange Colour  ",
         category: "kid",
         image: p35_img,
         new_price: 85.0,
@@ -108,7 +105,7 @@ let related = [
     },
     {
         id: 36,
-        name: "Boys Orange Colourblocked Hooded Sweatshirt",
+        name: "Boys Orange Colour ",
         category: "kid",
         image: p36_img,
         new_price: 85.0,

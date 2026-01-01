@@ -77,4 +77,38 @@
         font-size: 15px;
         width: 130px;
     }
+    #login-inner{
+        width:300px ;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    #login-inner h1{
+       font-size: 25px;
+    }
+    #login-inner #name{
+        height: 35px;
+       font-size: 15px;
+    }
+    #login-inner #email{
+        height: 35px;
+       font-size: 15px;
+    }
+    #login-inner #password{
+        height: 35px;
+       font-size: 15px;
+    }
+    #login-inner #submit{
+        height: 45px;
+       font-size: 20px;
+       margin-top: 10px;
+    }
+    
+    #login-inner #para1{
+       font-size: 16px;
+    }
+    #login-inner #para2{
+       font-size: 14px;
+       margin-bottom: 10px;
+    }
+    
 }
