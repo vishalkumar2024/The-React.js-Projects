@@ -5,7 +5,7 @@ function CartItem() {
     const { allProducts, cartItems,getTotalAmount, removeFromCart } = useContext(ShopContext)
 
     return (
-        <div className='w-[85%] mx-auto  pt-[100px] pb-32 max-lg:pt-[70px] max-md:w-[90%] '>
+        <div className='w-[86%] mx-auto  pt-[100px] pb-32 max-lg:pt-[70px] max-md:w-[90%] '>
             <div className='flex mt-20 pb-5 max-md:text-[15px] '>
                 <div className='flex  gap-44 w-[40%]  justify-start max-md:gap-24 max-sm:gap-18 max-sm:text-[14px]'>
                     <p>Product</p>
