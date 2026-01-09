@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom'
 import { ShopContext } from '../Context/ShopContext'
 import menu from "../Components/Assets/menu.svg";
 
-function Navbar() {
+function Navbar(props) {
 
     const { getTotalItem } = useContext(ShopContext);
     const [menuBar, setMenuBar] = useState(false);
 
     return (
-        <div className='flex justify-around fixed bg-[#5df4db]  w-full p-2 z-50 shadow-black shadow max-md:justify-between'>
+        <div className={`flex justify-around fixed bg-[#d1fff7] w-full p-2 z-50 shadow-sky-200 shadow max-md:justify-between`}>
             <div className='w-[40%]  flex justify-center items-center gap-2 '>
                 <img src={Logo} alt="Logo" className='max-lg:size-12' />
                 <p className='text-[#171717] text-[35px] max-lg:text-[26px] font-semibold'><Link to="/">SHOPPER</Link> </p>

@@ -5,21 +5,25 @@ import Breadcrumbs from '../Components/Breadcrumbs';
 import ProductDisplay from '../Components/ProductDisplay';
 import Description from '../Components/Description';
 import RelatedProducts from '../Components/RelatedProducts';
-
+import Navbar from '../Components/Navbar';
 
 function Product() {
   const { allProducts } = useContext(ShopContext);
   const { productId } = useParams();
   const product = allProducts.find((e) => e.id === Number(productId))
-  
-  return (
-    <div className="pt-[82px]">
-      <Breadcrumbs product={product} />
-      <ProductDisplay product={product} />
-      <Description />
-      <RelatedProducts product={product} />
 
-    </div>
+  return (
+    <>
+
+      <Navbar />
+      <div className="pt-[82px]">
+        <Breadcrumbs product={product} />
+        <ProductDisplay product={product} />
+        <Description />
+        <RelatedProducts product={product} />
+
+      </div>
+    </>
   )
 }
 

@@ -2,16 +2,14 @@ import React from 'react'
 import handIcon from "../Components/Assets/hand_icon.png"
 import arrowIcon from "../Components/Assets/arrow.png"
 import heroImage from "../Components/Assets/hero_image.png"
-import './Hero.css'
-
 
 
 function Hero() {
     return (
-        <div id="HeroMain" className='flex mb- pt-22  bg-linear-to-b from-[#adf8ec] to-[#e1ffea22]  max-md:pt-0 ' >
+        <div id="HeroMain" className='flex mb-10 h-[650px] max-md:pt-0 max-lg:h-[500px] max-md:h-[440px]  max-sm:mt-10 ' >
 
             {/* Left Part */}
-            <div className=' h-full w-[50%]   flex items-center justify-center  pl-[100px] max-lg:pl-[40px] max-md:w-[100%] max-md:pl-[70px] max-sm:pl-[10px]'>
+            <div className=' h-full w-[50%] mx-auto  pl-[100px] max-lg:pl-[40px] max-md:w-[100%] max-md:pl-[70px] max-sm:pl-[50px]'>
                 <div className='w-[70%]  max-md:w-[80%]' >
                     <h2 className='text-[#090909] text-[26px] uppercase font-semibold'>New Arrival Only</h2>
 
@@ -28,7 +26,6 @@ function Hero() {
                         <div>Latest Collection</div>
                         <img src={arrowIcon} alt="" />
                     </div>
-
                 </div>
             </div>
 

@@ -19,7 +19,7 @@ function NewsLetter() {
                 <input
                     type="submit"
                     value="Subscribe"
-                    className='w-[210px] h-[70px] rounded-4xl bg-black text-white text-[24px] cursor-pointer max-lg:w-[200px] max-lg:h-[50px] max-lg:text-[20px] max-sm:h-[40px] max-sm:text-[14px] max-sm:w-[250px] '
+                    className='w-[210px] h-[70px] rounded-4xl bg-black text-white text-[24px] cursor-pointer max-lg:w-[200px] max-lg:h-[50px] max-lg:text-[20px] max-sm:h-[40px] max-sm:text-[14px] max-sm:w-[260px] '
                 />
             </form>
         </div>

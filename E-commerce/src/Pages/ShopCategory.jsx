@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { ShopContext } from '../Context/ShopContext';
 import dropdownIcon from "../Components/Assets/dropdown_icon.png"
 import Item from '../Components/Item';
+import Navbar from '../Components/Navbar';
 
 
 function ShopCategory(props) {
@@ -9,7 +10,9 @@ function ShopCategory(props) {
   const { allProducts } = useContext(ShopContext);
 
   return (
+    <>     <Navbar/>
     <div id="shopcategory" className=" flex  flex-col items-center pt-[82px] bg-linear-to-b from-[#adf8ec] to-[#e1ffea22]  ">
+ 
       <img id="shopcategory-image" src={props.banner} className='inline-block  my-7 mx-auto w-[90%] h-[250px] max-md:my-4' alt="banner" />
       <div className='w-[70%] flex justify-between items-center my-4 mx-[170px]'>
         <p className='max-md:text-[15px] '> <span className='font-semibold mr-1'>Showing 1-12</span> out of 36 products </p>
@@ -26,6 +29,7 @@ function ShopCategory(props) {
       </div>
       <div id="more-btn" className='flex items-center justify-center my-[100px] mx-auto w-[233px] h-[70px] bg-[#d3d0d0] rounded-4xl text-[#504949] text-[18px] cursor-pointer font-semibold max-md:my-[50px] max-md:h-[40px] max-md:w-[150px] max-md:text-[17px] '>Explore more</div>
     </div>
+    </>
   )
 }
 

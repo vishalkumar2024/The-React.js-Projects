@@ -10,14 +10,14 @@ import Footer from './Components/Footer'
 import menBanner from "./Components/Assets/banner_mens.png"
 import womenBanner from "./Components/Assets/banner_women.png"
 import kidBanner from "./Components/Assets/banner_kids.png"
-import Login from './Pages/login'
-import Signup from './Pages/Signup'
+import Login from './Pages/LoginPage'
+import Signup from './Pages/SignupPage'
 
 function App() {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         <Route path='/' element={<Shop />} />
         <Route path='/men' element={<ShopCategory category="men" banner={menBanner} />} />
