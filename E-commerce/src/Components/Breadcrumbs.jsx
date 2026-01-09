@@ -6,8 +6,8 @@ function Breadcrumbs(props) {
   const { product } = props;
 
   return (
-    <div className='flex items-center text-[#5e5e5e] gap-4 text-4 font-semibold mt-[30px] mb-5 ml-[150px] capitalize'>
-      HOME <img src={breadcrumArrowIcon} alt="" /> SHOP <img src={breadcrumArrowIcon} alt="" /> {product.category} <img src={breadcrumArrowIcon} alt="" /> {product.name}
+    <div className='flex items-center text-[#5e5e5e] gap-4 text-4 font-semibold mt-[30px] mb-5 ml-[150px] capitalize max-lg:text-[15px] '>
+      <span className='cursor-pointer hover:text-blue-500 '>HOME</span> <img src={breadcrumArrowIcon} alt="" /> <span  className='cursor-pointer hover:text-blue-500 '>SHOP</span> <img src={breadcrumArrowIcon} alt="" /><span  className='cursor-pointer hover:text-blue-500 '> {product.category} </span><img src={breadcrumArrowIcon} alt="" /><span  className='cursor-pointer hover:text-blue-500 '> {product.name} </span>
     </div>
   )
 }

@@ -2,7 +2,7 @@ import React from 'react'
 
 function Description() {
   return (
-    <div className='my-[120px mx-[170px]'>
+    <div className='  mx-[170px] max-xl:mx-[100px] '>
       <div className='flex gap-3'>
         <div className='flex items-center justify-center text-[1rem] font-semibold w-[170px] h-[70px] border border-[#d0d0d0]'>Description</div>
         <div className='flex items-center justify-center text-[1rem] font-semibold w-[170px] h-[70px] border border-[#d0d0d0] bg-[#fbfbfb] text-[#555]'>Reviews (122)</div>
