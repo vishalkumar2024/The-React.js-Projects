@@ -8,6 +8,7 @@ function productDisplay(props) {
 
     const { product } = props
     const {addToCart} = useContext(ShopContext)
+    
     return (
         <div className='flex my-2 ml-[150px] mb-[100px]'>
             {/* left part */}

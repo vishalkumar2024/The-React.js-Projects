@@ -13,7 +13,7 @@ function Footer() {
                 <p id="footer-logo-p" className='text-[#383838] text-[46px] font-bold max-sm:text-[40px]'>SHOPPER</p>
             </div>
 
-            <ul id='footer-ul' className='flex gap-12 text-[#252525] text-[20px] max-md:gap-10  max-sm:gap-5 max-sm:text-[18px] '>
+            <ul id='footer-ul' className='flex gap-11 text-[#252525] text-[20px] max-md:gap-10  max-sm:gap-5 max-sm:text-[18px] '>
                 <li id="footer-li" className='cursor-pointer hover:bg-blue-300 px-3 py-[6px] rounded  '>Company</li>
                 <li id="footer-li" className='cursor-pointer hover:bg-blue-300 px-3 py-[6px] rounded  '>Products</li>
                 <li id="footer-li" className='cursor-pointer hover:bg-blue-300 px-3 py-[6px] rounded  '>Offices</li>

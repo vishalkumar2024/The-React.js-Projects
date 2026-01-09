@@ -1,4 +1,4 @@
-
+import react from 'react'
 import { Link } from 'react-router-dom'
 
 function Signup() {
@@ -7,7 +7,7 @@ function Signup() {
             <div id="login" className='w-[100%]   border-b bg-linear-to-b from-[#94f5e5] to-[#e1ffea22]  pt-[120px] pb-32'>
                 <div id="login-inner" className='w-[550px] h-fit rounded  bg-white/70 m-auto py-5 px-15 max-sm:w-[450px]'>
                     <h1 className='my-4 mx-0 text-3xl font-semibold capitalize'>Sign up</h1>
-                    <form action="/signup" method="post" className='flex flex-col gap-7  '>
+                    <form action="/signup" method="post" className='flex flex-col gap-5  '>
                         <input
                             type="text"
                             name="name"
