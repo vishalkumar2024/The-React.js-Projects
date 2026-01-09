@@ -183,7 +183,7 @@
         width: 200px;
     }
     /* CSS for productDetails below 500px */
-
+    
     #productDetails{
         flex-direction: column;
         align-items: center;
@@ -211,5 +211,9 @@
     #productDetails-right{
         width: 96%;
         margin-left: 35px;
+    }
+    /* CSS for productDetails below 500px */
+     #relatedProduct-item{
+        grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 }
