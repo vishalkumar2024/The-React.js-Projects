@@ -10,7 +10,7 @@ function productDisplay(props) {
     const {addToCart} = useContext(ShopContext)
     
     return (
-        <div id="productDetails" className='flex   my-2 ml-[110px] mb-[100px] max-lg:ml-[50px] max-md:ml-[10px] '>
+        <div id="productDetails" className='flex   my-2 ml-[110px] mb-[100px] max-lg:ml-[50px] max-md:ml-[10px] max-md:mb-[60px] '>
             {/* left part */}
             <div id="productDetails-left" className='flex   gap-4 w-[50%]  max-lg:gap-2 max-md:flex-col-reverse max-md:gap-1  '>
                 <div id='productDetails-left-small' className='flex flex-col  gap-4 max-lg:gap-3 max-md:flex-row max-md:gap-1'>
