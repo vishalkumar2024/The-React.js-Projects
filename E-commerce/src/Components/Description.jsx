@@ -9,8 +9,10 @@ function Description() {
         <div className='flex items-center justify-center text-[1rem] font-semibold w-[170px] h-[70px] border border-[#d0d0d0] bg-[#fbfbfb] text-[#555] max-md:w-[120px] max-md:h-[50px] max-md:text-[15px]  max-sm:w-[100px] max-sm:h-[30px] max-sm:text-[14px] '>Reviews (122)</div>
       </div>
       <div className='flex flex-col gap-6 mt-[10px] border border-[#d0d0d0] p-[48px] pb[70px] max-md:p-[30px] max-sm:p-[20px] max-sm:text-[14px] '>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus quaerat optio magnam commodi beatae quae officia iusto, possimus dicta excepturi! Ullam quod pariatur quasi, ad dolorum unde obcaecati nesciunt quis Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur beatae veniam dolores nulla aliquam expedita tenetur veritatis laborum fuga debitis. Voluptas accusantium nemo autem est quidem quia facere dolor inventore?</p>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum unde dolor placeat maxime nihil est delectus repellat provident fugiat iusto atque, suscipit corrupti tenetur. Ut repellendus doloribus fugiat laboriosam illum?</p>
+        <p>This versatile clothing item is designed to provide comfort, style, and durability for men, women, and kids. Made from high-quality, breathable fabric, it ensures a soft feel and all-day comfort. The modern fit and timeless design make it suitable for casual outings, daily wear, and special occasions. Easy to maintain and long-lasting, this garment offers a perfect balance of fashion and functionality for every age group.
+          <br/>
+          This versatile clothing item is designed to provide comfort, style, and durability for men, women, and kids. Made from high-quality, breathable fabric, it ensures a soft feel and all-day comfort. The modern fit and timeless design make it suitable for casual outings, daily wear, and special occasions. Easy to maintain and long-lasting, this garment offers a perfect balance of fashion and functionality for every age group.
+        </p>
       </div>
     </div>
   )
