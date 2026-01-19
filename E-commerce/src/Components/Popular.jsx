@@ -11,13 +11,12 @@ function Popular() {
     useGSAP(() => {
 
         gsap.from(".smallScreen", {
-            y: -40,
+            y: -30,
             opacity: 0.5,
             duration: 2,
             scrollTrigger: {
                 trigger: ".smallScreen",
                 scroller: "body",
-                // markers: true,
                 start: "top 90%", 
                 end: "top 70%",
                 scrub: 3, 
@@ -31,7 +30,6 @@ function Popular() {
             scrollTrigger: {
                 trigger: ".popularItem",
                 scroller: "body",
-                markers: true,
                 start: "top 80%", 
                 end: "top 60%",
                 scrub: 3, 
