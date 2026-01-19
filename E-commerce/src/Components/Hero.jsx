@@ -2,16 +2,55 @@ import React from 'react'
 import handIcon from "../Components/Assets/hand_icon.png"
 import arrowIcon from "../Components/Assets/arrow.png"
 import heroImage from "../Components/Assets/hero_image.png"
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 
 
 function Hero() {
+  gsap.registerPlugin(ScrollTrigger);
+
+    useGSAP(() => {
+
+        gsap.from("#heroText", {
+            x: -30,
+            opacity: 0,
+            duration: 2,
+            scrollTrigger: {
+                trigger: "#heroText",
+                scroller: "body",
+                markers: true,
+                start: "top 60%", 
+                end: "top 30%",
+                scrub: 3, 
+            }
+        })
+        gsap.from("#heroImg", {
+            x: 30,
+            opacity: 0,
+            duration: 2,
+            scrollTrigger: {
+                trigger: "#heroText",
+                scroller: "body",
+                markers: true,
+                start: "top 60%",
+                end: "top 30%",
+                scrub: 3, 
+            }
+        })
+
+    })
+
+
+
     return (
         <div id="HeroMain" className='flex mb-10 h-[650px] max-md:pt-0 max-lg:h-[500px] max-md:h-[440px]  max-sm:mt-10 ' >
 
             {/* Left Part */}
-            <div className=' h-full w-[50%] mx-auto  pl-[100px] max-lg:pl-[40px] max-md:w-[100%] max-md:pl-[70px] max-sm:pl-[50px]'>
-                <div className='w-[70%]  max-md:w-[80%]' >
-                    <h2 className='text-[#090909] text-[26px] uppercase font-semibold'>New Arrival Only</h2>
+            <div className=' h-full w-[50%]  mx-auto  pl-[100px] max-lg:pl-[40px] max-md:w-[100%] max-md:pl-[70px] max-sm:pl-[50px]'>
+                <div id="heroText" className='w-[70%] h-[100%]   max-md:w-[80%]' >
+                    <h2 className='text-[#090909] text-[26px] py-[60px] uppercase font-semibold'>New Arrival Only</h2>
 
                     <div className=''>
                         <div className='flex max-md:py-6'>
@@ -30,8 +69,8 @@ function Hero() {
             </div>
 
             {/* Right Part */}
-            <div className='w-[50%]  max-md:w-[100%] max-md:hidden  '>
-                <img className=' h-full pl-25 max-lg:h-[90%] max-lg:pl-20 ' src={heroImage} alt="" />
+            <div className='w-[50%]   max-md:w-[100%] max-md:hidden  '>
+                <img id="heroImg" className=' h-full pl-25 max-lg:h-[90%] max-lg:pl-20 ' src={heroImage} alt="" />
             </div>
         </div>
     )
