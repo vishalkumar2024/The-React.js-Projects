@@ -7,7 +7,6 @@ import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 
-
 function Hero() {
   gsap.registerPlugin(ScrollTrigger);
 
@@ -20,8 +19,7 @@ function Hero() {
             scrollTrigger: {
                 trigger: "#heroText",
                 scroller: "body",
-                markers: true,
-                start: "top 60%", 
+                start: "top 70%", 
                 end: "top 30%",
                 scrub: 3, 
             }
@@ -33,15 +31,13 @@ function Hero() {
             scrollTrigger: {
                 trigger: "#heroText",
                 scroller: "body",
-                markers: true,
-                start: "top 60%",
+                start: "top 70%",
                 end: "top 30%",
                 scrub: 3, 
             }
         })
 
     })
-
 
 
     return (
