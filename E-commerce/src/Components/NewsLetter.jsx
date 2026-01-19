@@ -1,11 +1,48 @@
 import React from 'react'
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+
+gsap.registerPlugin(ScrollTrigger);
 function NewsLetter() {
+
+    useGSAP(() => {
+
+        gsap.from("#newslaterPara ", {
+            y: -20,
+            opacity: 0.5,
+            duration: 2,
+            scrollTrigger: {
+                trigger: "#newslaterPara  ",
+                scroller: "body",
+                start: "top 90%",
+                end: "top 70%",
+                scrub: 3,
+            }
+        })
+
+        gsap.from("#newsletterH1 ", {
+            y: -20,
+            opacity: 0.5,
+            duration: 2,
+            scrollTrigger: {
+                trigger: "#newsletterH1",
+                scroller: "body",
+                start: "top 90%",
+                end: "top 70%",
+                scrub: 3,
+            }
+        })
+
+
+    })
+
     return (
         <div id="newslater" className='w-[80%] py-20 bg-linear-to-b from-[#b2f5ea] to-[#e1ffea22] flex justify-center items-center flex-col gap-7 m-auto px-[140px] mb-[150px] max-md:w-[90%] max-md:px-[100px] max-sm:px-[60px] max:sm:py-[10px]  '>
 
-            <h1 className='text-[#454545] capitalize text-[50px] font-semibold max-lg:text-[35px] max-md:text-[30px] max-sm:text-[25px] '>Get exclusive offers on your email</h1>
-            <p className='text-[#454545] text-[20px] font-mono max-lg:text-[19px] max-md:text-[17px] max-sm:text-[16px]'>Subscribe to our newsletter and stay updated</p>
+            <h1 id="newsletterH1" className='text-[#454545] capitalize text-[50px] font-semibold max-lg:text-[35px] max-md:text-[30px] max-sm:text-[25px] '>Get exclusive offers on your email</h1>
+            <p id="newslaterPara" className='text-[#454545] text-[20px] font-mono max-lg:text-[19px] max-md:text-[17px] max-sm:text-[16px]'>Subscribe to our newsletter and stay updated</p>
             <form
                 action="/newslater"
                 method="post"
