@@ -34,9 +34,22 @@ function Footer() {
             scrollTrigger: {
                 trigger: ".footerLi",
                 scroller: "body",
-                markers: true,
                 start: "top 80%",
                 end: "top 60%",
+                scrub: 3,
+            }
+        })
+
+        timeLine.from("#footerPara", {
+            y: -20,
+            opacity: 0,
+            duration: 2,
+            scrollTrigger: {
+                trigger: "#footerPara",
+                scroller: "body",
+                start: "top 95%",
+                markers:true,
+                end: "top 90%",
                 scrub: 3,
             }
         })
@@ -72,7 +85,7 @@ function Footer() {
 
             <div id="footer-copyright" className='flex items-center flex-col gap-7 w-[100%] mb-7 text-[#1a1a1a] text-[20px] max-sm:text-[18px] '>
                 <hr className='w-[80%] border-none border-[10px] h-[3px] bg-[#c7c7c7]' />
-                <p >Copyright @ 2025 - All Right Reserved.</p>
+                <p id="footerPara" >Copyright @ 2025 - All Right Reserved.</p>
             </div>
         </div>
     )
