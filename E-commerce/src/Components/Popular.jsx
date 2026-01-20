@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import dataProduct from "./Assets/data"
 import Item from './Item'
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+
 function Popular() {
     gsap.registerPlugin(ScrollTrigger);
+
+    const cardsRef = useRef([]);
 
 
     useGSAP(() => {
@@ -27,19 +30,21 @@ function Popular() {
             },
         })
 
-        gsap.from(".popularItem", {
-            y: -20,
-            opacity: 0.5,
-            duration: 2,
+        gsap.from(cardsRef.current, {
+            y: 40,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.15,
             scrollTrigger: {
-                trigger: ".popularItem",
+                trigger: cardsRef.current[0],
+                start: "top 80%",
                 scroller: "body",
-                start: "top 80%", 
-                end: "top 60%",
-                scrub: 3, 
-            }
-        })
+                end: "top 50%",
+                scrub: 3,
+            },
+        });
 
+      
     })
 
     return (
@@ -48,7 +53,7 @@ function Popular() {
             <hr className='w-[200px] h-[6px] rounded bg-[#252525] max-lg:w-[130px] max-md:w-[100px] max-md:h-[3px] ' />
             <div id="popular-item" className='popularItem flex mt-7  gap-8 pb-10 max-xl:gap-5 max-lg:gap-2 max-md:grid max-md:grid-cols-2'>
                 {dataProduct.map((item, i) => {
-                    return <div className=''> <Item key={i} id={item.id} name={item.name} image={item.image} new_price={item.new_price} old_price={item.old_price} />
+                    return <div className=''  ref={(el) => (cardsRef.current[i] = el)}> <Item key={i} id={item.id} name={item.name} image={item.image} new_price={item.new_price} old_price={item.old_price} />
                     </div>
                 })}
             </div>
