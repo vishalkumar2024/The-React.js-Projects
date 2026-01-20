@@ -21,7 +21,6 @@ function Hero() {
                 scroller: "body",
                 start: "top 70%", 
                 end: "top 30%",
-                markers:true,
                 scrub: 3, 
             }
         },"same")

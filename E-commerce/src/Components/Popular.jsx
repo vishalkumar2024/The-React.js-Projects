@@ -8,19 +8,23 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 function Popular() {
     gsap.registerPlugin(ScrollTrigger);
 
+
     useGSAP(() => {
 
         gsap.from(".smallScreen", {
-            y: -30,
-            opacity: 0.5,
-            duration: 2,
+          y: -50,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.2,
+            ease: "power3.out",
             scrollTrigger: {
                 trigger: ".smallScreen",
+                start: "top 80%",
+                markers:true,
                 scroller: "body",
-                start: "top 90%", 
-                end: "top 70%",
-                scrub: 3, 
-            }
+                end: "top 30%",
+                scrub: 3,
+            },
         })
 
         gsap.from(".popularItem", {
