@@ -1,36 +1,144 @@
-import React, { useContext } from 'react'
-import { ShopContext } from '../Context/ShopContext';
-import dropdownIcon from "../Components/Assets/dropdown_icon.png"
-import Item from '../Components/Item';
-import Navbar from '../Components/Navbar';
+import React, { useContext, useRef } from "react";
+import { ShopContext } from "../Context/ShopContext";
+import Navbar from "../Components/Navbar";
+import Item from "../Components/Item";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
 
-
-function ShopCategory(props) {
-
+function ShopCategory({ banner, category }) {
   const { allProducts } = useContext(ShopContext);
 
+  const heroRef = useRef(null);
+  const titleRef = useRef(null);
+  const cardsRef = useRef([]);
+
+  const filteredProducts = allProducts.filter(
+    (item) => item.category === category
+  );
+
+  useGSAP(() => {
+    gsap.from(heroRef.current, {
+      opacity: 0,
+      scale: 0.95,
+      duration: 1.2,
+      ease: "power3.out",
+    });
+
+    gsap.from(titleRef.current, {
+      y: 60,
+      opacity: 0,
+      duration: 1,
+      delay: 0.3,
+      ease: "power4.out",
+    });
+
+    gsap.from(cardsRef.current, {
+      y: 80,
+      opacity: 0,
+      scale: 0.9,
+      stagger: 0.08,
+      duration: 1,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: cardsRef.current[0],
+        start: "top 85%",
+      },
+    });
+  }, []);
+
   return (
-    <>     <Navbar/>
-    <div id="shopcategory" className=" flex  flex-col items-center pt-[82px] bg-linear-to-b from-[#adf8ec] to-[#e1ffea22]  ">
- 
-      <img id="shopcategory-image" src={props.banner} className='inline-block  my-7 mx-auto w-[90%] h-[250px] max-md:my-4' alt="banner" />
-      <div className='w-[70%] flex justify-between items-center my-4 mx-[170px]'>
-        <p className='max-md:text-[15px] '> <span className='font-semibold mr-1'>Showing 1-12</span> out of 36 products </p>
-        <div id="shopcategory-div" className='flex py-2 px-5 rounded-3xl border border-[#888] font-semiboldbold max-md:py-[4px] max-md:text-[15px] '> Sort by <img src={dropdownIcon} className='h-[10px] w-[12px] font-bold  mt-[8px] ml-1' alt="" /> </div>
-      </div>
-      <div id="newCollection-item" className=' grid grid-cols-4 mt-7 gap-6 max-lg:gap-2 max-md:grid-cols-2 max-md:gap-8 max-sm:gap-3'>
-        {allProducts.map((item, i) => {
-          if (props.category == item.category) {
-            return <div>
-              <Item key={i} id={item.id} name={item.name} image={item.image} new_price={item.new_price} old_price={item.old_price} />
+    <>
+      <Navbar />
+
+      <section className="pt-24 bg-gradient-to-b from-[#d9fff8] via-white to-white overflow-hidden">
+
+        {/* ================= HERO ================= */}
+        <div
+          ref={heroRef}
+          className="relative mx-auto w-[92%] max-w-7xl h-[360px] md:h-[420px] rounded-[32px] overflow-hidden"
+        >
+          <img
+            src={banner}
+            className="absolute inset-0 w-full h-full object-cover scale-105"
+            alt=""
+          />
+
+          {/* gradient + blur layers */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent" />
+          <div className="absolute inset-0 backdrop-blur-[2px]" />
+
+          {/* Hero content */}
+          <div
+            ref={titleRef}
+            className="relative z-10 h-full flex flex-col justify-center px-10 md:px-20"
+          >
+            <span className="text-sm tracking-[0.3em] text-white/70 mb-3">
+              NEW SEASON
+            </span>
+
+            <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight uppercase">
+              {category}'s <br /> COLLECTION
+            </h1>
+
+            <p className="mt-4 max-w-md text-white/80">
+              Elevated essentials crafted for modern lifestyles.
+            </p>
+
+            <button className="mt-6 w-fit px-8 py-3 rounded-full bg-white text-black font-semibold hover:scale-105 transition">
+              Explore Now
+            </button>
+          </div>
+        </div>
+
+        {/* ================= STATS BAR ================= */}
+        
+        <div id="stats" className="mt-14 mx-auto w-[92%] max-w-7xl grid grid-cols-2 sm:grid-cols-4 gap-6">
+          {[
+            ["Premium", "Materials"],
+            ["36+", "Products"],
+            ["4.9★", "Ratings"],
+            ["Fast", "Delivery"],
+          ].map(([title, sub], i) => (
+            <div
+              key={i}
+              id="stats-container"
+              className="bg-white/70 backdrop-blur-xl rounded-2xl p-6 text-center shadow-md max-sm:p-4"
+            >
+              <h3 className="text-2xl font-bold max-sm:text-[24px] ">{title}</h3>
+              <p className="text-gray-500 text-sm mt-1 ">{sub}</p>
             </div>
-          } else null;
-        })}
-      </div>
-      <div id="more-btn" className='flex items-center justify-center my-[100px] mx-auto w-[233px] h-[70px] bg-[#d3d0d0] rounded-4xl text-[#504949] text-[18px] cursor-pointer font-semibold max-md:my-[50px] max-md:h-[40px] max-md:w-[150px] max-md:text-[17px] '>Explore more</div>
-    </div>
+          ))}
+        </div>
+
+        {/* ================= PRODUCTS ================= */}
+        <div id="ShopCategoryItem" className="mt-16 mx-auto w-[92%] max-w-7xl   grid grid-cols-4 gap-6 max-sm:grid-cols-2 max-md:grid-cols-3 max-lg:grid-cols-4">
+          {filteredProducts.map((item, i) => (
+            <div
+              key={item.id}
+              ref={(el) => (cardsRef.current[i] = el)}
+              className="group"
+            >
+              <div  className="flex justify-center rounded-3xl overflow-hidden  shadow-lg transition-all duration-500 group-hover:-translate-y-3 group-hover:shadow-2xl max-xl:px-0 ">
+                <Item {...item} />
+
+                {/* glow */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-t from-black/10 to-transparent" />
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* ================= CTA ================= */}
+        <div className="flex justify-center mt-24">
+          <button className="px-14 py-4 rounded-full text-lg font-semibold bg-black text-white hover:scale-110 transition-transform max-sm:px-8 max-sm:py-3 max-sm:text-sm">
+            Load More
+          </button>
+        </div>
+
+        <div className="h-24" />
+      </section>
     </>
-  )
+  );
 }
 
-export default ShopCategory
+export default ShopCategory;
