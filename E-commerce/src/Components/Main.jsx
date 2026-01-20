@@ -72,7 +72,7 @@ function Main() {
                 <div className=''>
                     <h1
                         ref={title}
-                        className="text-6xl md:text-7xl font-extrabold text-gray-900 leading-tight max-sm:text-6xl"
+                        className="text-6xl md:text-7xl font-extrabold text-gray-900 leading-tight max-sm:text-5xl"
                     >
                         Redefining <br />
                         <span className="text-emerald-600">Everyday Fashion</span>
