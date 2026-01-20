@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import newCollections from "../Components/Assets/new_collections"
 import Item from '../Components/Item'
 import gsap from 'gsap';
@@ -8,6 +8,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function NewCollections() {
     gsap.registerPlugin(ScrollTrigger);
+
+    const cardsRef = useRef([]);
+
 
     useGSAP(() => {
 
@@ -24,18 +27,19 @@ function NewCollections() {
             }
         })
 
-        gsap.from(".newCollectionItem", {
-            y: -20,
-            opacity: 0.5,
-            duration: 2,
+        gsap.from(cardsRef.current, {
+            y: 40,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.15,
             scrollTrigger: {
-                trigger: ".newCollectionItem",
-                scroller: "body",
+                trigger: cardsRef.current[0],
                 start: "top 80%",
-                end: "top 60%",
+                scroller: "body",
+                end: "top 50%",
                 scrub: 3,
-            }
-        })
+            },
+        });
 
     })
     return (
@@ -46,7 +50,7 @@ function NewCollections() {
             </div>
             <div id="newCollection-item" className='newCollectionItem grid grid-cols-4 mt-7 gap-5 max-lg:gap-1 max-md:grid-cols-2 max-sm:gap-3'>
                 {newCollections.map((item, i) => {
-                    return <div className=''>
+                    return <div className=''  ref={(el) => (cardsRef.current[i] = el)}>
                         <Item key={i} id={item.id} name={item.name} image={item.image} new_price={item.new_price} old_price={item.old_price} />
                     </div>
                 })}
