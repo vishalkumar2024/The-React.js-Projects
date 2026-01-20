@@ -28,14 +28,14 @@ function Item(props) {
 
 
     return (
-        <div id="itemId" className='w-[230px] m-2 shadow-lg pl-[10px]  rounded-2xl transform  hover:scale-105 transition duration-500  max-xl:w-[220px] max-lg:w-[165px] max-md:w-[200px] max-md:h-[300px] max-sm:hover:scale-100 '>
-            <Link to={`/product/${props.id}`}>   <img src={props.image} className='  ' onClick={window.scrollTo(0, 0)} alt="" /> </Link>
+        <div id="itemId" className='w-[200px] m-2 shadow-lg pl-[10px]  rounded-2xl transform  hover:scale-105 transition duration-500  max-xl:w-[220px] max-lg:w-[165px] max-md:w-[200px] max-md:h-[300px] max-sm:hover:scale-100 '>
+            <Link to={`/product/${props.id}`}>   <img src={props.image} className='w-[100%] ' onClick={window.scrollTo(0, 0)} alt="" /> </Link>
             <p className='py-2 px-0 text-emerald-800'>{props.name}</p>
             <div className='flex gap-0'>
                 <div className='text-[#374151] text-[18px] font-bold  max-sm:text-[15px] '>
                     ${props.new_price}
                 </div>
-                <div className='text-[#8c8c8c] text-[18px] font-semibold line-through max-sm:text-[15px] '>
+                <div className='text-[#8c8c8c] text-[18px] font-semibold line-through pb-[10px] max-sm:text-[15px] '>
                     ${props.old_price}
                 </div>
             </div>

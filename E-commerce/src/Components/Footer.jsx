@@ -1,5 +1,6 @@
 import React from 'react'
-import FooterImg from "../Components/Assets/logo_big.png"
+import FooterImg  from "../Components/Assets/logoshoping.png"
+
 import instagramLogo from "../Components/Assets/instagram_icon.png"
 import pinterestLogo from "../Components/Assets/pintester_icon.png"
 import whatsAppLogo from "../Components/Assets/whatsapp_icon.png"
@@ -58,7 +59,7 @@ function Footer() {
         <div id="footer" className='bg-[#befcf2] flex items-center justify-center flex-col pt-3'>
 
             <div id="footerLogo" className='flex items-center gap-5 py-5'>
-                <img src={FooterImg} alt="" id="footer-logo" className='max-sm:h-[60px] ' />
+                <img src={FooterImg} alt="" id="footer-logo" className='size-28   ' />
                 <p id="footer-logo-p" className='text-[#383838] text-[46px] font-bold max-sm:text-[40px]'>SHOPPER</p>
             </div>
 

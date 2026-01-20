@@ -9,21 +9,8 @@ function NewsLetter() {
 
     useGSAP(() => {
 
-        gsap.from("#newslaterPara ", {
-            y: -20,
-            opacity: 0.5,
-            duration: 2,
-            scrollTrigger: {
-                trigger: "#newslaterPara  ",
-                scroller: "body",
-                start: "top 90%",
-                end: "top 70%",
-                scrub: 3,
-            }
-        })
-
         gsap.from("#newsletterH1 ", {
-            y: -20,
+            x: -50,
             opacity: 0.5,
             duration: 2,
             scrollTrigger: {
@@ -33,9 +20,20 @@ function NewsLetter() {
                 end: "top 70%",
                 scrub: 3,
             }
-        })
+        },"newslatter")
 
-
+        gsap.from("#newslaterPara ", {
+            x: 30,
+            opacity: 0.5,
+            duration: 2,
+            scrollTrigger: {
+                trigger: "#newslaterPara  ",
+                scroller: "body",
+                start: "top 90%",
+                end: "top 70%",
+                scrub: 3,
+            }
+        },"newslatter")
     })
 
     return (
