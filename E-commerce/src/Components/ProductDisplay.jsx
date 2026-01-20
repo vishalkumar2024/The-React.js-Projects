@@ -2,12 +2,43 @@ import React, { useContext } from 'react'
 import starIcon from "../Components/Assets/star_icon.png"
 import starDullIcon from "../Components/Assets/star_dull_icon.png"
 import { ShopContext } from '../Context/ShopContext'
-
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function productDisplay(props) {
-
     const { product } = props
     const {addToCart} = useContext(ShopContext)
+    gsap.registerPlugin(ScrollTrigger);
+
+    useGSAP(() => {
+
+        gsap.from("#relatedH1", {
+            y: -30,
+            opacity: 0.5,
+            duration: 2,
+            scrollTrigger: {
+                trigger: "#relatedH1",
+                scroller: "body",
+                start: "top 90%",
+                end: "top 70%",
+                scrub: 3,
+            }
+        })
+
+        gsap.from(".relatedProductItem", {
+            y: -20,
+            opacity: 0.5,
+            duration: 2,
+            scrollTrigger: {
+                trigger: ".relatedProductItem",
+                scroller: "body",
+                start: "top 80%",
+                end: "top 60%",
+                scrub: 3,
+            }
+        })
+    })
     
     return (
         <div id="productDetails" className='flex   my-2 ml-[110px] mb-[100px] max-lg:ml-[50px] max-md:ml-[10px] max-md:mb-[60px] '>
@@ -19,7 +50,7 @@ function productDisplay(props) {
                     <img src={product.image} className='h-[150px] w-[230px] max-lg:h-[135px] max-md:h-[90px] max-md:w-[32%] ' alt="" />
                 </div>
                 <div id='productDetails-left-big' >
-                    <img  src={product.image} className='w-[750px] h-[480px] max-lg:w-[580px] max-lg:h-[430px]   max-md:h-[350px] max-sm:h-[320px] ' alt="main-Image" />
+                    <img src={product.image} className='w-[750px] h-[480px] max-lg:w-[580px] max-lg:h-[430px]   max-md:h-[350px] max-sm:h-[320px] ' alt="main-Image" />
                 </div>
             </div>
 
@@ -28,10 +59,10 @@ function productDisplay(props) {
                 <h1 className='text-[#3d3d3d] text-[30px] font-semibold max-lg:text-[25px] max-md:text-[19px] '>{product.name}</h1>
                 <div className='flex items-center gap-[5px] mt-3 text-[#1c1c1c] text-[1rem] max-md:mt-2 max-md:text-[14px] '>
                     <img src={starIcon} alt="" className='size-[20px] max-md:size-[16px] ' />
-                    <img src={starIcon} alt=""  className='size-[20px] max-md:size-[16px] '/>
                     <img src={starIcon} alt="" className='size-[20px] max-md:size-[16px] ' />
                     <img src={starIcon} alt="" className='size-[20px] max-md:size-[16px] ' />
-                    <img src={starDullIcon} alt=""  className='size-[20px] max-md:size-[16px] '/>
+                    <img src={starIcon} alt="" className='size-[20px] max-md:size-[16px] ' />
+                    <img src={starDullIcon} alt="" className='size-[20px] max-md:size-[16px] ' />
                     <p>(122)</p>
                 </div>
                 <div className='flex my-5 mx-0 gap-7 text-6 font-semibold max-lg:my-3 max-md:text-[15px] '>
@@ -53,7 +84,7 @@ function productDisplay(props) {
                         </div>
                     </div>
                 </div>
-                <button onClick={()=>{addToCart(product.id)}} className='py-3 px-8 w-[200px] rounded text-[1rem] font-semibold bg-[#ff4141] text-white mb-[10px] border-none outline-none cursor-pointer max-lg:py-2.5 max-lg:px-6 max-lg:mb-[6px] max-md:py-2 max-md:px-4 '>ADD TO CART</button>
+                <button onClick={() => { addToCart(product.id) }} className='py-3 px-8 w-[200px] rounded text-[1rem] font-semibold bg-[#ff4141] text-white mb-[10px] border-none outline-none cursor-pointer max-lg:py-2.5 max-lg:px-6 max-lg:mb-[6px] max-md:py-2 max-md:px-4 '>ADD TO CART</button>
 
                 <p className='mt-3 max-lg:mt-2.5'><span className='font-semibold'>Category: </span>{product.category}, T-shirt, Crop-Top</p>
                 <p className='mt-3 max-lg:mt-2.5'><span className='font-semibold'>Tags: </span>Modern, Latest</p>

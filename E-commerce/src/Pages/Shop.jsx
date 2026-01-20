@@ -6,6 +6,7 @@ import Offers from '../Components/Offers';
 import NewCollections from '../Components/NewCollections';
 import NewsLetter from '../Components/NewsLetter';
 import Navbar from '../Components/Navbar';
+import Demo from '../Components/Demo';
 
 
 
@@ -13,8 +14,10 @@ function Shop() {
   return (
     <div>
       <Navbar />
+
       <Main />
       <Hero />
+      <Demo/>
       <Popular />
       <Offers />
       <NewCollections />

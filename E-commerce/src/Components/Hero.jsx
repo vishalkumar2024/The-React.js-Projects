@@ -21,9 +21,10 @@ function Hero() {
                 scroller: "body",
                 start: "top 70%", 
                 end: "top 30%",
+                markers:true,
                 scrub: 3, 
             }
-        })
+        },"same")
         gsap.from("#heroImg", {
             x: 30,
             opacity: 0,
@@ -35,7 +36,7 @@ function Hero() {
                 end: "top 30%",
                 scrub: 3, 
             }
-        })
+        },"same")
 
     })
 

@@ -48,7 +48,6 @@ function Footer() {
                 trigger: "#footerPara",
                 scroller: "body",
                 start: "top 95%",
-                markers:true,
                 end: "top 90%",
                 scrub: 3,
             }
