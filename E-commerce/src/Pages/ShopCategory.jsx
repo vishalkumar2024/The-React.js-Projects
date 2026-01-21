@@ -91,7 +91,7 @@ function ShopCategory({ banner, category }) {
         </div>
 
         {/* ================= STATS BAR ================= */}
-        
+
         <div id="stats" className="mt-14 mx-auto w-[92%] max-w-7xl grid grid-cols-2 sm:grid-cols-4 gap-6">
           {[
             ["Premium", "Materials"],
@@ -118,11 +118,13 @@ function ShopCategory({ banner, category }) {
               ref={(el) => (cardsRef.current[i] = el)}
               className="group"
             >
-              <div  className="flex justify-center rounded-3xl overflow-hidden  shadow-lg transition-all duration-500 group-hover:-translate-y-3 group-hover:shadow-2xl max-xl:px-0 ">
+              <div
+                className=" flex justify-center rounded-3xl overflow-hidden  shadow-xl transition-all duration-500 group-hover:-translate-y-3 group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] pt-4 group-hover:bg-gradient-to-t  group-hover:from-black/7 group-hover:to-transparent max-xl:px-0 "
+              >
                 <Item {...item} />
 
                 {/* glow */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-t from-black/10 to-transparent" />
+                <div className="flex inset-0 opacity-0 group-hover:opacity-100 transition bg-gradient-to-t from-black/10 to-transparent" />
               </div>
             </div>
           ))}
