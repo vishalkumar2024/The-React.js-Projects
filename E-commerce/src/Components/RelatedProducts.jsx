@@ -24,7 +24,6 @@ function RelatedProducts(props) {
             scrollTrigger: {
                 trigger: "#relatedH1",
                 start: "top 80%",
-                markers:true,
                 scroller: "body",
                 end: "top 30%",
                 scrub: 3,

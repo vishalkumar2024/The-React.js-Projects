@@ -23,7 +23,6 @@ function Popular() {
             scrollTrigger: {
                 trigger: ".smallScreen",
                 start: "top 80%",
-                markers:true,
                 scroller: "body",
                 end: "top 30%",
                 scrub: 3,
