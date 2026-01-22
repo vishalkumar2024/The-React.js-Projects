@@ -27,7 +27,7 @@ Each folder represents a different application, ranging from beginner-level apps
 
 - **Framework**: [React.js](https://reactjs.org/)
 - **Languages**: JavaScript, HTML, CSS
-- **Styling**: Tailwind CSS, Custom CSS, Bootstrap
+- **Styling**: Tailwind CSS, Custom CSS, Bootstrap, GSAP
 - **Tools**: Visual Studio Code, Git & GitHub, npm
 
 ---
