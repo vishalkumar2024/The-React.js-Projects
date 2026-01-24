@@ -73,7 +73,7 @@ function ShopCategoryViz() {
     ]
 
   return (
-    <div className="py-10 w-full  mb-20 flex flex-col items-center justify-center ">
+    <div className="py-20 w-full  mb-20 flex flex-col items-center justify-center ">
 
       <h1 id="smallScreen" className="uppercase text-[#171717] mb-4 text-5xl font-bold  max-sm:text-[32px] max-lg:text-[30px] ">
       Shop by <span className="text-cyan-600">Category</span>

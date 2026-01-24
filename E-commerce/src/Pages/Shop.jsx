@@ -8,6 +8,7 @@ import NewsLetter from '../Components/NewsLetter';
 import Navbar from '../Components/Navbar';
 import Premium from '../Components/Premium';
 import ShopCategoryViz from '../Components/ShopCategoryViz';
+import PromoBanner from '../Components/PromoBanner';
 
 
 
@@ -21,7 +22,7 @@ function Shop() {
       <Premium/>
       <ShopCategoryViz/>
       <Offers />
-      
+      <PromoBanner/>
       <NewCollections />
       <NewsLetter />
 
