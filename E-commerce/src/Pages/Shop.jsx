@@ -7,6 +7,7 @@ import NewCollections from '../Components/NewCollections';
 import NewsLetter from '../Components/NewsLetter';
 import Navbar from '../Components/Navbar';
 import Premium from '../Components/Premium';
+import ShopCategoryViz from '../Components/ShopCategoryViz';
 
 
 
@@ -18,8 +19,9 @@ function Shop() {
       <Main />
       <Hero />
       <Premium/>
-      <Popular />
+      <ShopCategoryViz/>
       <Offers />
+      
       <NewCollections />
       <NewsLetter />
 

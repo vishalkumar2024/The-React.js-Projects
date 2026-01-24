@@ -1,0 +1,17 @@
+#innerDiv:hover #innerDivIcon{
+    transform: translateY(-15px);
+   box-shadow: 5px 5px 17px 4px rgb(33, 122, 154) ;
+   border-color: white;
+   transition: all 0.3s ease-in-out;
+   background-color: oklch(71.5% 0.143 215.221);
+     
+}
+#innerDiv:hover #innerBtn{
+    transform: scale(1.2);
+    transition: scale 0.5s;
+    background: linear-gradient(oklch(71.5% 0.143 215.221), oklch(57.234% 0.10261 217.897));
+}
+#innerDiv:hover #icon{
+    color: white;
+}
+ 

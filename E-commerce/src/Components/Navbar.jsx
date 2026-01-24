@@ -70,10 +70,10 @@ function Navbar(props) {
             </div>
             <div className=' w-[60%] flex gap-40  max-xl:gap-32 max-lg:gap-20 max-md:hidden'>
                 <ul className='w-[50%] flex items-center gap-10 text-gray-500 text-[20px] outlin-none font-semibold max-lg:gap-6'>
-                    <li id="id" className='cursor-pointer active:text-red-300   max-lg:text-[16px]  '><Link to="/">Shop</Link> </li>
-                    <li id="id" className='cursor-pointer  active:text-red-300   max-lg:text-[16px] hover:translate-y-[10px] '><Link to="/men">Men</Link> </li>
-                    <li id="id" className='cursor-pointer active:text-red-300   max-lg:text-[16px] hover:translate-y-[10px] '><Link to="/women">Women</Link></li>
-                    <li id="id" className='cursor-pointer active:text-red-300   max-lg:text-[16px] hover:translate-y-[10px]'><Link to="/kid">Kid</Link></li>
+                    <li id="id" className='cursor-pointer active:text-red-300   max-lg:text-[16px]  '><Link to="/">Home</Link> </li>
+                    <li id="id" className='cursor-pointer  active:text-red-300   max-lg:text-[16px] hover:translate-y-[10px] '><Link to="/men">About</Link> </li>
+                    <li id="id" className='cursor-pointer active:text-red-300   max-lg:text-[16px] hover:translate-y-[10px] '><Link to="/women">Products</Link></li>
+                    <li id="id" className='cursor-pointer active:text-red-300   max-lg:text-[16px] hover:translate-y-[10px]'><Link to="/kid">Contact</Link></li>
                 </ul>
                 <div className='flex items-center gap-10 max-lg:gap-6'>
                     <Link id="loginIcon" to="/login"> <button onClick={window.scrollTo(0, 0)} className=' px-4 py-2 max-lg:py-1.5 max-lg:px-3rounded cursor-pointer  active:bg-green-700'>Login</button>
