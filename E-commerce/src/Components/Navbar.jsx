@@ -9,7 +9,7 @@ import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react';
 
 
-function Navbar(props) {
+function Navbar() {
 
     const { getTotalItem } = useContext(ShopContext);
     const [menuBar, setMenuBar] = useState(false);
@@ -72,7 +72,7 @@ function Navbar(props) {
                 <ul className='w-[50%] flex items-center gap-10 text-gray-500 text-[20px] outlin-none font-semibold max-lg:gap-6'>
                     <li id="id" className='cursor-pointer active:text-red-300   max-lg:text-[16px]  '><Link to="/">Home</Link> </li>
                     <li id="id" className='cursor-pointer active:text-red-300   max-lg:text-[16px] hover:translate-y-[10px] '><Link to="/women">Products</Link></li>
-                    <li id="id" className='cursor-pointer  active:text-red-300   max-lg:text-[16px] hover:translate-y-[10px] '><Link to="/men">About</Link> </li>
+                    <li id="id" className='cursor-pointer  active:text-red-300   max-lg:text-[16px] hover:translate-y-[10px] '><Link to="/about">About</Link> </li>
                     <li id="id" className='cursor-pointer active:text-red-300   max-lg:text-[16px] hover:translate-y-[10px]'><Link to="/kid">Contact</Link></li>
                 </ul>
                 <div className='flex items-center gap-10 max-lg:gap-6'>

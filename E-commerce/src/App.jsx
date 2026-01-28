@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom"
 import Shop from './Pages/Shop'
 import ShopCategory from './Pages/ShopCategory'
 import Product from './Pages/Product'
+import AboutPage from "./Pages/AboutPage"
 import Cart from './Pages/Cart'
 import Footer from './Components/Footer'
 import menBanner from "./Components/Assets/banner_mens.png"
@@ -13,13 +14,15 @@ import kidBanner from "./Components/Assets/banner_kids.png"
 import Login from './Pages/LoginPage'
 import Signup from './Pages/SignupPage'
 
+
 function App() {
 
   return (
     <>
-      {/* <Navbar /> */}
+     {/* <Navbar/> */}
       <Routes>
         <Route path='/' element={<Shop />} />
+        <Route path='/about' element={<AboutPage/>} />
         <Route path='/men' element={<ShopCategory category="men" banner={menBanner} />} />
         <Route path='/women' element={<ShopCategory category="women" banner={womenBanner} />} />
         <Route path='/kid' element={<ShopCategory category="kid" banner={kidBanner} />} />
