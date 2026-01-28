@@ -87,12 +87,12 @@ const About = () => {
 
           {/* BUTTONS */}
           <div className="mt-10 flex gap-6">
-            <button className="group relative px-10 py-4 rounded-full bg-linear-to-t to-cyan-400 from-cyan-600 text-white font-semibold overflow-hidden">
+            <button className="group relative px-10 py-4 rounded-full bg-linear-to-t to-cyan-400 from-cyan-600 text-white font-semibold overflow-hidden max-sm:px-7 max-sm:py-3 max-sm:rounded-2xl">
               <span className="relative z-10 cursor-pointer">Explore Collection</span>
               <span className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
             </button>
 
-            <button className="px-10 py-4 rounded-full border border-cyan-600 text-cyan-600 font-semibold hover:bg-emerald-600 hover:text-white transition">
+            <button className="px-10 py-4 rounded-full border border-cyan-600 text-cyan-600 font-semibold hover:bg-emerald-600 hover:text-white transition max-sm:px-7 max-sm:py-3 max-sm:rounded-2xl">
               Our Story
             </button>
           </div>
@@ -109,7 +109,7 @@ const About = () => {
           </div>
 
           {/* CARDS */}
-          <div className="stats bg-green-400 absolute -bottom-10 -left-10 flex gap-6">
+          <div className="stats  absolute -bottom-10 -left-10 flex gap-6 max-xl:left-0">
             <div className="stat-card backdrop-blur-xl bg-white/60 border border-white/30 rounded-2xl px-6 py-4 shadow-xl">
               <p className="text-2xl font-bold text-emerald-600">10K+</p>
               <p className="text-sm text-gray-500">Customers</p>

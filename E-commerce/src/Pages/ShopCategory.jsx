@@ -4,6 +4,8 @@ import Navbar from "../Components/Navbar";
 import Item from "../Components/Item";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
+import { Link } from "react-router-dom";
+
 
 function ShopCategory({ banner, category }) {
   const { allProducts } = useContext(ShopContext);
@@ -51,8 +53,6 @@ function ShopCategory({ banner, category }) {
       <Navbar />
 
       <section className="pt-24 bg-gradient-to-b from-[#d9fff8] via-white to-white overflow-hidden">
-
-        {/* ================= HERO ================= */}
         <div
           ref={heroRef}
           className="relative mx-auto w-[92%] max-w-7xl h-[360px] md:h-[420px] rounded-[32px] overflow-hidden"
@@ -88,6 +88,18 @@ function ShopCategory({ banner, category }) {
               Explore Now
             </button>
           </div>
+        </div>
+
+        <div className=" flex w-full m-10 pl-3  gap-6 ">
+          <Link to="/men">
+            <div className="py-2 px-3 bg-gray-200 text-cyan-700 cursor-pointer rounded">Men</div>
+             </Link>
+            <Link to='/women'>
+            <div className="py-2 px-3 bg-gray-200 text-cyan-700 cursor-pointer rounded">Women</div>
+            </Link>
+            <Link to='/kid'>
+            <div className="py-2 px-3 bg-gray-200 text-cyan-700 cursor-pointer rounded">Kids</div>
+            </Link>
         </div>
 
         {/* ================= STATS BAR ================= */}

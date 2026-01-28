@@ -71,15 +71,15 @@ function Navbar() {
             <div className=' w-[60%] flex gap-40  max-xl:gap-32 max-lg:gap-20 max-md:hidden'>
                 <ul className='w-[50%] flex items-center gap-10 text-gray-500 text-[20px] outlin-none font-semibold max-lg:gap-6'>
                     <li id="id" className='cursor-pointer active:text-red-300   max-lg:text-[16px]  '><Link to="/">Home</Link> </li>
-                    <li id="id" className='cursor-pointer active:text-red-300   max-lg:text-[16px] hover:translate-y-[10px] '><Link to="/women">Products</Link></li>
+                    <li id="id" className='cursor-pointer active:text-red-300   max-lg:text-[16px] hover:translate-y-[10px] '><Link to="/allproducts">Products</Link></li>
                     <li id="id" className='cursor-pointer  active:text-red-300   max-lg:text-[16px] hover:translate-y-[10px] '><Link to="/about">About</Link> </li>
-                    <li id="id" className='cursor-pointer active:text-red-300   max-lg:text-[16px] hover:translate-y-[10px]'><Link to="/kid">Contact</Link></li>
+                    <li id="id" className='cursor-pointer active:text-red-300   max-lg:text-[16px] hover:translate-y-[10px]'><Link to="/contact">Contact</Link></li>
                 </ul>
                 <div className='flex items-center gap-10 max-lg:gap-6'>
                     <Link id="loginIcon" to="/login"> <button onClick={window.scrollTo(0, 0)} className=' px-4 py-2 max-lg:py-1.5 max-lg:px-3rounded cursor-pointer  active:bg-green-700'>Login</button>
                     </Link>
                     <Link id="cart" to="/cart">  <img src={CartIcon} alt="Cart Image" className='size-8 max-lg:size-8' /></Link>
-                    <div id="cart" className='w-4 h-4 flex items-center justify-center -mt-7 -ml-12 rounded-full text-[15px] bg-red-500 text-white
+                    <div id="cart" className='w-4 h-4 flex items-center justify-center -mt-7 -ml-12 rounded-full text-[14px] bg-red-500 text-white
                         max-lg:-mt-6 max-lg:w-[16px] max-lg:h-[16px] max-lg:text-[11px] max-lg:-ml-8 '>{getTotalItem()}</div>
                 </div>
             </div>
@@ -96,9 +96,9 @@ function Navbar() {
                 {/* Div for small screens */}
                 <div id="mobileMenu" className={`${menuBar ? "fixed" : "hidden"} bg-[#74f5dfe7] p-2.5 mt-4.5  md:hidden max-sm:w-[120px] `}>
                     <ul>
-                        <Link to="/men" onClick={() => setMenuBar(false)}> <li className='h-10 w-[120px] py-2 px-3 hover:bg-[#d4fbf3] max-sm:w-[100%] '>Men</li></Link>
-                        <Link to="/women" onClick={() => setMenuBar(false)}><li className='h-10 w-[120px] py-2 px-3 hover:bg-[#d4fbf3] max-sm:w-[100%] '>Women</li></Link>
-                        <Link to="/kid" onClick={() => setMenuBar(false)}><li className='h-10 w-[120px] py-2 px-3 hover:bg-[#d4fbf3] max-sm:w-[100%] '>Kids</li></Link>
+                        <Link to="/allproducts" onClick={() => setMenuBar(false)}> <li className='h-10 w-[120px] py-2 px-3 hover:bg-[#d4fbf3] max-sm:w-[100%] '>Products</li></Link>
+                        <Link to="/about" onClick={() => setMenuBar(false)}><li className='h-10 w-[120px] py-2 px-3 hover:bg-[#d4fbf3] max-sm:w-[100%] '>About</li></Link>
+                        <Link to="/contact" onClick={() => setMenuBar(false)}><li className='h-10 w-[120px] py-2 px-3 hover:bg-[#d4fbf3] max-sm:w-[100%] '>Contact</li></Link>
 
                         <Link to="/login" onClick={() => setMenuBar(false)}><li className='bg-green-500 text-white cursor-pointer py-2 max-lg:py-1.5 max-lg:px-3rounded  active:bg-green-700 w-[120px] px-3  max-sm:w-[100%] '>Login</li></Link>
                     </ul>

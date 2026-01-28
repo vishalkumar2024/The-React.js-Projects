@@ -8,9 +8,9 @@ import Product from './Pages/Product'
 import AboutPage from "./Pages/AboutPage"
 import Cart from './Pages/Cart'
 import Footer from './Components/Footer'
-import menBanner from "./Components/Assets/banner_mens.png"
-import womenBanner from "./Components/Assets/banner_women.png"
-import kidBanner from "./Components/Assets/banner_kids.png"
+import menBanner from "./Components/Assets/Banner-mens.png"
+import womenBanner from "./Components/Assets/Banner-women.png"
+import kidBanner from "./Components/Assets/banner-kids.png"
 import Login from './Pages/LoginPage'
 import Signup from './Pages/SignupPage'
 
