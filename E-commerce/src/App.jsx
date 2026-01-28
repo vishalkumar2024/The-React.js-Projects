@@ -13,6 +13,7 @@ import womenBanner from "./Components/Assets/Banner-women.png"
 import kidBanner from "./Components/Assets/banner-kids.png"
 import Login from './Pages/LoginPage'
 import Signup from './Pages/SignupPage'
+import ContactPage from './Pages/ContactPage'
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Shop />} />
         <Route path='/about' element={<AboutPage/>} />
+        <Route path='/contact' element={<ContactPage/>} />
         <Route path='/men' element={<ShopCategory category="men" banner={menBanner} />} />
         <Route path='/women' element={<ShopCategory category="women" banner={womenBanner} />} />
         <Route path='/kid' element={<ShopCategory category="kid" banner={kidBanner} />} />
