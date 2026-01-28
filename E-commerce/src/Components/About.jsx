@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Navbar from "../Components/Navbar";
+import { Link } from "react-router-dom";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -88,7 +88,7 @@ const About = () => {
             {/* BUTTONS */}
             <div className="mt-10 flex gap-6">
               <button className="group relative px-10 py-4 rounded-full bg-linear-to-t to-cyan-400 from-cyan-600 text-white font-semibold overflow-hidden max-sm:px-7 max-sm:py-3 max-sm:rounded-2xl">
-                <span className="relative z-10 cursor-pointer">Explore Collection</span>
+               <Link to='/allproducts'> <span className="relative z-10 cursor-pointer">Explore Collection</span> </Link>
                 <span className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
               </button>
 

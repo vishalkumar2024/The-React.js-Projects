@@ -40,7 +40,7 @@ function Offers() {
     return (
         <div id="offers" className='flex w-[80%] m-auto px-0  mb-[100px] bg-linear-to-b from-[#b2f5ea] to-[#e1ffea22] max-md:w-[90%]'>
             {/* Left part */}
-            <div id="left" className='flex-1 flex flex-col   justify-center pl-20 max-md:pl-7'>
+            <div id="left" className='flex-1 flex flex-col   justify-center pl-20 max-md:pl-7 max-sm:pl-5'>
                 <h1 className='text-[#a26969] text-[80px] capitalize font-semibold max-xl:text-[65px] max-lg:text-[50px] max-md:text-[40px]  '>Exclusive</h1>
                 <h1 className='text-[#171717] text-[80px] capitalize font-semibold max-xl:text-[65px] max-lg:text-[50px] max-md:text-[40px]  '>Offer for you</h1>
                 <p className='text-[#171717] text-[22px] uppercase font-semibold max-xl:text-[18px] max-lg:text-[16px] '>only on best sellers products</p>

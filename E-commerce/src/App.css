@@ -284,6 +284,7 @@
     #ShopCategoryVizItem{
         margin-top: 40px;
     }
+   
     #ShopCategoryVizHr{
         margin-bottom: 30px;
     }
@@ -324,5 +325,21 @@
     #cartItem-third-second #input-2{
         font-size:13px;
         width: 70px;
+    }
+     #ShopCategoryViz #smallScreen{
+        font-size: 30px;
+    }
+    #ShopCategoryVizItem #innerBtn{   
+        padding: 6px 4px ;
+    }
+    #newslater #form{
+        width: 250px;
+    }
+    #newslater .input-1{
+        width: 150px;
+        
+    }
+    #newslater .input-2{
+        width: 100px;
     }
 }

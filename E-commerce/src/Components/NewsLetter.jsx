@@ -44,17 +44,17 @@ function NewsLetter() {
             <form
                 action="/newslater"
                 method="post"
-                id=""
+                id="form"
                 className='flex items-center justify-between w-[730px] h-[70px] text-white rounded-4xl border border-[#b9b2b2] max-lg:w-[580px] max-lg:h-[50px] max-md:w-[450px] max-sm:w-[370px] max-sm:h-[40px] '>
                 <input
                     type="text"
                     placeholder='Enter your email'
-                    className='w-[500px] ml-7 border-none outline-none text-[#616161] text-5'
+                    className='input-1 w-[500px] ml-7 border-none outline-none text-[#616161] text-5'
                 />
                 <input
                     type="submit"
                     value="Subscribe"
-                    className='w-[210px] h-[70px] rounded-4xl bg-black text-white text-[24px] cursor-pointer max-lg:w-[200px] max-lg:h-[50px] max-lg:text-[20px] max-sm:h-[40px] max-sm:text-[14px] max-sm:w-[260px] '
+                    className='input-2 w-[210px] h-[70px] rounded-4xl bg-black text-white text-[24px] cursor-pointer max-lg:w-[200px] max-lg:h-[50px] max-lg:text-[20px] max-sm:h-[40px] max-sm:text-[14px] max-sm:w-[260px] '
                 />
             </form>
         </div>

@@ -46,7 +46,7 @@ const ContactUs = () => {
                     <div className="contact-animate mt-8 space-y-4 text-gray-700">
                         <p>📍 Ranchi, Jharkhand</p>
                         <p>📧 support@vastra.com</p>
-                        <p>📞 +91 91536 16643</p>
+                        <p>📞 +91 9876543210</p>
                     </div>
                 </div>
 
