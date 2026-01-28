@@ -50,7 +50,7 @@ const PromoBanner = () => {
                 every season.
                 </p>
 
-                <button id="PromobannerBtn" className="mt-6 inline-flex items-center justify-center rounded-full bg-linear-to-t to-cyan-400 from-cyan-600 cursor-pointer  px-8 py-3 text-white font-semibold shadow-md hover:bg-emerald-600 transition">
+                <button id="PromobannerBtn" className="mt-6 inline-flex items-center justify-center rounded-full bg-linear-to-t to-cyan-400 from-cyan-600 cursor-pointer  px-8 py-3 text-white font-semibold shadow-md hover:bg-cyan-700 transition">
                 Shop Now
                 </button>
             </div>

@@ -33,7 +33,8 @@ function Main() {
             .from(cta.current, {
                 scale: 0.8,
                 opacity: 0,
-                duration: 0.6,
+                duration: 1,
+               ease: "back.out(1.7)",
             }, "-=0.4")
             .from(cards.current, {
                 y: 120,
@@ -43,7 +44,7 @@ function Main() {
                 duration: 1,
             }, "-=0.8");
 
-        // Floating motion (luxury feel)
+ 
         cards.current.forEach((card, i) => {
             gsap.to(card, {
                 x: i % 2 === 0 ? -15 : 15,
@@ -82,7 +83,7 @@ function Main() {
                         ref={subtitle}
                         className="mt-6 text-xl text-gray-600 max-w-xl"
                     >
-                        Premium styles crafted for Men & Kids — minimal, modern,
+                        Premium styles crafted for Men, Women & Kids — minimal, modern,
                         and made to stand out.
                     </p>
 

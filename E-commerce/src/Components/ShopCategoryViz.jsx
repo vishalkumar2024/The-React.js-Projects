@@ -79,26 +79,24 @@ function ShopCategoryViz() {
       Shop by <span className="text-cyan-600">Category</span>
       </h1>
 
-      <hr className="w-[200px] h-[6px] mb-15 rounded bg-[#252525] max-lg:w-[140px] max-md:w-[110px] max-md:h-[4px] " />
+      <hr id="ShopCategoryVizHr" className="w-[200px] h-[6px] mb-15 rounded bg-[#252525] max-lg:w-[140px] max-md:w-[110px] max-md:h-[4px] " />
 
-      <div className=" w-[50%]  bg flex justify-center gap-20">
+      <div id="ShopCategoryVizId" className=" w-[50%]   flex justify-center gap-20 max-sm:gap-10 ">
  
             {
                 data.map((item, i)=>{   
-                        return <div  ref={(el) => (cardsRef.current[i] = el)}>
-                                <Link to={`/${item.path}`}>
-                                    <div id="innerDiv" className="h-[100px] cursor-pointer">
+                    return <div id="ShopCategoryVizItem" className=''  ref={(el) => (cardsRef.current[i] = el)}>
+                        <Link to={`/${item.path}`}>
+                            <div id="innerDiv" className="h-[100px]  cursor-pointer">
                                 <div id="innerDivIcon" className="  size-18 border-2 px-[9px] py-2 border-cyan-500 rounded-full ">
                                     <span id="icon" className="text-[48px]   h-12 w-12 text-cyan-500">{item.icon}</span>
                                 </div>
                                 <h3 id="innerBtn" className="text-center bg-gray-300 rounded-[6px] py-1.5 px-3 mt-5 font-semibold    "> {item.text} </h3>
                             </div>
                         </Link>
-                        </div>
-                       
+                    </div> 
                 })
             }
-
       </div>
     </div>
   );

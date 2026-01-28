@@ -49,7 +49,7 @@ function Premium() {
             {/* HERO */}
             <div id="premiumText" className="text-center px-[10%] pt-20 pb-24 ">
                 <h1 className="text-5xl font-bold text-gray-900">
-                    Shop <span className='text-cyan-600'>Smart</span> . Live <span className='text-cyan-600'>Better</span> .
+                    Shop <span className='text-cyan-600'>Smart, </span> Live <span className='text-cyan-600'>Better</span>
                 </h1>
 
                 <p className="mt-5 text-lg text-gray-500">

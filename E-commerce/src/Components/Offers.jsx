@@ -44,7 +44,7 @@ function Offers() {
                 <h1 className='text-[#a26969] text-[80px] capitalize font-semibold max-xl:text-[65px] max-lg:text-[50px] max-md:text-[40px]  '>Exclusive</h1>
                 <h1 className='text-[#171717] text-[80px] capitalize font-semibold max-xl:text-[65px] max-lg:text-[50px] max-md:text-[40px]  '>Offer for you</h1>
                 <p className='text-[#171717] text-[22px] uppercase font-semibold max-xl:text-[18px] max-lg:text-[16px] '>only on best sellers products</p>
-                <button className='w-[282px] h-[70] rounded-2xl py-1 bg-red-500 border-none text-white text-[22px] mt-7 cursor-pointer font-semibold max-xl:text-[20px] max-xl:w-[250px] max-lg:w-[200px] max-lg:text-[18px] '>check now</button>
+                <button className='w-[282px] h-[70] rounded-2xl py-1 bg-linear-to-t to-cyan-400 from-cyan-600  border-none text-white text-[22px] mt-7 cursor-pointer font-semibold max-xl:text-[20px] max-xl:w-[250px] max-lg:w-[200px] max-lg:text-[18px] '>check now</button>
             </div>
 
             {/* Right Part */}

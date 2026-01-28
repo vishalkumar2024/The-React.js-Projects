@@ -57,7 +57,7 @@ function Hero() {
                         <p className='text-[65px] font-bold mb-1 max-lg:text-6xl'>for everyone</p>
                     </div>
 
-                    <div className='flex items-center justify-center gap-4 cursor-pointer w-[250px] h-[40px] rounded-4xl mt-8 bg-red-600 text-white text-[18px] font-semibold max-lg:w-[220px] max-lg:h-[30px] max-md:h-[40px] '>
+                    <div className='flex items-center justify-center gap-4 cursor-pointer w-[250px] h-[40px] rounded-4xl mt-8 bg-linear-to-t to-emerald-400 from-emerald-600  text-white text-[18px] font-semibold max-lg:w-[220px] max-lg:h-[30px] max-md:h-[40px] '>
                         <div>Latest Collection</div>
                         <img src={arrowIcon} alt="" />
                     </div>

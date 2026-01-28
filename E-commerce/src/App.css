@@ -276,6 +276,19 @@
     #PromobannerBtn{
         padding: 10px 20px;
     }
+    #ShopCategoryVizId{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    #ShopCategoryVizItem{
+        margin-top: 40px;
+    }
+    #ShopCategoryVizHr{
+        margin-bottom: 30px;
+    }
+    #ShopCategoryVizItem #innerBtn{
+        font-size: 14px;
+    }
 }
 
 @media (max-width:400px) {
