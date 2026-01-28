@@ -14,7 +14,7 @@ const reviews = [
         role: "Fashion Blogger",
         image: "https://i.pravatar.cc/150?u=sarah",
         rating: 5,
-        text: "I am absolutely in love with the summer collection at ECart! The fabric quality is premium and the fit is true to size. It's hard to find trendy clothes  ",
+        text: "I am absolutely in love with the summer collection at VASTRA! The fabric quality is premium and the fit is true to size. It's hard to find trendy clothes  ",
     },
     {
         id: 2,
@@ -22,7 +22,7 @@ const reviews = [
         role: "Student",
         image: "https://media-ccu2-2.cdn.whatsapp.net/v/t61.24694-24/472735847_944962443885434_514145004336530345_n.jpg?ccb=11-4&oh=01_Q5Aa3gGMiERqfWLgKasnqojZWFu7LNFRtDRDaHEaNNNCM7d5jg&oe=6986E54F&_nc_sid=5e03e0&_nc_cat=104",
         rating: 5,
-        text: "ECart is my go-to for formal wear. Their shirts have a great finish and the delivery is always on time. The packaging was eco-friendly too, which is a huge plus for me!",
+        text: "VASTRA is my go-to for formal wear. Their shirts have a great finish and the delivery is always on time. The packaging was eco-friendly too, which is a huge plus for me!",
     },
     {
         id: 3,
@@ -30,7 +30,7 @@ const reviews = [
         role: "Stylist",
         image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWVufGVufDB8fDB8fHww",
         rating: 5,
-        text: "The variety of styles on ECart is impressive. Whether I'm looking for street wear or elegant evening dresses, I always find something unique for my clients. Highly recommended!",
+        text: "The variety of styles on VASTRA is impressive. Whether I'm looking for street wear or elegant evening dresses, I always find something unique for my clients. Highly recommended!",
     },
     {
         id: 4,
@@ -38,7 +38,7 @@ const reviews = [
         role: "Daily Shopper",
         image: "https://images.unsplash.com/photo-1622049605334-72e1e4432346?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aW5kaWFuJTIwZ2lybHxlbnwwfHwwfHx8MA%3D%3D",
         rating: 4,
-        text: "Fastest shipping I've experienced for a clothing brand. The denim jacket I ordered from ECart fits perfectly. The exchange process for a different size was also very smooth.",
+        text: "Fastest shipping I've experienced for a clothing brand. The denim jacket I ordered from VASTRA fits perfectly. The exchange process for a different size was also very smooth.",
     },
 ];
 

@@ -36,7 +36,7 @@ const ContactUs = () => {
                         Contact Us
                     </p>
 
-                    <h1 className="contact-animate text-5xl uppercase  font-extrabold bg-gradient-to-r from-cyan-600 via-cyan-400 to-cyan-600 bg-clip-text text-transparent ">Contact Ecart</h1>
+                    <h1 className="contact-animate text-5xl uppercase  font-extrabold bg-gradient-to-r from-cyan-600 via-cyan-400 to-cyan-600 bg-clip-text text-transparent ">Contact VASTRA</h1>
 
                     <p className="contact-animate mt-6 text-gray-600 text-lg leading-relaxed">
                         Have a question about our products, orders, or anything else?
@@ -45,7 +45,7 @@ const ContactUs = () => {
 
                     <div className="contact-animate mt-8 space-y-4 text-gray-700">
                         <p>📍 Ranchi, Jharkhand</p>
-                        <p>📧 support@ecart.com</p>
+                        <p>📧 support@vastra.com</p>
                         <p>📞 +91 91536 16643</p>
                     </div>
                 </div>

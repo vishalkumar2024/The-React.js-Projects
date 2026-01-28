@@ -4,6 +4,8 @@ import './Button.css'
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { Link } from 'react-router-dom';
+
 
 function Main() {
     const container = useRef(null);
@@ -34,7 +36,7 @@ function Main() {
                 scale: 0.8,
                 opacity: 0,
                 duration: 1,
-               ease: "back.out(1.7)",
+                ease: "back.out(1.7)",
             }, "-=0.4")
             .from(cards.current, {
                 y: 120,
@@ -44,7 +46,7 @@ function Main() {
                 duration: 1,
             }, "-=0.8");
 
- 
+
         cards.current.forEach((card, i) => {
             gsap.to(card, {
                 x: i % 2 === 0 ? -15 : 15,
@@ -86,14 +88,15 @@ function Main() {
                         Premium styles crafted for Men, Women & Kids — minimal, modern,
                         and made to stand out.
                     </p>
-
-                    <button
-                        ref={cta}
-                        id="MainBtn"
-                        className="mt-10 px-8 py-3 rounded-2xl bg-emerald-500  text-white text-[18px] font-medium shadow-2xl "
-                    >
-                        Explore Collection
-                    </button>
+                    <Link to='/allproducts'>
+                        <button
+                            ref={cta}
+                            id="MainBtn"
+                            className="mt-10 px-8 py-3 rounded-2xl bg-emerald-500  text-white text-[18px] font-medium shadow-2xl "
+                        >
+                            Explore Collection
+                        </button>
+                    </Link>
                 </div>
 
                 {/* VISUAL SYSTEM */}

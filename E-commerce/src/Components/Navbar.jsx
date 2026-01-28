@@ -65,9 +65,9 @@ function Navbar() {
     return (
         <div ref={navRef} className="flex justify-around fixed bg-[#d1fff7] w-full z-50 shadow-sky-200 shadow max-md:justify-between">
 
-            <div id="logoImage" className='w-[40%] flex justify-center items-center gap-2 '>
+            <div id="logoImage" className='w-[40%] flex justify-center items-center gap-1 ml-2'>
                 <img src={Logo} alt="Logo" className='w-20 h-18 max-lg:size-12' />
-                <p className='text-[#171717] text-[30px] max-lg:text-[26px] font-semibold'><Link to="/">ECart</Link> </p>
+                <p className='text-[#171717] text-[30px] max-lg:text-[26px] font-bold'><Link to="/">VASTRA</Link> </p>
             </div>
 
             <div className=' w-[60%] flex gap-40  max-xl:gap-32 max-lg:gap-20 max-md:hidden'>
