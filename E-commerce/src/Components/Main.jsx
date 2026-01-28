@@ -1,5 +1,4 @@
 import React from 'react'
-import heroImg from "../Components/Assets/img-hero5.png"
 import './Button.css'
 import { useRef } from "react";
 import gsap from "gsap";
@@ -61,11 +60,7 @@ function Main() {
     }, []);
 
     return (
-        <section
-            ref={container}
-            className="relative min-h-screen overflow-hidden bg-gradient-to-br from-emerald-100 via-white to-emerald-200"
-        >
-            {/* ambient blobs */}
+        <section ref={container} className="relative min-h-screen overflow-hidden bg-gradient-to-br from-emerald-100 via-white to-emerald-200">
             <div className="absolute -top-32 -left-32 w-[500px] h-[500px] bg-emerald-200/40 rounded-full blur-[120px]" />
             <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-teal-200/40 rounded-full blur-[120px]" />
 
@@ -73,18 +68,12 @@ function Main() {
 
                 {/* TEXT */}
                 <div className=''>
-                    <h1
-                        ref={title}
-                        className="text-6xl md:text-7xl font-extrabold text-gray-900 leading-tight max-sm:text-5xl"
-                    >
+                    <h1 ref={title} className="text-6xl md:text-7xl font-extrabold text-gray-900 leading-tight max-sm:text-5xl">
                         Redefining <br />
                         <span className="text-emerald-600">Everyday Fashion</span>
                     </h1>
 
-                    <p
-                        ref={subtitle}
-                        className="mt-6 text-xl text-gray-600 max-w-xl"
-                    >
+                    <p ref={subtitle} className="mt-6 text-xl text-gray-600 max-w-xl">
                         Premium styles crafted for Men, Women & Kids — minimal, modern,
                         and made to stand out.
                     </p>
@@ -122,7 +111,6 @@ function Main() {
 
             </div>
         </section>
-
     )
 }
 

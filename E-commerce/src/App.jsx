@@ -10,7 +10,7 @@ import Cart from './Pages/Cart'
 import Footer from './Components/Footer'
 import menBanner from "./Components/Assets/Banner-mens.png"
 import womenBanner from "./Components/Assets/Banner-women.png"
-import kidBanner from "./Components/Assets/banner-kids.png"
+import kidBanner from "./Components/Assets/Banner-kids.png"
 import Login from './Pages/LoginPage'
 import Signup from './Pages/SignupPage'
 import ContactPage from './Pages/ContactPage'
