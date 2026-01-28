@@ -269,6 +269,13 @@
     #relatedProduct-item {
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
+
+    #promoBannerId{
+        padding-left: 10px;
+    }
+    #PromobannerBtn{
+        padding: 10px 20px;
+    }
 }
 
 @media (max-width:400px) {
