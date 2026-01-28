@@ -43,7 +43,6 @@ function CartItem() {
                                         <img src={removeIcon} className='w-[15px] cursor-pointer my-0 mx-[40px] max-md:mx-[24px] ' onClick={() => { removeFromCart(item.id) }} alt="" />
                                     </div>
 
-
                                 </div><hr className='h-[2px] border-2 rounded-2xl text-[#cbc6c6] ' />
                             </div>
                         )
@@ -52,10 +51,10 @@ function CartItem() {
                     return null;
 
                 })}
-                <div id="cartItem-third" className='flex my-100px  mx-0 py-14 pl-2 max-md:flex-col max-sm:pl-0'>
+                <div id="cartItem-third" className='flex  my-100px  mx-0 py-14 pl-2 max-md:flex-col max-sm:pl-0'>
 
                     {/* Left Part */}
-                    <div id='cartItem-third-first' className='flex flex-col  w-[50%] mr-[100px]  gap-[20px] max-md:w-[100%] max-md:px-[80px] max-md:mb-14 '>
+                    <div id='cartItem-third-first' className='flex  flex-col  w-[50%] mr-[100px]  gap-[20px] max-md:w-[100%] max-md:px-[80px] max-md:mb-14 '>
                         <h1 className='text-3xl text-black font-bold uppercase '>Cart Totals</h1>
                         <div >
                             <div className='flex justify-between py-4 px-0'>
@@ -86,6 +85,7 @@ function CartItem() {
                         <p className='text-[#555] max-md:text-[22px] '>If you have  a promo code, Enter it here</p>
                         <div id='cartItem-third-second-input' className='w-[400px] h-[58px]  mt-4  flex max-lg:w-[280px]  max-md:w-[330px] '>
                             <input id='input-1' className='w-[340px] h-[50px] bg-zinc-300 pl-3 border-0 outline-none text-[16px] max-lg:h-[45px] max-md:w-[350px] ' type="text" placeholder='Enter you promo code' />
+
                             <input id='input-2' className='w-[170px] h-[50px] rounded-br-[4px] rounded-tr-[4px] bg-black text-[16px] text-white cursor-pointer max-lg:h-[45px]' type="submit" value="submit" />
                         </div>
                     </div>

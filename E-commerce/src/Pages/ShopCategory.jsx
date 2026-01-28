@@ -53,10 +53,7 @@ function ShopCategory({ banner, category }) {
       <Navbar />
 
       <section className="pt-24 bg-gradient-to-b from-[#d9fff8] via-white to-white overflow-hidden">
-        <div
-          ref={heroRef}
-          className="relative mx-auto w-[92%] max-w-7xl h-[360px] md:h-[420px] rounded-[32px] overflow-hidden"
-        >
+        <div  ref={heroRef} className="relative mx-auto w-[92%] max-w-7xl h-[360px] md:h-[420px] rounded-[32px] overflow-hidden">
           <img
             src={banner}
             className="absolute inset-0 w-full h-full object-cover scale-105"

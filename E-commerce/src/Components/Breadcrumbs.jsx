@@ -12,7 +12,7 @@ function Breadcrumbs(props) {
 
       <img src={breadcrumArrowIcon} alt="" className='max-md:h-[10px] ' />
       
-       <Link to={`/${product.category}`} className='cursor-pointer hover:text-blue-500 '>SHOP</Link>
+       <Link to='/allproducts' className='cursor-pointer hover:text-blue-500 '>SHOP</Link>
        
         <img src={breadcrumArrowIcon} alt="" className='max-md:h-[10px] '/>
 

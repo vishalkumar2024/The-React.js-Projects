@@ -44,9 +44,9 @@ function Hero() {
         <div id="HeroMain" className='flex bg-gray-50  h-[650px]  max-md:pt-0 max-lg:h-[500px] max-md:h-[440px]  max-sm:mt-10 ' >
 
             {/* Left Part */}
-            <div className=' h-full w-[50%] mx-auto  pl-[100px] max-lg:pl-[40px] max-md:w-[100%] max-md:pl-[70px] max-sm:pl-[30px]'>
+            <div id="Hero-Left" className=' h-full w-[50%] mx-auto  pl-[100px] max-lg:pl-[40px] max-md:w-[100%] max-md:pl-[70px] max-sm:pl-[30px]'>
                 <div id="heroText" className='w-[70%] h-[100%]   max-md:w-[80%]' >
-                    <h2 className='text-[#090909] text-[26px] py-[60px] uppercase font-semibold max-md:py-[10px]'>New Arrival Only</h2>
+                    <h2  className='text-[#090909] text-[26px] py-[60px] uppercase font-semibold max-md:py-[10px]'>New Arrival Only</h2>
 
                     <div className=''>
                         <div className='flex max-md:py-6'>

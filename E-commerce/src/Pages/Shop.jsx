@@ -14,9 +14,8 @@ import PromoBanner from '../Components/PromoBanner';
 
 function Shop() {
   return (
-    <div>
+    <>
       <Navbar />
-
       <Main />
       <Hero />
       <Premium/>
@@ -26,7 +25,7 @@ function Shop() {
       <NewCollections />
       <NewsLetter />
 
-    </div>
+    </>
   )
 }
 

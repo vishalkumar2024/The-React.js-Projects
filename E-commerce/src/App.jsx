@@ -14,17 +14,19 @@ import kidBanner from "./Components/Assets/banner-kids.png"
 import Login from './Pages/LoginPage'
 import Signup from './Pages/SignupPage'
 import ContactPage from './Pages/ContactPage'
+import AllProductsPage from './Pages/AllProductsPage'
 
 
 function App() {
 
   return (
-    <>
+    <div className=' overflow-hidden'>
      {/* <Navbar/> */}
       <Routes>
         <Route path='/' element={<Shop />} />
         <Route path='/about' element={<AboutPage/>} />
         <Route path='/contact' element={<ContactPage/>} />
+        <Route path='/allproducts' element={<AllProductsPage/>} />
         <Route path='/men' element={<ShopCategory category="men" banner={menBanner} />} />
         <Route path='/women' element={<ShopCategory category="women" banner={womenBanner} />} />
         <Route path='/kid' element={<ShopCategory category="kid" banner={kidBanner} />} />
@@ -36,7 +38,7 @@ function App() {
         <Route path='/signup' element={<Signup />} />
       </Routes>
       <Footer />
-    </>
+    </div>
   )
 }
 

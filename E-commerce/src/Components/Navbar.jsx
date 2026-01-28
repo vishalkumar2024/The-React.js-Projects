@@ -64,10 +64,12 @@ function Navbar() {
 
     return (
         <div ref={navRef} className="flex justify-around fixed bg-[#d1fff7] w-full z-50 shadow-sky-200 shadow max-md:justify-between">
+
             <div id="logoImage" className='w-[40%] flex justify-center items-center gap-2 '>
                 <img src={Logo} alt="Logo" className='w-20 h-18 max-lg:size-12' />
                 <p className='text-[#171717] text-[30px] max-lg:text-[26px] font-semibold'><Link to="/">ECart</Link> </p>
             </div>
+
             <div className=' w-[60%] flex gap-40  max-xl:gap-32 max-lg:gap-20 max-md:hidden'>
                 <ul className='w-[50%] flex items-center gap-10 text-gray-500 text-[20px] outlin-none font-semibold max-lg:gap-6'>
                     <li id="id" className='cursor-pointer active:text-red-300   max-lg:text-[16px]  '><Link to="/">Home</Link> </li>
@@ -79,7 +81,7 @@ function Navbar() {
                     <Link id="loginIcon" to="/login"> <button onClick={window.scrollTo(0, 0)} className=' px-4 py-2 max-lg:py-1.5 max-lg:px-3rounded cursor-pointer  active:bg-green-700'>Login</button>
                     </Link>
                     <Link id="cart" to="/cart">  <img src={CartIcon} alt="Cart Image" className='size-8 max-lg:size-8' /></Link>
-                    <div id="cart" className='w-4 h-4 flex items-center justify-center -mt-7 -ml-12 rounded-full text-[14px] bg-red-500 text-white
+                    <div id="cart" className='w-4 h-4 flex items-center justify-center -mt-6 -ml-12 rounded-full text-[14px] bg-red-500 text-white
                         max-lg:-mt-6 max-lg:w-[16px] max-lg:h-[16px] max-lg:text-[11px] max-lg:-ml-8 '>{getTotalItem()}</div>
                 </div>
             </div>
