@@ -1,6 +1,5 @@
 
 import './App.css'
-import Navbar from './Components/Navbar'
 import { Routes, Route } from "react-router-dom"
 import Shop from './Pages/Shop'
 import ShopCategory from './Pages/ShopCategory'
@@ -21,7 +20,6 @@ function App() {
 
   return (
     <div className=' overflow-hidden'>
-     {/* <Navbar/> */}
       <Routes>
         <Route path='/' element={<Shop />} />
         <Route path='/about' element={<AboutPage/>} />
