@@ -52,7 +52,7 @@ function ShopCategoryViz() {
     const data = [
         {
             text: "All",
-            path: "",
+            path: "allproducts",
             icon: <GiClothes />,
         },
         {

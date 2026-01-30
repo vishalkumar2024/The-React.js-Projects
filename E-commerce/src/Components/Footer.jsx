@@ -1,60 +1,12 @@
 import React from 'react'
 import FooterImg  from "../Components/Assets/logoshoping.png"
-
 import instagramLogo from "../Components/Assets/instagram_icon.png"
 import pinterestLogo from "../Components/Assets/pintester_icon.png"
 import whatsAppLogo from "../Components/Assets/whatsapp_icon.png"
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react'
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 
 function Footer() {
-    gsap.registerPlugin(ScrollTrigger);
-
-    useGSAP(() => {
-        const timeLine = gsap.timeline();
-
-        timeLine.from("#footerLogo", {
-            y: -40,
-            opacity: 0,
-            duration: 2,
-            scrollTrigger: {
-                trigger: "#footerLogo",
-                scroller: "body",
-                start: "top 90%",
-                end: "top 70%",
-                scrub: 3,
-            }
-        })
-
-        timeLine.from(".footerLi", {
-            y: -20,
-            opacity: 0,
-            duration: 2,
-            scrollTrigger: {
-                trigger: ".footerLi",
-                scroller: "body",
-                start: "top 80%",
-                end: "top 60%",
-                scrub: 3,
-            }
-        })
-
-        timeLine.from("#footerPara", {
-            y: -20,
-            opacity: 0,
-            duration: 2,
-            scrollTrigger: {
-                trigger: "#footerPara",
-                scroller: "body",
-                start: "top 95%",
-                end: "top 90%",
-                scrub: 3,
-            }
-        })
-
-    })
+   
     return (
         <div id="footer" className='bg-[#befcf2] flex items-center justify-center flex-col pt-3'>
 
